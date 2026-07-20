@@ -6,36 +6,23 @@
   const standalone = matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
   const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
 
-  // GA4 is loaded from one shared config file, so Pendulum COLOR and Godzilla
-  // can reuse this module by replacing only project-config.js.
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = window.gtag || function(){ dataLayer.push(arguments); };
-  if (cfg.analyticsId) {
-    const ga = document.createElement("script");
-    ga.async = true;
-    ga.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(cfg.analyticsId)}`;
-    document.head.appendChild(ga);
-    gtag("js", new Date());
-    gtag("config", cfg.analyticsId, {
-      anonymize_ip: true,
-      send_page_view: true,
-      project_id: cfg.projectId,
-      app_version: cfg.version,
-      launch_mode: standalone ? "standalone" : "browser"
-    });
-    gtag("event", "dmvault_launch", {
-      project_id: cfg.projectId,
-      launch_mode: standalone ? "standalone" : "browser",
-      platform_family: isIOS ? "ios" : (/android/i.test(navigator.userAgent) ? "android" : "desktop")
-    });
-  }
-
+  // GA4 is loaded once by the platform shared analytics module.
   const track = (name, params={}) => {
-    if (typeof gtag === "function" && cfg.analyticsId) {
-      gtag("event", name, { project_id: cfg.projectId, app_version: cfg.version, ...params });
+    if (window.DMVaultAnalytics?.track) {
+      window.DMVaultAnalytics.track(name, {
+        project_id: cfg.projectId,
+        app_version: cfg.version,
+        ...params
+      });
     }
   };
   window.DMVaultTrack = track;
+
+  track("dmvault_launch", {
+    project_id: cfg.projectId,
+    launch_mode: standalone ? "standalone" : "browser",
+    platform_family: isIOS ? "ios" : (/android/i.test(navigator.userAgent) ? "android" : "desktop")
+  });
 
   document.addEventListener("click", event => {
     const link = event.target.closest("a[href]");

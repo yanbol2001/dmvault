@@ -1,11 +1,11 @@
-const BUILD = "7.4.1-pwa-20260720-integration-fix2";
+const BUILD = "7.4.1-pwa-20260720-analytics-v1";
 const CACHE_PREFIX = "dmvault-mh20th";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${BUILD}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-${BUILD}`;
 const CORE = [
   "./", "./index.html",
   "../core/dmvault-nav.css",
-  "../core/dmvault-nav.js", "./guide.html", "./stage.html", "./background.html",
+  "../core/dmvault-nav.js", "../core/analytics.js", "./guide.html", "./stage.html", "./background.html",
   "./style.css", "./manifest.webmanifest", "./pwa/project-config.js",
   "./pwa/dmvault-pwa.js", "./pwa/dmvault-pwa.css", "./icons/icon-192.png",
   "./icons/icon-512.png", "./icons/icon-maskable-512.png", "./icons/apple-touch-icon.png",

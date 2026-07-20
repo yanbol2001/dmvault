@@ -3,8 +3,8 @@ window.DMVaultConfig = Object.freeze({
   platformVersion: "1.0.0-dev26",
   releaseChannel: "development",
   lastUpdated: "2026-07-20",
-  repositoryBase: "/DMVault/",
-  ga4MeasurementId: "G-CL1PZNMQTZ",
+  repositoryBase: "/dmvault/",
+  ga4MeasurementId: "G-LQEFPC3QCF",
   latestUpdateLimit: 3,
   requestTimeoutMs: 6500,
   debug: false

@@ -1,0 +1,31 @@
+DMVault Analytics v1
+====================
+Measurement ID: G-LQEFPC3QCF
+Date: 2026-07-20
+
+Completed
+- Added one shared analytics module: core/analytics.js
+- Added the shared module to all 17 HTML pages
+- Tracks page_view with the actual path, title and URL
+- Automatically identifies hub, mh-20th, pendulum-color and godzilla-70th
+- Distinguishes browser and installed PWA display modes
+- Adds platform and content version parameters
+- Tracks cross-project navigation and outbound links
+- Tracks online/offline changes
+- Tracks PWA install prompt availability and installation completion
+- Updated the platform and MH service-worker caches
+- Removed duplicate MH GA4 loading to prevent double page views
+- Updated old GA4 IDs and /DMVault/ base-path references in config files
+
+GA4 custom parameters collected
+- platform_name
+- platform_version
+- project_name
+- project_version
+- display_mode
+- connection_mode
+
+Important
+Custom parameters are collected immediately, but to show them directly in standard GA4 reports,
+create corresponding event-scoped custom dimensions in GA4 Admin > Custom definitions.
+Realtime and DebugView can be used first to verify incoming events.
