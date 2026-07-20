@@ -1,4 +1,4 @@
-const BUILD = "7.4.0-pwa-20260720";
+const BUILD = "7.4.1-pwa-20260720-integration-fix2";
 const CACHE_PREFIX = "dmvault-mh20th";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${BUILD}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-${BUILD}`;

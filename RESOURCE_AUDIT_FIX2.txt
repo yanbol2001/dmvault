@@ -1,0 +1,20 @@
+DMVault local resource audit after Excel recovery
+Missing static references: 18
+diagnostics.html -> blob
+diagnostics.html -> url
+service-worker.js -> event.request.url
+core/ui.js -> ${escapeHtml(project.url)}
+godzilla-70th/dex.html -> ${m.img}
+mh-20th/service-worker.js -> req.url
+pendulum-color/app.js -> ${esc(d.image)}
+pendulum-color/app.js -> ${esc(d.attack_image||
+pendulum-color/app.js -> location.href
+mh-20th/evolution/index.html -> ${mo.img}
+mh-20th/evolution/index.html -> ${mo.atk}
+mh-20th/evolution/index.html -> ${x.img}
+mh-20th/pwa/dmvault-pwa.js -> document.documentElement.dataset.dmvaultRoot ||
+mh-20th/pwa/dmvault-pwa.js -> path, rootUrl
+mh-20th/pwa/dmvault-pwa.js -> link.href, location.href
+mh-20th/evolution/dex/index.html -> ${m.image_data}
+mh-20th/evolution/dex/index.html -> new Blob([JSON.stringify(o,null,2
+core/js/ui.js -> ${escapeHtml(project.url)}

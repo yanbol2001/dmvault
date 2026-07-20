@@ -1,4 +1,4 @@
-const VERSION = "dmvault-platform-1.0.0-dev26";
+const VERSION = "dmvault-platform-1.1.0-integration-fix2";
 const CORE_CACHE = `${VERSION}-core`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const CACHE_META_KEY = "./__dmvault_cache_meta__";
@@ -10,7 +10,10 @@ const CORE_FILES = [
   "./core/dmvault-nav.js", "./diagnostics.html", "./offline.html", "./manifest.webmanifest",
   "./core/css/dmvault-core.css", "./core/js/config.js", "./core/js/core.js", "./core/js/preferences.js", "./core/js/analytics.js", "./core/js/data.js", "./core/js/diagnostics.js", "./core/js/ui.js", "./core/js/pwa.js",
   "./projects/index.json", "./projects/updates.json", "./projects/mh-20th.json", "./projects/pendulum-color.json", "./projects/godzilla-70th.json",
-  "./icons/icon.svg", "./icons/icon-192.png", "./icons/icon-512.png"
+  "./icons/icon.svg", "./icons/icon-192.png", "./icons/icon-512.png",
+  "./mh-20th/", "./mh-20th/index.html",
+  "./pendulum-color/", "./pendulum-color/index.html",
+  "./godzilla-70th/", "./godzilla-70th/index.html"
 ];
 
 

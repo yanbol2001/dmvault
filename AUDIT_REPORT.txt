@@ -1,0 +1,51 @@
+DMVault 全站檢查報告｜Integration Fix 1
+日期：2026-07-20
+
+已檢查：HTML href/src、CSS url()、JSON/Manifest、Service Worker、大小寫路徑、三專案導覽。
+已確認專案路徑：mh-20th、pendulum-color、godzilla-70th。
+已更新平台與 MH 的 Service Worker 版本，避免瀏覽器繼續使用舊快取。
+
+重要發現：Godzilla 原始壓縮檔本身缺少 33 個被頁面引用的 PNG。
+其中包含背景頁 18 張與 G 細胞頁 15 張。這不是搬移後的路徑錯誤；供應的 Godzilla RC9_8 壓縮檔內即不存在這些原始檔。
+為避免部署後出現破圖，本修正版已放入明確標示「原始圖檔缺失」的暫代圖。要恢復真正圖片，仍需提供含這 33 張圖的舊版 Godzilla 專案或原始匯出資料。
+
+缺少的原始檔：
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_43c44af7.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_69cca1a5.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_1aa0eda8.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_28982349.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_73aa8780.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_75eb52c1.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_7d797acc.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_9ff56f3a.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_dbadd687.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_d315a100.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_f11c5633.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_17593b94.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_e0c6b8cb.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_563b8519.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_6d951e50.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_45a6aa62.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_868a1b3f.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_cb7144b4.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_754e0b67_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_1c7ae086_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_e615bd1_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_59009cea_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_7c71f414_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_e3ce2acd_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_f6b41160_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_ee78fbf9_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_a47f5a8_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_c07be390_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_c5e1e6cf_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_4339afb6_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_77370f60_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_2387a8c9_4x.png
+- godzilla-70th/assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_af99a04b_4x.png
+
+Integration Fix 2｜Excel 圖片復原
+日期：2026-07-20
+已由 Excel 原檔復原背景頁 18 張與 G 細胞頁 15 張，共 33 張。
+背景前 8 組採用 Excel「中」欄代表圖；G細胞依工作表排列順序對應。
+已重新執行本機資源引用檢查。
