@@ -1,0 +1,62 @@
+{
+  "id": "./?source=pwa",
+  "name": "DMVault MH20th",
+  "short_name": "MH20th",
+  "description": "Monster Hunter 20th Digital Monster 進化、圖鑑、關卡與背景資料庫。",
+  "start_url": "./index.html?source=pwa",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f7f5ef",
+  "theme_color": "#101820",
+  "lang": "zh-Hant-TW",
+  "categories": [
+    "reference",
+    "games",
+    "utilities"
+  ],
+  "icons": [
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "進化條件",
+      "short_name": "進化",
+      "url": "evolution/index.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    },
+    {
+      "name": "圖鑑",
+      "short_name": "圖鑑",
+      "url": "evolution/dex/index.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192"
+        }
+      ]
+    }
+  ]
+}

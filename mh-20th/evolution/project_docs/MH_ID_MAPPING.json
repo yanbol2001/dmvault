@@ -1,0 +1,326 @@
+{
+  "version": "v0.3.1",
+  "naming_rule": "official English name in snake_case; juvenile forms use _young",
+  "renamed_ids": {
+    "egg": "egg_stage2",
+    "gore_young": "gore_magala_young"
+  },
+  "count": 38,
+  "validation": {
+    "duplicate_ids": [],
+    "key_id_mismatches": [],
+    "missing_route_references": [],
+    "missing_edge_references": [],
+    "missing_stage_references": [],
+    "old_id_residue": {
+      "egg": 0,
+      "gore_young": 0
+    }
+  },
+  "monsters": [
+    {
+      "catalog_number": "1",
+      "stage": "幼年期1",
+      "zh": "蛋",
+      "en": "Egg",
+      "ja": "タマゴ",
+      "id": "egg_stage1"
+    },
+    {
+      "catalog_number": "2",
+      "stage": "幼年期2",
+      "zh": "蛋",
+      "en": "Egg",
+      "ja": "タマゴ",
+      "id": "egg_stage2"
+    },
+    {
+      "catalog_number": "3",
+      "stage": "成長期",
+      "zh": "火龍(幼體)",
+      "en": "Rathalos Juvenile",
+      "ja": "リオレウス(ヨウタイ)",
+      "id": "rathalos_young"
+    },
+    {
+      "catalog_number": "4",
+      "stage": "成長期",
+      "zh": "轟龍(幼體)",
+      "en": "Tigrex Juvenile",
+      "ja": "ティガレックス(ヨウタイ)",
+      "id": "tigrex_young"
+    },
+    {
+      "catalog_number": "5",
+      "stage": "成長期",
+      "zh": "迅龍(幼體)",
+      "en": "Nargacuga Juvenile",
+      "ja": "ナルガクルガ(ヨウタイ)",
+      "id": "nargacuga_young"
+    },
+    {
+      "catalog_number": "6",
+      "stage": "成長期",
+      "zh": "雷狼龍(幼體)",
+      "en": "Zinogre Juvenile",
+      "ja": "ジンオウガ(ヨウタイ)",
+      "id": "zinogre_young"
+    },
+    {
+      "catalog_number": "7",
+      "stage": "成長期",
+      "zh": "黑蝕龍(幼體)",
+      "en": "Gore Magala Juvenile",
+      "ja": "ゴア・マガラ(ヨウタイ)",
+      "id": "gore_magala_young"
+    },
+    {
+      "catalog_number": "8",
+      "stage": "成長期",
+      "zh": "泡狐龍(幼體)",
+      "en": "Mizutsune Juvenile",
+      "ja": "タマミツネ(ヨウタイ)",
+      "id": "mizutsune_young"
+    },
+    {
+      "catalog_number": "9",
+      "stage": "成長期",
+      "zh": "金獅子(幼體)",
+      "en": "Rajang Juvenile",
+      "ja": "ラージャン(ヨウタイ)",
+      "id": "rajang_young"
+    },
+    {
+      "catalog_number": "10",
+      "stage": "成熟期",
+      "zh": "火龍(亞種)",
+      "en": "Azure Rathalos",
+      "ja": "リオレウス亜種",
+      "id": "azure_rathalos"
+    },
+    {
+      "catalog_number": "10",
+      "stage": "成長期",
+      "zh": "奇怪龍(幼體)",
+      "en": "Khezu Juvenile",
+      "ja": "フルフル(ヨウタイ)",
+      "id": "khezu_young"
+    },
+    {
+      "catalog_number": "11",
+      "stage": "成熟期",
+      "zh": "火龍",
+      "en": "Rathalos",
+      "ja": "リオレウス",
+      "id": "rathalos"
+    },
+    {
+      "catalog_number": "12",
+      "stage": "成熟期",
+      "zh": "轟龍",
+      "en": "Tigrex",
+      "ja": "ティガレックス",
+      "id": "tigrex"
+    },
+    {
+      "catalog_number": "13",
+      "stage": "成熟期",
+      "zh": "轟龍(亞種)",
+      "en": "Brute Tigrex",
+      "ja": "ティガレックス亜種",
+      "id": "brute_tigrex"
+    },
+    {
+      "catalog_number": "14",
+      "stage": "成熟期",
+      "zh": "雷狼龍",
+      "en": "Zinogre",
+      "ja": "ジンオウガ",
+      "id": "zinogre"
+    },
+    {
+      "catalog_number": "15",
+      "stage": "成熟期",
+      "zh": "雷狼龍(亞種)",
+      "en": "Stygian Zinogre",
+      "ja": "ジンオウガ亜種",
+      "id": "stygian_zinogre"
+    },
+    {
+      "catalog_number": "16",
+      "stage": "成熟期",
+      "zh": "奇怪龍",
+      "en": "Khezu",
+      "ja": "フルフル",
+      "id": "khezu"
+    },
+    {
+      "catalog_number": "16",
+      "stage": "成熟期",
+      "zh": "迅龍",
+      "en": "Nargacuga",
+      "ja": "ナルガクルガ",
+      "id": "nargacuga"
+    },
+    {
+      "catalog_number": "17",
+      "stage": "成熟期",
+      "zh": "奇怪龍(亞種)",
+      "en": "Red Khezu",
+      "ja": "フルフル亜種",
+      "id": "red_khezu"
+    },
+    {
+      "catalog_number": "17",
+      "stage": "成熟期",
+      "zh": "迅龍(亞種)",
+      "en": "Green Nargacuga",
+      "ja": "ナルガクルガ亜種",
+      "id": "green_nargacuga"
+    },
+    {
+      "catalog_number": "18",
+      "stage": "成熟期",
+      "zh": "黑蝕龍",
+      "en": "Gore Magala",
+      "ja": "ゴア・マガラ",
+      "id": "gore_magala"
+    },
+    {
+      "catalog_number": "19",
+      "stage": "成熟期",
+      "zh": "泡狐龍",
+      "en": "Mizutsune",
+      "ja": "タマミツネ",
+      "id": "mizutsune"
+    },
+    {
+      "catalog_number": "20",
+      "stage": "成熟期",
+      "zh": "金獅子",
+      "en": "Rajang",
+      "ja": "ラージャン",
+      "id": "rajang"
+    },
+    {
+      "catalog_number": "23",
+      "stage": "完全體",
+      "zh": "黑炎王雄火龍",
+      "en": "Dreadking Rathalos",
+      "ja": "黒炎王リオレウス",
+      "id": "dreadking_rathalos"
+    },
+    {
+      "catalog_number": "24",
+      "stage": "完全體",
+      "zh": "火龍(稀少種)",
+      "en": "Silver Rathalos",
+      "ja": "リオレウス希少種",
+      "id": "silver_rathalos"
+    },
+    {
+      "catalog_number": "25",
+      "stage": "完全體",
+      "zh": "荒鉤爪轟龍",
+      "en": "Grimclaw Tigrex",
+      "ja": "荒鉤爪ティガレックス",
+      "id": "grimclaw_tigrex"
+    },
+    {
+      "catalog_number": "26",
+      "stage": "完全體",
+      "zh": "轟龍(稀少種)",
+      "en": "Molten Tigrex",
+      "ja": "ティガレックス希少種",
+      "id": "molten_tigrex"
+    },
+    {
+      "catalog_number": "27",
+      "stage": "完全體",
+      "zh": "白疾風迅龍",
+      "en": "Silverwind Nargacuga",
+      "ja": "白疾風ナルガクルガ",
+      "id": "silverwind_nargacuga"
+    },
+    {
+      "catalog_number": "28",
+      "stage": "完全體",
+      "zh": "迅龍(稀少種)",
+      "en": "Lucent Nargacuga",
+      "ja": "ナルガクルガ希少種",
+      "id": "lucent_nargacuga"
+    },
+    {
+      "catalog_number": "29",
+      "stage": "完全體",
+      "zh": "金雷公雷狼龍",
+      "en": "Thunderlord Zinogre",
+      "ja": "金雷公ジンオウガ",
+      "id": "thunderlord_zinogre"
+    },
+    {
+      "catalog_number": "30",
+      "stage": "完全體",
+      "zh": "天迴龍",
+      "en": "Shagaru Magala",
+      "ja": "シャガルマガラ",
+      "id": "shagaru_magala"
+    },
+    {
+      "catalog_number": "31",
+      "stage": "完全體",
+      "zh": "混沌黑蝕龍",
+      "en": "Chaotic Gore Magala",
+      "ja": "混沌に呻くゴア・マガラ",
+      "id": "chaotic_gore_magala"
+    },
+    {
+      "catalog_number": "32",
+      "stage": "完全體",
+      "zh": "首領泡狐龍",
+      "en": "Apex Mizutsune",
+      "ja": "ヌシ・タマミツネ",
+      "id": "apex_mizutsune"
+    },
+    {
+      "catalog_number": "33",
+      "stage": "完全體",
+      "zh": "泡狐龍(稀少種)",
+      "en": "Violet Mizutsune",
+      "ja": "タマミツネ希少種",
+      "id": "violet_mizutsune"
+    },
+    {
+      "catalog_number": "34",
+      "stage": "完全體",
+      "zh": "天眼泡狐龍",
+      "en": "Soulseer Mizutsune",
+      "ja": "天眼タマミツネ",
+      "id": "soulseer_mizutsune"
+    },
+    {
+      "catalog_number": "35",
+      "stage": "完全體",
+      "zh": "激昂金獅子",
+      "en": "Furious Rajang",
+      "ja": "激昂したラージャン",
+      "id": "furious_rajang"
+    },
+    {
+      "catalog_number": "36",
+      "stage": "究極體",
+      "zh": "雄火暴龍獸",
+      "en": "Rathalos Greymon",
+      "ja": "レウスグレイモン",
+      "id": "rathalos_greymon"
+    },
+    {
+      "catalog_number": "37",
+      "stage": "究極體",
+      "zh": "雷狼加魯魯獸",
+      "en": "Zinogre Garurumon",
+      "ja": "ジンオウガルルモン",
+      "id": "zinogre_garurumon"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+GitHub Pages deployment package
+
+Upload the CONTENTS of this folder to the repository root.
+Do not upload the outer folder itself and do not upload the ZIP as the website source.
+The .nojekyll file must also be uploaded.
