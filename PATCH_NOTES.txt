@@ -1,0 +1,7 @@
+DMVault Platform v1.0.0-dev26
+Sprint 3 / Developer Mode
+
+- 新增 diagnostics.html
+- 一鍵檢查平台完整性
+- Build 資訊與 debug=1 模式
+- 納入 PWA 離線快取

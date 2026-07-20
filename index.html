@@ -2,93 +2,129 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#111827">
-  <meta name="description" content="DMVault 玩家自製數位怪獸資料庫入口">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080b12">
+  <meta name="color-scheme" content="dark">
+  <meta name="application-name" content="DMVault">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="DMVault">
-  <title>DMVault｜Digital Monster Database</title>
-  <link rel="manifest" href="./manifest.webmanifest">
-  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
-  <link rel="icon" href="./icons/icon-192.png">
-  <link rel="stylesheet" href="./core/dmvault-core.css">
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CL1PZNMQTZ"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-CL1PZNMQTZ', { page_title: 'DMVault', project_name: 'hub' });
-  </script>
+  <meta name="description" content="DMVault 怪獸對打機資料庫與育成攻略平台">
+  <title>DMVault｜怪獸對打機資料庫</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="core/css/dmvault-core.css">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <script src="core/js/config.js"></script>
+  <script src="core/js/core.js"></script>
+  <script src="core/js/preferences.js"></script>
+  <script defer src="core/js/analytics.js"></script>
+  <script defer src="core/js/data.js"></script>
+  <script defer src="core/js/ui.js"></script>
+  <script defer src="core/js/diagnostics.js"></script>
+  <script defer src="core/js/pwa.js"></script>
 </head>
 <body>
+  <noscript><div class="noscript-warning">DMVault 需要啟用 JavaScript 才能載入作品與更新資料。</div></noscript>
+  <a class="skip-link" href="#main-content">跳至主要內容</a>
   <header class="site-header">
     <a class="brand" href="./" aria-label="DMVault 首頁">
-      <span class="brand-mark">DM</span>
-      <span><strong>DMVault</strong><small>DIGITAL MONSTER DATABASE</small></span>
+      <span class="brand-mark">DV</span>
+      <span><strong>DMVault</strong><small>怪獸對打機資料庫</small></span>
     </a>
-    <button class="install-button" id="installButton" type="button" hidden>安裝 DMVault</button>
+    <div class="header-actions">
+      <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true">☰</span><span class="menu-label">選單</span></button>
+      <nav class="main-nav" id="main-nav" aria-label="主要導覽">
+        <a href="#overview">總覽</a>
+        <a href="#projects">作品</a>
+        <a href="#updates">更新</a>
+        <a href="#about">關於</a>
+      </nav>
+      <button class="install-button" id="install-app" type="button" hidden>安裝 App</button>
+    </div>
   </header>
 
-  <main>
+  <main id="main-content">
+    <div class="data-fallback-notice" id="data-fallback-notice" role="status" hidden>目前使用最近一次成功載入的資料；恢復連線後可重新整理取得最新版。</div>
     <section class="hero">
-      <div class="hero-copy">
-        <span class="eyebrow">PLAYER-MADE DATABASE</span>
-        <h1>所有作品，<br>集中在一個入口。</h1>
-        <p>DMVault 整合進化、圖鑑、關卡、背景與培育資訊。各作品仍可獨立維護，並逐步共用 PWA、統計與介面核心。</p>
-        <div class="hero-actions">
-          <a class="primary-action" href="#projects">選擇作品</a>
-          <button class="secondary-action" id="iosGuideButton" type="button">安裝方式</button>
+      <p class="eyebrow">Digital Monster Database</p>
+      <h1>DMVault</h1>
+      <p class="hero-copy">整合各系列怪獸對打機的進化、圖鑑、關卡與培育資料，使用一致的介面與版本規格持續更新。</p>
+      <div class="platform-meta" aria-label="平台版本資訊">
+        <span class="meta-pill meta-platform"><span class="meta-icon" aria-hidden="true">◆</span><strong id="platform-version">Platform v1.0.0-dev26</strong></span>
+        <span class="meta-pill meta-date"><span class="meta-icon" aria-hidden="true">▣</span><strong>更新日期</strong><time id="platform-updated" datetime="2026-07-20">2026-07-20</time></span>
+      </div>
+    </section>
+
+    <section class="section overview-section" id="overview">
+      <div class="section-heading">
+        <div><p class="section-kicker">Overview</p><h2>平台總覽</h2></div>
+        <p>目前收錄狀態與平台資訊。</p>
+      </div>
+      <div class="overview-grid" aria-live="polite">
+        <article class="overview-card"><span class="overview-label">收錄作品</span><strong id="stat-total">—</strong><small>個作品</small></article>
+        <article class="overview-card"><span class="overview-label">目前可用</span><strong id="stat-available">—</strong><small>個作品</small></article>
+        <article class="overview-card"><span class="overview-label">最後更新</span><strong class="overview-date" id="stat-updated">—</strong><small>平台資料</small></article>
+        <article class="overview-card"><span class="overview-label">平台版本</span><strong class="overview-version" id="stat-version">—</strong><small>Development</small></article>
+      </div>
+    </section>
+
+
+    <section class="section app-section" id="app-status">
+      <div class="app-card">
+        <div>
+          <p class="section-kicker">Web App</p>
+          <h2>可安裝的網頁 App</h2>
+          <p id="app-status-copy">支援加入桌面、離線開啟、版本檢查與離線資料修復。</p>
+        </div>
+        <div class="app-control-panel">
+          <div class="app-status-list" aria-live="polite">
+            <span class="status-chip" id="network-status"><span class="status-dot" aria-hidden="true"></span>網路狀態確認中</span>
+            <span class="status-chip" id="install-status">瀏覽器安裝支援確認中</span>
+            <span class="status-chip" id="cache-status">離線資料確認中</span>
+            <span class="status-chip" id="version-status">版本同步確認中</span>
+          </div>
+          <div class="app-actions">
+            <button class="secondary-button compact-button" id="check-update" type="button">檢查更新</button>
+            <button class="secondary-button compact-button" id="refresh-offline" type="button">重新下載離線資料</button>
+            <span class="update-check-note" id="update-check-note" aria-live="polite">尚未手動檢查</span>
+          </div>
+          <p class="ios-install-note" id="ios-install-note" hidden>iPhone／iPad：點選瀏覽器的分享按鈕，再選擇「加入主畫面」。</p>
         </div>
       </div>
-      <div class="vault-emblem" aria-hidden="true"><span>DM</span><strong>VAULT</strong><small>EST. 2026</small></div>
     </section>
 
     <section class="section" id="projects">
       <div class="section-heading">
-        <div><span>PROJECTS</span><h2>作品資料庫</h2></div>
-        <p>從同一個入口前往 MH、Pendulum COLOR、哥吉拉與後續作品。</p>
+        <div><p class="section-kicker">Library</p><h2>作品資料庫</h2></div>
+        <p id="project-summary">作品資料載入中</p>
       </div>
-      <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+      <div class="project-grid" id="project-grid" aria-live="polite"></div>
     </section>
 
-    <section class="section dark-panel">
-      <div class="section-heading"><div><span>DMVAULT CORE</span><h2>共用基礎架構</h2></div></div>
-      <div class="feature-grid">
-        <article><strong>01</strong><h3>單一入口</h3><p>所有作品從 DMVault 首頁統一進入。</p></article>
-        <article><strong>02</strong><h3>統一統計</h3><p>使用同一組 GA4，仍可區分各作品與頁面。</p></article>
-        <article><strong>03</strong><h3>PWA 與離線</h3><p>支援 Android、iOS、Windows 安裝與首頁離線。</p></article>
-        <article><strong>04</strong><h3>容易擴充</h3><p>新增作品只需更新專案設定，不必重做首頁。</p></article>
+    <section class="section" id="updates">
+      <div class="section-heading">
+        <div><p class="section-kicker">Changelog</p><h2>最新更新</h2></div>
+        <p id="update-summary">顯示最近更新。</p>
       </div>
+      <div class="update-list" id="update-list" aria-live="polite"></div>
+      <div class="update-actions"><button class="secondary-button" id="toggle-updates" type="button" hidden>顯示全部更新</button></div>
     </section>
 
-    <section class="section compact-section">
-      <div class="section-heading"><div><span>ABOUT</span><h2>關於 DMVault</h2></div></div>
-      <div class="about-grid">
-        <article><small>網站製作</small><h3>紫硯</h3><p>玩家自製資料整理、介面設計與功能整合。</p></article>
-        <article><small>平台版本</small><h3>Core V1.0</h3><p>正式入口、PWA、GA4 與可擴充專案清單。</p></article>
-        <article><small>資料聲明</small><h3>非官方網站</h3><p>相關名稱、圖片與商標均屬原權利人所有。</p></article>
+    <section class="section" id="about">
+      <div class="about-card">
+        <div class="section-heading"><div><p class="section-kicker">About</p><h2>關於 DMVault</h2></div></div>
+        <p>DMVault 是以方便查閱與實際遊玩為核心的怪獸對打機攻略平台，整合各系列的進化、圖鑑、關卡與培育資料，並以一致的介面與版本規格持續更新。</p>
       </div>
     </section>
   </main>
 
-  <footer><strong>DMVault · Digital Monster Database</strong><span>Core V1.0 · 2026-07-20</span></footer>
+  <footer class="site-footer">
+    <div><strong>DMVault</strong><span>怪獸對打機資料庫</span></div>
+    <div class="footer-meta"><span>作者：紫硯</span><span id="footer-project-count">作品：—</span><span id="footer-version">Platform v1.0.0-dev26</span><a href="diagnostics.html">系統資訊</a><span>© 2026 DMVault</span></div>
+  </footer>
 
-  <div class="toast" id="updateToast" hidden><span>DMVault 已有新版。</span><button id="reloadButton" type="button">立即更新</button></div>
-
-  <dialog id="installDialog">
-    <button class="dialog-close" id="dialogClose" type="button" aria-label="關閉">×</button>
-    <h2>安裝到裝置</h2>
-    <div class="install-steps">
-      <section><strong>Android／Chrome</strong><p>右上角選單 →「安裝應用程式」或「加入主畫面」。</p></section>
-      <section><strong>iPhone／Safari</strong><p>下方分享按鈕 →「加入主畫面」→「加入」。</p></section>
-      <section><strong>Windows／Chrome、Edge</strong><p>點網址列右側的安裝圖示。</p></section>
-    </div>
-  </dialog>
-
-  <script src="./core/config.js"></script>
-  <script src="./core/analytics.js"></script>
-  <script src="./core/ui.js"></script>
-  <script src="./core/pwa.js"></script>
+  <aside class="update-bar" id="update-bar" hidden><span id="update-message">DMVault 有新版本可用</span><button id="apply-update" type="button">立即更新</button></aside>
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="回到頁面頂端" hidden>↑</button>
+  <div class="toast" id="app-toast" role="status" aria-live="polite" hidden></div>
 </body>
 </html>

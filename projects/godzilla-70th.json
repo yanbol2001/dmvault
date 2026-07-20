@@ -1,0 +1,17 @@
+{
+  "id": "godzilla-70th",
+  "name": "Godzilla 70th",
+  "subtitle": "哥吉拉 70 週年聯名",
+  "description": "怪獸圖鑑、進化條件、關卡、背景、G 細胞與隨機遭遇。",
+  "contentVersion": "1.0.0",
+  "updated": "2026-07-20",
+  "status": "available",
+  "isNew": true,
+  "tags": [
+    "進化",
+    "圖鑑",
+    "G 細胞",
+    "隨機遭遇"
+  ],
+  "url": "https://yanbol2001.github.io/DMVault_Godzilla70th/"
+}

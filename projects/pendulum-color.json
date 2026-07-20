@@ -1,0 +1,17 @@
+{
+  "id": "pendulum-color",
+  "name": "Pendulum COLOR",
+  "subtitle": "V0～V5 完成｜後續補充",
+  "description": "各版本圖鑑、進化路線、技能樹、關卡與培育工具。",
+  "contentVersion": "1.0.0",
+  "updated": "2026-07-20",
+  "status": "available",
+  "isNew": true,
+  "tags": [
+    "V0～V5",
+    "技能樹",
+    "計時器",
+    "已養過"
+  ],
+  "url": "https://yanbol2001.github.io/DMVault-Pendulum-COLOR/"
+}

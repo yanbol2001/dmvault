@@ -1,42 +1,9 @@
-[
-  {
-    "id": "mh20th",
-    "code": "MH",
-    "subtitle": "MONSTER HUNTER 20th",
-    "title": "魔物獵人 20週年",
-    "description": "進化條件、圖鑑、技能樹、關卡、背景與培育工具。",
-    "url": "https://yanbol2001.github.io/DMVault_MH20th/",
-    "theme": "mh",
-    "status": "live"
-  },
-  {
-    "id": "pendulum-color",
-    "code": "PC",
-    "subtitle": "PENDULUM COLOR",
-    "title": "數碼寶貝彩色超代",
-    "description": "V0～V5 圖鑑、進化、技能樹、關卡與版本資料。",
-    "url": "https://yanbol2001.github.io/DMVault-Pendulum-COLOR/?version=v1#view=home",
-    "theme": "pendulum",
-    "status": "updating"
-  },
-  {
-    "id": "godzilla70th",
-    "code": "GZ",
-    "subtitle": "GODZILLA 70th",
-    "title": "哥吉拉 70週年",
-    "description": "怪獸圖鑑、進化路線、關卡與培育資訊整合。",
-    "url": "https://yanbol2001.github.io/DMVault_Godzilla70th/",
-    "theme": "godzilla",
-    "status": "updating"
-  },
-  {
-    "id": "future",
-    "code": "＋",
-    "subtitle": "FUTURE PROJECTS",
-    "title": "未來作品",
-    "description": "新資料庫可直接加入 DMVault，不必重新設計入口。",
-    "url": "",
-    "theme": "future",
-    "status": "planned"
-  }
-]
+{
+  "schemaVersion": 1,
+  "platformVersion": "1.0.0-dev26",
+  "projects": [
+    "projects/mh-20th.json",
+    "projects/pendulum-color.json",
+    "projects/godzilla-70th.json"
+  ]
+}

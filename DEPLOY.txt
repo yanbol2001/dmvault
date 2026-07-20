@@ -1,26 +1,17 @@
-DMVault Core V1.0 部署方式
+DMVault GitHub Pages 部署
 
-Repository：DMVault
-正式網址：https://yanbol2001.github.io/DMVault/
+Repository:
+DMVault
 
-1. 解壓縮本檔案。
-2. 將資料夾「裡面的所有檔案」上傳到 DMVault Repository 根目錄。
-3. Repository 根目錄需直接看到：
-   index.html
-   manifest.webmanifest
-   service-worker.js
-   .nojekyll
-   core/
-   projects/
-   icons/
-4. GitHub：Settings → Pages。
-5. Source 選 Deploy from a branch。
-6. Branch 選 main，Folder 選 / (root)，按 Save。
-7. 等 Actions 部署成功後開啟：
-   https://yanbol2001.github.io/DMVault/
+網址:
+https://yanbol2001.github.io/DMVault/
 
-GA4 Measurement ID：G-CL1PZNMQTZ
+上傳方式:
+1. 使用 VS Code 編輯。
+2. 使用 GitHub Desktop Commit。
+3. Push origin。
+4. GitHub > Settings > Pages > Deploy from a branch。
+5. Branch 選 main，資料夾選 /(root)。
 
-注意：
-- 這版已針對 /DMVault/ 子路徑設定 manifest、scope 與 start_url。
-- 不要把外層資料夾本身上傳，只上傳裡面的內容。
+本機預覽:
+雙擊 PREVIEW_LOCAL.bat

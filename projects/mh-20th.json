@@ -1,0 +1,17 @@
+{
+  "id": "mh-20th",
+  "name": "Monster Hunter 20th",
+  "subtitle": "魔物獵人 20 週年聯名",
+  "description": "進化條件、圖鑑、關卡、背景與基本操作資料。",
+  "contentVersion": "1.0.0",
+  "updated": "2026-07-20",
+  "status": "available",
+  "isNew": false,
+  "tags": [
+    "進化",
+    "圖鑑",
+    "關卡",
+    "背景"
+  ],
+  "url": "https://yanbol2001.github.io/DMVault_MH20th/"
+}

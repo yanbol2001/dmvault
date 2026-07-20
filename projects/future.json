@@ -1,0 +1,14 @@
+{
+  "id": "future",
+  "name": "Future Project",
+  "subtitle": "下一個作品",
+  "description": "日後新增作品時，只需加入一份作品 JSON，即可自動顯示於首頁。",
+  "contentVersion": "0.0.0",
+  "updated": "",
+  "status": "planned",
+  "isNew": false,
+  "tags": [
+    "預留"
+  ],
+  "url": ""
+}

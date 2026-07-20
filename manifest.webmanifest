@@ -1,23 +1,88 @@
 {
-  "id": "/DMVault/",
-  "name": "DMVault",
+  "name": "DMVault｜怪獸對打機資料庫",
   "short_name": "DMVault",
-  "description": "DMVault 玩家自製數位怪獸資料庫入口",
+  "description": "怪獸對打機資料庫與育成攻略平台",
   "lang": "zh-Hant",
-  "start_url": "/DMVault/?source=pwa",
-  "scope": "/DMVault/",
+  "start_url": "./",
+  "scope": "./",
   "display": "standalone",
-  "orientation": "any",
-  "background_color": "#080d16",
-  "theme_color": "#111827",
+  "background_color": "#080b12",
+  "theme_color": "#080b12",
   "icons": [
-    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
-    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
-    {"src":"./icons/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
   ],
+  "id": "./",
+  "orientation": "any",
+  "categories": [
+    "education",
+    "utilities"
+  ],
+  "prefer_related_applications": false,
   "shortcuts": [
-    {"name":"Monster Hunter 20th","short_name":"MH20th","url":"https://yanbol2001.github.io/DMVault_MH20th/"},
-    {"name":"Pendulum COLOR","short_name":"彩超","url":"https://yanbol2001.github.io/DMVault-Pendulum-COLOR/?version=v1#view=home"},
-    {"name":"Godzilla 70th","short_name":"哥吉拉","url":"https://yanbol2001.github.io/DMVault_Godzilla70th/"}
-  ]
+    {
+      "name": "作品資料庫",
+      "short_name": "作品",
+      "url": "./#projects",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "最新更新",
+      "short_name": "更新",
+      "url": "./#updates",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "系統資訊",
+      "short_name": "系統資訊",
+      "description": "檢查平台版本與核心資料完整性",
+      "url": "diagnostics.html",
+      "icons": [
+        {
+          "src": "icons/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "display_override": [
+    "window-controls-overlay",
+    "standalone",
+    "minimal-ui"
+  ],
+  "launch_handler": {
+    "client_mode": [
+      "navigate-existing",
+      "auto"
+    ]
+  }
 }
