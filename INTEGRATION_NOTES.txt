@@ -1,0 +1,18 @@
+DMVault 整合版 v1
+
+目錄：
+- mh-20th/
+- pendulum-color/
+- godzilla-70th/
+
+已處理：
+1. 平台首頁三個作品入口改為相對路徑。
+2. 三個作品資料夾統一為全小寫加連字號。
+3. 移除舊的獨立 GitHub Pages 專案網址。
+4. 跨作品連結改為同一個 dmvault 儲存庫內的相對路徑。
+5. 平台部署網址文件改為 https://yanbol2001.github.io/dmvault/。
+6. 保留 Monster Hunter 專案自己的 PWA scope，放入子資料夾後仍以 ./ 為基準。
+
+部署：
+將本壓縮檔內所有內容直接覆蓋到 dmvault Repository 根目錄，Commit 後 Push origin。
+GitHub Pages 網址： https://yanbol2001.github.io/dmvault/

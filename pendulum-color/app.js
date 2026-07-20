@@ -269,10 +269,10 @@ function renderHome(){
     <section class="about-section">
       <h2>DMVault 系列</h2>
       <div class="project-link-grid">
-        <a class="project-link-card" href="https://yanbol2001.github.io/DMVault_MH20th/" target="_blank" rel="noopener noreferrer">
+        <a class="project-link-card" href="../mh-20th/" target="_blank" rel="noopener noreferrer">
           <span>已公開</span><strong>DMVault MH20th</strong><small>魔物獵人攻略 ↗</small>
         </a>
-        <a class="project-link-card" href="https://yanbol2001.github.io/DMVault_Godzilla70th/" target="_blank" rel="noopener noreferrer">
+        <a class="project-link-card" href="../godzilla-70th/" target="_blank" rel="noopener noreferrer">
           <span>已公開</span><strong>DMVault Godzilla 70th</strong><small>哥吉拉攻略 ↗</small>
         </a>
         <div class="project-link-card current"><span>目前網站</span><strong>DMVault Pendulum COLOR</strong><small>V0～V5</small></div>
@@ -361,7 +361,7 @@ function renderOverview(){
     <section class="home-panel home-projects">
       <div class="home-section-heading"><div><span>DMVAULT PROJECTS</span><h2>其他作品</h2></div><p>集中放置 MH 與之後完成的攻略工具。</p></div>
       <div class="home-project-grid">
-        <a class="home-project-card available" href="https://yanbol2001.github.io/DMVault_MH20th/" target="_blank" rel="noopener noreferrer">
+        <a class="home-project-card available" href="../mh-20th/" target="_blank" rel="noopener noreferrer">
           <span class="project-status">已公開</span><strong>DMVault MH 20th</strong><p>魔物獵人 20 週年聯名對打機攻略工具。</p><small>開啟作品 ↗</small>
         </a>
         <div class="home-project-card future"><span class="project-status">COMING NEXT</span><strong>更多 DMVault 作品</strong><p>哥吉拉與後續系列完成後，將由此處加入連結。</p><small>預留位置</small></div>

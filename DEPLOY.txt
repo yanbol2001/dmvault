@@ -4,7 +4,7 @@ Repository:
 DMVault
 
 網址:
-https://yanbol2001.github.io/DMVault/
+https://yanbol2001.github.io/dmvault/
 
 上傳方式:
 1. 使用 VS Code 編輯。
