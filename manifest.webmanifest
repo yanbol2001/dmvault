@@ -1,0 +1,23 @@
+{
+  "id": "/DMVault/",
+  "name": "DMVault",
+  "short_name": "DMVault",
+  "description": "DMVault 玩家自製數位怪獸資料庫入口",
+  "lang": "zh-Hant",
+  "start_url": "/DMVault/?source=pwa",
+  "scope": "/DMVault/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#080d16",
+  "theme_color": "#111827",
+  "icons": [
+    {"src":"./icons/icon-192.png","sizes":"192x192","type":"image/png","purpose":"any"},
+    {"src":"./icons/icon-512.png","sizes":"512x512","type":"image/png","purpose":"any"},
+    {"src":"./icons/icon-maskable-512.png","sizes":"512x512","type":"image/png","purpose":"maskable"}
+  ],
+  "shortcuts": [
+    {"name":"Monster Hunter 20th","short_name":"MH20th","url":"https://yanbol2001.github.io/DMVault_MH20th/"},
+    {"name":"Pendulum COLOR","short_name":"彩超","url":"https://yanbol2001.github.io/DMVault-Pendulum-COLOR/?version=v1#view=home"},
+    {"name":"Godzilla 70th","short_name":"哥吉拉","url":"https://yanbol2001.github.io/DMVault_Godzilla70th/"}
+  ]
+}

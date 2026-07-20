@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <meta name="description" content="DMVault 玩家自製數位怪獸資料庫入口">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="DMVault">
+  <title>DMVault｜Digital Monster Database</title>
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icons/apple-touch-icon.png">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./core/dmvault-core.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CL1PZNMQTZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-CL1PZNMQTZ', { page_title: 'DMVault', project_name: 'hub' });
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="./" aria-label="DMVault 首頁">
+      <span class="brand-mark">DM</span>
+      <span><strong>DMVault</strong><small>DIGITAL MONSTER DATABASE</small></span>
+    </a>
+    <button class="install-button" id="installButton" type="button" hidden>安裝 DMVault</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">PLAYER-MADE DATABASE</span>
+        <h1>所有作品，<br>集中在一個入口。</h1>
+        <p>DMVault 整合進化、圖鑑、關卡、背景與培育資訊。各作品仍可獨立維護，並逐步共用 PWA、統計與介面核心。</p>
+        <div class="hero-actions">
+          <a class="primary-action" href="#projects">選擇作品</a>
+          <button class="secondary-action" id="iosGuideButton" type="button">安裝方式</button>
+        </div>
+      </div>
+      <div class="vault-emblem" aria-hidden="true"><span>DM</span><strong>VAULT</strong><small>EST. 2026</small></div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading">
+        <div><span>PROJECTS</span><h2>作品資料庫</h2></div>
+        <p>從同一個入口前往 MH、Pendulum COLOR、哥吉拉與後續作品。</p>
+      </div>
+      <div class="project-grid" id="projectGrid" aria-live="polite"></div>
+    </section>
+
+    <section class="section dark-panel">
+      <div class="section-heading"><div><span>DMVAULT CORE</span><h2>共用基礎架構</h2></div></div>
+      <div class="feature-grid">
+        <article><strong>01</strong><h3>單一入口</h3><p>所有作品從 DMVault 首頁統一進入。</p></article>
+        <article><strong>02</strong><h3>統一統計</h3><p>使用同一組 GA4，仍可區分各作品與頁面。</p></article>
+        <article><strong>03</strong><h3>PWA 與離線</h3><p>支援 Android、iOS、Windows 安裝與首頁離線。</p></article>
+        <article><strong>04</strong><h3>容易擴充</h3><p>新增作品只需更新專案設定，不必重做首頁。</p></article>
+      </div>
+    </section>
+
+    <section class="section compact-section">
+      <div class="section-heading"><div><span>ABOUT</span><h2>關於 DMVault</h2></div></div>
+      <div class="about-grid">
+        <article><small>網站製作</small><h3>紫硯</h3><p>玩家自製資料整理、介面設計與功能整合。</p></article>
+        <article><small>平台版本</small><h3>Core V1.0</h3><p>正式入口、PWA、GA4 與可擴充專案清單。</p></article>
+        <article><small>資料聲明</small><h3>非官方網站</h3><p>相關名稱、圖片與商標均屬原權利人所有。</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer><strong>DMVault · Digital Monster Database</strong><span>Core V1.0 · 2026-07-20</span></footer>
+
+  <div class="toast" id="updateToast" hidden><span>DMVault 已有新版。</span><button id="reloadButton" type="button">立即更新</button></div>
+
+  <dialog id="installDialog">
+    <button class="dialog-close" id="dialogClose" type="button" aria-label="關閉">×</button>
+    <h2>安裝到裝置</h2>
+    <div class="install-steps">
+      <section><strong>Android／Chrome</strong><p>右上角選單 →「安裝應用程式」或「加入主畫面」。</p></section>
+      <section><strong>iPhone／Safari</strong><p>下方分享按鈕 →「加入主畫面」→「加入」。</p></section>
+      <section><strong>Windows／Chrome、Edge</strong><p>點網址列右側的安裝圖示。</p></section>
+    </div>
+  </dialog>
+
+  <script src="./core/config.js"></script>
+  <script src="./core/analytics.js"></script>
+  <script src="./core/ui.js"></script>
+  <script src="./core/pwa.js"></script>
+</body>
+</html>
