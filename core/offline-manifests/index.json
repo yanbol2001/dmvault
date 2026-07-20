@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "generatedAt": "2026-07-20T09:06:00Z",
+  "projects": [
+    {
+      "id": "mh-20th",
+      "name": "Monster Hunter 20th",
+      "version": "V7.4.0",
+      "fileCount": 74,
+      "estimatedBytes": 960276,
+      "manifest": "./core/offline-manifests/mh-20th.json"
+    },
+    {
+      "id": "pendulum-color",
+      "name": "Pendulum COLOR",
+      "version": "pkg-90a9ee18bed4",
+      "fileCount": 470,
+      "estimatedBytes": 697300,
+      "manifest": "./core/offline-manifests/pendulum-color.json"
+    },
+    {
+      "id": "godzilla-70th",
+      "name": "Godzilla 70th",
+      "version": "V3.0-offline1",
+      "fileCount": 219,
+      "estimatedBytes": 4661019,
+      "manifest": "./core/offline-manifests/godzilla-70th.json"
+    }
+  ]
+}

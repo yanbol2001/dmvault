@@ -1,0 +1,18 @@
+DMVault Offline Package v1 — Final validation build
+Generated: 2026-07-20
+
+Final-stage work:
+- Validated every offline manifest entry against the packaged site.
+- Fixed Godzilla asset filenames containing URL-reserved # characters; these are now percent-encoded so the browser downloads the actual image instead of treating the filename as a URL fragment.
+- Bumped the Godzilla offline package version to V3.0-offline1 so existing clients can detect and install the corrected package.
+- Checked JavaScript syntax across the full platform.
+- Verified all project manifests contain no missing local resources.
+- Updated the Service Worker cache version to activate the final build cleanly.
+
+Offline package counts:
+- Monster Hunter 20th: 74 files
+- Pendulum COLOR: 470 files
+- Godzilla 70th: 219 files
+
+Deployment:
+Replace the contents of the GitHub repository with the contents of the dmvault folder, commit, and push. After GitHub Pages updates, open DMVault online once, then use the homepage Offline Library to download each project. Test with airplane mode only after a package reports completion.

@@ -1,0 +1,21 @@
+DMVault Offline Package v1 — Part 2 UI
+Generated: 2026-07-20
+
+Completed:
+- Added an Offline Library section to the platform homepage.
+- Added independent download/update/delete controls for all three projects.
+- Added live file-count and percentage progress.
+- Added installed/update/error states and version display.
+- Added browser storage usage display when supported.
+- Redirected the old “重新下載離線資料” control to the new Offline Library.
+- Added mobile layout and accessible progress markup.
+- Added analytics events for offline-package actions.
+- Added the new UI resources to the platform core cache.
+
+Files added:
+- core/offline-ui.js
+- core/offline-ui.css
+
+Files updated:
+- index.html
+- service-worker.js

@@ -12,6 +12,7 @@
   <title>DMVault｜怪獸對打機資料庫</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="core/css/dmvault-core.css">
+  <link rel="stylesheet" href="core/offline-ui.css">
   <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icons/icon-192.png">
   <script src="core/js/config.js"></script>
@@ -21,6 +22,8 @@
   <script defer src="core/js/ui.js"></script>
   <script defer src="core/js/diagnostics.js"></script>
   <script defer src="core/js/pwa.js"></script>
+  <script defer src="core/offline-manager.js"></script>
+  <script defer src="core/offline-ui.js"></script>
   <script defer src="core/analytics.js"></script>
 </head>
 <body>
@@ -37,6 +40,7 @@
         <a href="#overview">總覽</a>
         <a href="#projects">作品</a>
         <a href="#updates">更新</a>
+        <a href="#offline-data">離線</a>
         <a href="#about">關於</a>
       </nav>
       <button class="install-button" id="install-app" type="button" hidden>安裝 App</button>
@@ -89,6 +93,22 @@
             <span class="update-check-note" id="update-check-note" aria-live="polite">尚未手動檢查</span>
           </div>
           <p class="ios-install-note" id="ios-install-note" hidden>iPhone／iPad：點選瀏覽器的分享按鈕，再選擇「加入主畫面」。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section offline-center" id="offline-data">
+      <div class="section-heading">
+        <div><p class="section-kicker">Offline Library</p><h2>離線資料</h2></div>
+        <p>下載完成後，沒開過的頁面與圖片也能離線使用。</p>
+      </div>
+      <div class="offline-panel">
+        <div class="offline-toolbar">
+          <p>每個作品可獨立下載、更新或刪除；下載途中失敗不會破壞原本已安裝的版本。</p>
+          <span class="offline-storage" id="offline-storage">儲存空間確認中</span>
+        </div>
+        <div class="offline-grid" id="offline-project-grid" aria-live="polite">
+          <div class="offline-empty">離線資料狀態載入中…</div>
         </div>
       </div>
     </section>
