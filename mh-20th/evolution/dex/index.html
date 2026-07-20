@@ -152,4 +152,5 @@ function applySearch(){let q=search.value.trim().toLowerCase();document.querySel
 function focusFromHash(){let m=location.hash.match(/monster=([^&]+)/);if(!m)return;let id=decodeURIComponent(m[1]),n=document.getElementById('node-'+id),p=D.positions[id];if(!n||!p)return;document.querySelectorAll('.node.focused').forEach(x=>x.classList.remove('focused'));n.classList.add('focused');scale=Math.max(scale,1);tx=viewport.clientWidth/2-p[0]*scale;ty=viewport.clientHeight/2-p[1]*scale;setT();setTimeout(()=>n.classList.remove('focused'),2200)}
 window.addEventListener('hashchange',focusFromHash);window.addEventListener('storage',render);
 render();setTimeout(()=>{defaultView();focusFromHash()},60);</script>
+<script src="../../../core/dmvault-nav.js" data-dmvault-root="../../../"></script>
 </body></html>

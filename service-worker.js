@@ -5,7 +5,9 @@ const CACHE_META_KEY = "./__dmvault_cache_meta__";
 const CACHE_SCHEMA = 2;
 const RUNTIME_CACHE_LIMIT = 60;
 const CORE_FILES = [
-  "./", "./index.html", "./diagnostics.html", "./offline.html", "./manifest.webmanifest",
+  "./", "./index.html",
+  "./core/dmvault-nav.css",
+  "./core/dmvault-nav.js", "./diagnostics.html", "./offline.html", "./manifest.webmanifest",
   "./core/css/dmvault-core.css", "./core/js/config.js", "./core/js/core.js", "./core/js/preferences.js", "./core/js/analytics.js", "./core/js/data.js", "./core/js/diagnostics.js", "./core/js/ui.js", "./core/js/pwa.js",
   "./projects/index.json", "./projects/updates.json", "./projects/mh-20th.json", "./projects/pendulum-color.json", "./projects/godzilla-70th.json",
   "./icons/icon.svg", "./icons/icon-192.png", "./icons/icon-512.png"

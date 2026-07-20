@@ -16,3 +16,5 @@ DMVault 整合版 v1
 部署：
 將本壓縮檔內所有內容直接覆蓋到 dmvault Repository 根目錄，Commit 後 Push origin。
 GitHub Pages 網址： https://yanbol2001.github.io/dmvault/
+
+共用導覽列更新：所有三個專案內的 HTML 頁面已加入固定式 DMVault 導覽列，手機可左右滑動，並自動標示目前專案。

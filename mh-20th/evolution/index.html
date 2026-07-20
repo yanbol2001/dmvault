@@ -329,4 +329,5 @@ function focusEvolutionFromHash(){
 }
 window.addEventListener('hashchange',focusEvolutionFromHash);
 window.addEventListener('storage',()=>{render();if(modal.classList.contains('open'))drawDex()});if(searchInput)searchInput.oninput=render;window.onresize=()=>modal.classList.contains('open')&&lines();render();setTimeout(focusEvolutionFromHash,100);
-</script></body></html>
+</script><script src="../../core/dmvault-nav.js" data-dmvault-root="../../"></script>
+</body></html>

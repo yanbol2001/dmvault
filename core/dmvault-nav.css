@@ -1,0 +1,66 @@
+/* DMVault shared project navigation */
+:root { --dmvault-nav-height: 46px; }
+.dmvault-platform-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  min-height: var(--dmvault-nav-height);
+  padding: 6px max(10px, env(safe-area-inset-right)) 6px max(10px, env(safe-area-inset-left));
+  box-sizing: border-box;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+  background: rgba(15, 18, 25, .94);
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 5px 18px rgba(0,0,0,.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+.dmvault-platform-nav::-webkit-scrollbar { display: none; }
+.dmvault-platform-nav a {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 999px;
+  color: rgba(255,255,255,.82);
+  background: rgba(255,255,255,.055);
+  font: 600 13px/1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background .16s ease, border-color .16s ease, color .16s ease, transform .16s ease;
+}
+.dmvault-platform-nav a:hover,
+.dmvault-platform-nav a:focus-visible {
+  color: #fff;
+  background: rgba(255,255,255,.12);
+  border-color: rgba(255,255,255,.28);
+  outline: none;
+}
+.dmvault-platform-nav a:active { transform: scale(.98); }
+.dmvault-platform-nav a[aria-current="page"] {
+  color: #fff;
+  background: rgba(129, 92, 246, .34);
+  border-color: rgba(167, 139, 250, .78);
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.06);
+}
+.dmvault-platform-nav .dmvault-home::before {
+  content: "⌂";
+  margin-right: 6px;
+  font-size: 16px;
+  line-height: 1;
+}
+@media (max-width: 560px) {
+  .dmvault-platform-nav { gap: 5px; padding-top: 6px; padding-bottom: 6px; }
+  .dmvault-platform-nav a { min-height: 32px; padding: 0 10px; font-size: 12px; }
+}
+@media (display-mode: standalone) {
+  .dmvault-platform-nav { padding-top: max(6px, env(safe-area-inset-top)); }
+}
