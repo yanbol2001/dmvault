@@ -1,0 +1,261 @@
+/* DMVault shared cultivation component v1 */
+.route-column{position:relative;min-width:0}
+.route-owned-toggle{position:absolute;z-index:8;top:8px;right:8px;width:34px;height:34px;border:2px solid rgba(72,53,83,.55);border-radius:7px;background:#fff;display:grid;place-items:center;cursor:pointer;box-shadow:0 2px 5px rgba(0,0,0,.22);transition:.18s ease}
+.route-owned-toggle input{position:absolute;opacity:0;pointer-events:none}
+.route-owned-toggle span{font-size:0;color:transparent;line-height:1}
+.route-owned-toggle input:checked+span{font-size:24px;color:#fff;font-weight:900}
+.route-owned-toggle:has(input:checked){background:#1b9b59;border-color:#117442;box-shadow:0 0 0 3px rgba(27,155,89,.18)}
+.route-owned-toggle:hover{transform:translateY(-1px)}
+.route-column.is-owned{box-shadow:inset 0 0 0 3px rgba(27,155,89,.38)}
+.route-care{margin-top:auto;padding:8px;background:linear-gradient(180deg,#f6e8ed,#e6ccd5);border-top:1px solid rgba(80,42,61,.22)}
+.care-tools{display:grid;gap:6px}
+.care-actions{display:grid;grid-template-columns:1fr;gap:6px;align-items:stretch}
+.care-start{min-height:42px;width:100%;border:1px solid #4b2e3b;border-radius:8px;background:linear-gradient(#fff7fa,#ead2db);font-weight:800;font-size:17px;cursor:pointer;color:#2b1720}
+.care-start:hover{filter:brightness(.98);transform:translateY(-1px)}
+.care-countdown{min-height:42px;border:1px solid #553343;border-radius:8px;background:#190f16;color:#fff;display:flex;align-items:center;justify-content:center;gap:9px;padding:5px 10px}
+.care-countdown[hidden]{display:none!important}
+.care-countdown-label{font-size:12px;color:#f2c8d6;font-weight:800}
+.compact-time{font-variant-numeric:tabular-nums;font-size:18px;letter-spacing:.04em}
+.care-compact-controls{padding:0;background:none!important;border:0!important}
+.care-compact-controls[hidden]{display:none!important}
+.care-compact-buttons{display:grid!important;grid-template-columns:1fr 1fr;gap:6px;margin:0!important}
+.care-compact-buttons button{min-height:34px;border:1px solid #563746;border-radius:7px;background:#fff6f9;font-weight:800;cursor:pointer}
+.care-tools.timer-active .care-start{display:none}
+.care-tools.timer-active .care-countdown{display:flex!important}
+.care-tools.timer-complete .care-countdown{background:#174a2c;border-color:#2f9a59}
+.care-tools.timer-frozen .care-countdown{background:#26364c;border-color:#6683aa}
+.care-tools.timer-frozen .care-countdown-label::after{content:'（冷凍）'}
+@media(max-width:720px){.route-owned-toggle{width:31px;height:31px;top:6px;right:6px}.care-start{font-size:15px;min-height:38px}.compact-time{font-size:16px}}
+
+
+/* v1.1 修正：右上角只保留單一已養過框；計時器採總小時倒數並直式排列 */
+.route-owned-toggle{
+  width:38px!important;
+  height:38px!important;
+  min-height:0!important;
+  padding:0!important;
+  margin:0!important;
+  display:grid!important;
+  place-items:center!important;
+  border:2px solid #8b5cf6!important;
+  border-radius:10px!important;
+}
+.route-owned-toggle span{display:grid!important;place-items:center!important;width:100%!important;height:100%!important;font-size:0!important;gap:0!important}
+.route-owned-toggle span::before{content:none!important;display:none!important}
+.route-owned-toggle input:checked + span{font-size:25px!important;color:#fff!important}
+.route-column.is-owned .route-head strong::after{content:none!important;display:none!important}
+
+.route-care .care-tools{display:grid!important;gap:6px!important;padding:8px!important}
+.route-care .care-actions{display:block!important}
+.route-care .care-start{display:block!important;width:100%!important;min-height:38px!important;padding:6px 8px!important;font-size:13px!important}
+.route-care .care-countdown{width:100%!important;min-height:38px!important;display:flex!important;justify-content:center!important;gap:7px!important;padding:5px 8px!important}
+.route-care .care-countdown[hidden]{display:none!important}
+.route-care .care-countdown-label{font-size:11px!important}
+.route-care .compact-time{min-width:82px!important;min-height:0!important;padding:0!important;border:0!important;background:transparent!important;font-size:15px!important;white-space:nowrap!important}
+.route-care .care-timer{margin-top:0!important;padding:0!important;background:transparent!important;border:0!important}
+.route-care .care-compact-buttons{display:grid!important;grid-template-columns:1fr 1fr!important;gap:6px!important;margin:0!important}
+.route-care .care-compact-buttons button{min-height:31px!important;padding:4px 6px!important;font-size:11px!important}
+@media(max-width:520px){
+  .route-owned-toggle{width:34px!important;height:34px!important}
+  .route-care .compact-time{min-width:76px!important;font-size:14px!important}
+}
+
+/* v1.2 彩超式緊湊計時：開始按鈕與倒數共用同一位置 */
+.route-care{padding:6px 8px!important}
+.route-care .care-tools{gap:6px!important;padding:0!important}
+.route-care .care-actions{display:grid!important;grid-template-columns:1fr!important;gap:0!important}
+.route-care .care-start,
+.route-care .care-countdown{grid-area:1 / 1!important;width:100%!important;min-height:40px!important;margin:0!important}
+.route-care .care-tools.timer-active .care-start,
+.route-care .care-start[hidden]{display:none!important}
+.route-care .care-countdown[hidden]{display:none!important}
+.route-care .care-tools:not(.timer-active) .care-countdown{display:none!important}
+.route-care .care-tools.timer-active .care-countdown{display:flex!important}
+.route-care .care-countdown{padding:5px 8px!important;gap:0!important}
+.route-care .care-countdown-label{display:none!important}
+.route-care .compact-time{min-width:0!important;font-size:17px!important;line-height:1!important;color:#fff!important}
+.route-care .care-compact-controls{margin-top:0!important}
+.route-care .care-compact-buttons button{
+  min-height:34px!important;
+  color:#2b1720!important;
+  background:#fff6f9!important;
+  border-color:#563746!important;
+  text-shadow:none!important;
+  -webkit-text-fill-color:#2b1720!important;
+}
+.route-care .care-compact-buttons button:hover{background:#f4e3e9!important}
+.route-care .care-tools.timer-frozen .freeze-btn{background:#26364c!important;color:#fff!important;-webkit-text-fill-color:#fff!important}
+@media(max-width:520px){
+  .route-care{padding:5px 7px!important}
+  .route-care .care-start,.route-care .care-countdown{min-height:38px!important}
+  .route-care .care-compact-buttons button{min-height:32px!important}
+}
+
+/* RC9 single-line timer */
+.care-tools{display:block}
+.care-countdown{display:flex;justify-content:space-between;align-items:center;background:transparent!important;border:0!important;padding:0;min-height:38px;color:#222}
+.care-countdown-label{display:none!important}
+.care-compact-controls{display:none!important}
+.care-countdown .compact-time{font-size:18px;font-weight:700}
+.care-countdown::after{content:''}
+.care-countdown button,.care-countdown .freeze-btn,.care-countdown .reset-btn{min-height:28px;padding:2px 8px}
+
+/* RC9.1 */
+.route-owned-toggle{width:28px!important;height:28px!important;top:4px!important;right:4px!important;border-radius:8px!important}
+.route-owned-toggle input:checked+span{font-size:18px!important}
+.care-countdown{background:transparent!important;border:0!important;color:#402233!important;justify-content:flex-start!important;padding:0 4px!important}
+.care-countdown-label{display:none!important}
+.care-compact-buttons{display:inline-flex!important;grid-template-columns:none!important;gap:4px!important;margin-left:8px!important}
+.care-compact-buttons button{min-height:24px!important;padding:2px 8px!important;color:#402233!important;background:#fff!important}
+.compact-time{color:#402233!important;font-weight:800!important}
+
+/* RC9 compact timer */
+.route-owned-toggle{top:6px;right:6px;width:26px;height:26px;border-radius:6px}
+.route-owned-toggle input:checked+span{font-size:18px}
+.care-tools{display:flex!important;align-items:center;gap:8px;flex-wrap:nowrap}
+.care-start{flex:1}
+.care-countdown{font-weight:700;color:#4b2358;background:transparent!important;padding:0!important}
+.care-compact-buttons,.care-buttons{display:flex;gap:4px}
+.care-compact-buttons button,.care-buttons button{padding:2px 8px;font-size:13px}
+
+
+/* RC9.3：真正單列切換版（覆蓋前面測試樣式） */
+.route-owned-toggle{
+  top:4px!important;
+  right:4px!important;
+  width:22px!important;
+  height:22px!important;
+  min-width:22px!important;
+  min-height:22px!important;
+  padding:0!important;
+  border-width:1.5px!important;
+  border-radius:5px!important;
+}
+.route-owned-toggle input:checked + span{
+  font-size:15px!important;
+  line-height:1!important;
+}
+.route-head strong{
+  padding-right:20px!important;
+}
+.route-care{
+  padding:6px 7px!important;
+}
+.route-care .care-tools{
+  display:block!important;
+  padding:0!important;
+  margin:0!important;
+}
+.route-care .care-actions{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr)!important;
+  padding:0!important;
+  margin:0!important;
+}
+.route-care .care-start,
+.route-care .care-countdown{
+  grid-area:1 / 1!important;
+  box-sizing:border-box!important;
+  width:100%!important;
+  height:36px!important;
+  min-height:36px!important;
+  max-height:36px!important;
+  margin:0!important;
+}
+.route-care .care-start{
+  display:block!important;
+  padding:4px 8px!important;
+  border:1px solid #654052!important;
+  border-radius:7px!important;
+  background:linear-gradient(180deg,#fff8fa,#ead3dc)!important;
+  color:#321d27!important;
+  font-size:13px!important;
+  font-weight:800!important;
+  line-height:1!important;
+}
+.route-care .care-start[hidden],
+.route-care .care-tools.timer-active .care-start{
+  display:none!important;
+}
+.route-care .care-countdown{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:5px!important;
+  padding:4px 5px!important;
+  border:1px solid #654052!important;
+  border-radius:7px!important;
+  background:linear-gradient(180deg,#fff8fa,#ead3dc)!important;
+  color:#321d27!important;
+  overflow:hidden!important;
+  white-space:nowrap!important;
+}
+.route-care .care-countdown[hidden],
+.route-care .care-tools:not(.timer-active) .care-countdown{
+  display:none!important;
+}
+.route-care .care-tools.timer-active .care-countdown{
+  display:flex!important;
+}
+.route-care .compact-time{
+  flex:1 1 auto!important;
+  min-width:0!important;
+  padding:0!important;
+  border:0!important;
+  background:transparent!important;
+  color:#4b2358!important;
+  font-size:14px!important;
+  font-weight:900!important;
+  line-height:1!important;
+  letter-spacing:.01em!important;
+  text-align:center!important;
+  font-variant-numeric:tabular-nums!important;
+}
+.route-care .care-compact-buttons{
+  display:flex!important;
+  flex:0 0 auto!important;
+  align-items:center!important;
+  gap:3px!important;
+  margin:0!important;
+}
+.route-care .care-compact-buttons button{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:auto!important;
+  min-width:34px!important;
+  height:25px!important;
+  min-height:25px!important;
+  padding:1px 6px!important;
+  border:1px solid #6b4658!important;
+  border-radius:6px!important;
+  background:#fff!important;
+  color:#402233!important;
+  -webkit-text-fill-color:#402233!important;
+  font-size:11px!important;
+  font-weight:800!important;
+  line-height:1!important;
+  text-shadow:none!important;
+}
+.route-care .care-tools.timer-frozen .care-countdown{
+  border-color:#63799b!important;
+  background:linear-gradient(180deg,#eef4fc,#d9e4f3)!important;
+}
+.route-care .care-tools.timer-frozen .freeze-btn{
+  background:#344b6b!important;
+  border-color:#344b6b!important;
+  color:#fff!important;
+  -webkit-text-fill-color:#fff!important;
+}
+.route-care .care-tools.timer-complete .care-countdown{
+  border-color:#2f8c56!important;
+  background:linear-gradient(180deg,#effaf3,#d8efdf)!important;
+}
+@media(max-width:520px){
+  .route-owned-toggle{width:20px!important;height:20px!important;min-width:20px!important;min-height:20px!important}
+  .route-owned-toggle input:checked + span{font-size:14px!important}
+  .route-head strong{padding-right:17px!important}
+  .route-care .care-start,.route-care .care-countdown{height:34px!important;min-height:34px!important;max-height:34px!important}
+  .route-care .compact-time{font-size:13px!important}
+  .route-care .care-compact-buttons button{min-width:31px!important;height:23px!important;min-height:23px!important;padding:1px 4px!important;font-size:10px!important}
+}

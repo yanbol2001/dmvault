@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+
+<html lang="zh-Hant"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1,maximum-scale=5,user-scalable=yes" name="viewport"/><title>DMVault｜Godzilla 70th｜G細胞系統 V2.0</title><style type="text/css">
+		body,div,table,thead,tbody,tfoot,tr,th,td,p { font-family:"Arial"; font-size:x-small }
+		a.comment-indicator:hover + comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em;  } 
+		a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em;  } 
+		comment { display:none;  } 
+	</style>
+<style>
+:root{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif;color:#191919;background:#eef1f3}
+*{box-sizing:border-box}body{margin:0;background:#eef1f3}header.dm{position:sticky;top:0;z-index:100;background:#171b1f;color:#fff;padding:10px 16px;box-shadow:0 2px 8px #0005}.brand{font-weight:800;font-size:20px}.brand span{font-weight:500;color:#c9d1d9}.badge{font-size:13px;color:#aeb8c2;margin-top:2px}.nav{display:flex;gap:7px;flex-wrap:wrap;margin-top:9px}.nav a{color:#e8edf2;text-decoration:none;padding:6px 11px;border:1px solid #59636d;border-radius:7px;background:#2b3239}.nav a.active{background:#e8edf2;color:#171b1f;font-weight:700}.notice{padding:9px 16px;background:#fff3cd;border-bottom:1px solid #e0c46c;font-size:14px}.sheet-viewport{overflow:auto;padding:16px;min-height:calc(100vh - 125px)}.sheet-canvas{display:inline-block;background:#fff;box-shadow:0 2px 14px #0002;padding:10px;transform-origin:top left}.sheet-canvas table{margin:0!important} @media(max-width:700px){.sheet-viewport{padding:8px}.sheet-canvas{padding:4px}.brand{font-size:17px}}
+</style><style>header,header.dm{position:sticky!important;top:0!important;z-index:999!important}.nav{overflow-x:auto;white-space:nowrap;flex-wrap:nowrap!important}.nav a{flex:0 0 auto}</style><link href="shared.css" rel="stylesheet"/><style id="gcell-v16">
+.sheet-viewport{background:radial-gradient(circle at 85% 0,#281442,transparent 35%),#09070d;padding:22px!important}
+.sheet-canvas{zoom:1.45;background:#fff;border:2px solid #7c3aed;border-radius:14px;box-shadow:0 18px 50px #0009;padding:18px!important}
+.sheet-canvas table,.sheet-canvas td,.sheet-canvas th,.sheet-canvas p,.sheet-canvas font{font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif!important;font-size:15px!important;line-height:1.55!important}
+.sheet-canvas td{min-width:31px!important}.sheet-canvas img{image-rendering:pixelated;max-width:none}
+.gcell-tools{position:sticky;top:108px;z-index:80;display:flex;gap:8px;align-items:center;padding:10px 16px;background:#130d1dcc;border-bottom:1px solid #5b3f78;backdrop-filter:blur(8px)}
+.gcell-tools button{border:1px solid #74549a;background:#241632;color:#fff;border-radius:9px;padding:7px 12px;font-weight:800;cursor:pointer}.gcell-tools output{min-width:54px;color:#e9ddff;font-weight:800}
+@media(max-width:700px){.sheet-canvas{zoom:1.2}.gcell-tools{top:104px}}
+</style>
+<style id="gcell-v20">
+.sheet-canvas img[src*="_4x.png"]{width:144px!important;height:144px!important;object-fit:contain!important;image-rendering:pixelated!important}.sheet-canvas{zoom:1.25!important}.gcell-tools output{min-width:62px}.notice:after{content:" 圖片已製作為 4 倍最近鄰像素版本。"}
+@media(max-width:700px){.sheet-canvas img[src*="_4x.png"]{width:120px!important;height:120px!important}.sheet-canvas{zoom:1!important}}
+</style></head><body><header class="dm-header"><div class="dm-brand">DMVault<span>｜ Godzilla 70th</span></div><div class="dm-badge">G細胞 V2.0</div><nav class="dm-nav"><a href="index.html">總覽</a><a href="evolution.html">進化</a><a href="dex.html">圖鑑</a><a href="stage.html">關卡</a><a href="background.html">背景</a><a class="active" href="gcell.html">G細胞</a><a href="encounter.html">隨機遭遇</a></nav></header><div class="gcell-tools"><button type="button" data-z="-0.1">－</button><output id="gZoom">125%</output><button type="button" data-z="0.1">＋</button><button type="button" id="gReset">重設</button></div><div class="notice">依原始 Excel「G細胞系統」工作表完整搬移系統說明、數值變化、等級與進化相關資料。</div><main class="sheet-viewport"><div class="sheet-canvas"><table border="0" cellspacing="0">
+<colgroup span="23" width="23"></colgroup>
+<tr>
+<td align="center" bgcolor="#000000" colspan="24" data-sheets-value='{ "1": 2, "2": "G細胞 系統概要"}' height="48" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="4">G細胞 系統概要</font></b></td>
+</tr>
+<tr>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="center" colspan="24" data-sheets-value='{ "1": 2, "2": "G細胞（G-Cell）數值會隨著 照顧失誤、訓練、對戰、補充蛋白質以及 隨機事件 的回應而波動。"}' height="24" valign="middle"><font color="#000000" face="Noto Sans CJK SC">G細胞（G-Cell）數值會隨著 照顧失誤、訓練、對戰、補充蛋白質以及 隨機事件 的回應而波動。</font></td>
+</tr>
+<tr>
+<td align="center" colspan="24" data-sheets-value='{ "1": 2, "2": "這個數值會影響進化需求，是進化系統中相對複雜的一環。"}' height="24" valign="middle"><font color="#000000" face="Noto Sans CJK SC">這個數值會影響進化需求，是進化系統中相對複雜的一環。</font></td>
+</tr>
+<tr>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" colspan="24" data-sheets-value='{ "1": 2, "2": "G細胞 的運作方式"}' height="48" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="4">G細胞 的運作方式</font></b></td>
+</tr>
+<tr>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="center" colspan="24" data-sheets-value='{ "1": 2, "2": "G細胞數值會以「彩色刻度」顯示，透過3種顏色與計量表，表示分成4種等級。"}' height="24" valign="middle"><font color="#000000" face="Noto Sans CJK SC">G細胞數值會以「彩色刻度」顯示，透過3種顏色與計量表，表示分成4種等級。</font></td>
+</tr>
+<tr>
+<td align="center" colspan="24" data-sheets-value='{ "1": 2, "2": "不同顏色的G細胞，分別代表不同數值的G細胞與等級。"}' height="24" valign="middle"><font color="#000000" face="Noto Sans CJK SC">不同顏色的G細胞，分別代表不同數值的G細胞與等級。</font></td>
+</tr>
+<tr>
+<td align="center" colspan="24" data-sheets-value='{ "1": 2, "2": "當該等級的 G細胞數值 滿足後，計量表會升級到下一個等級，背景畫面也會改變。"}' height="24" valign="middle"><font color="#000000" face="Noto Sans CJK SC">當該等級的 G細胞數值 滿足後，計量表會升級到下一個等級，背景畫面也會改變。</font></td>
+</tr>
+<tr>
+<td align="center" colspan="24" data-sheets-value='{ "1": 2, "2": "背景的變化是判斷是否符合進化條件的最直觀方式（詳見背景對照表）。"}' height="24" valign="middle"><font color="#000000" face="Noto Sans CJK SC">背景的變化是判斷是否符合進化條件的最直觀方式（詳見背景對照表）。</font></td>
+</tr>
+<tr>
+<td align="center" colspan="24" data-sheets-value='{ "1": 2, "2": "但要注意，有10種背景，不會因G細胞的等級而變化。"}' height="24" valign="middle"><font color="#000000" face="Noto Sans CJK SC">但要注意，有10種背景，不會因G細胞的等級而變化。</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="center" bgcolor="#000000" colspan="24" data-sheets-value='{ "1": 2, "2": "顏色與等級規則"}' height="48" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="4">顏色與等級規則</font></b></td>
+</tr>
+<tr>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="center" colspan="24" data-sheets-value='{ "1": 2, "2": "以下透過預設的背景（參考用，非實際畫面），來解釋 G細胞數值 的計算方式。"}' height="24" valign="middle"><font color="#000000" face="Noto Sans CJK SC">以下透過預設的背景（參考用，非實際畫面），來解釋 G細胞數值 的計算方式。</font></td>
+</tr>
+<tr>
+<td align="center" colspan="24" data-sheets-value='{ "1": 2, "2": "G細胞＂數值＂，會轉換成 對應的 ３色 G細胞＂點數＂ 顯示。"}' height="24" valign="middle"><font color="#000000" face="Noto Sans CJK SC">G細胞＂數值＂，會轉換成 對應的 ３色 G細胞＂點數＂ 顯示。</font></td>
+</tr>
+<tr>
+<td align="center" colspan="24" data-sheets-value='{ "1": 2, "2": "藍點 = 藍色G細胞點數 ， 黃點 = 黃色G細胞點數 ， 紅點 = 紅色G細胞點數 。 "}' height="24" valign="middle"><font color="#000000" face="Noto Sans CJK SC">藍點 = 藍色G細胞點數 ， 黃點 = 黃色G細胞點數 ， 紅點 = 紅色G細胞點數 。 </font></td>
+</tr>
+<tr>
+<td align="center" colspan="24" data-sheets-value='{ "1": 2, "2": "因為並不是1:1對應，所以 每個點數轉換成的數值 ，只是估計值。"}' height="24" valign="middle"><font color="#000000" face="Noto Sans CJK SC">因為並不是1:1對應，所以 每個點數轉換成的數值 ，只是估計值。</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" bgcolor="#0000FF" colspan="16" data-sheets-value='{ "1": 2, "2": "等級 1 藍色 G細胞  背景：荒野"}' style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC">等級 1 藍色 G細胞  背景：荒野</font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" style="border-left: 2px solid #000000" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_754e0b67_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_1c7ae086_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" style="border-right: 2px solid #000000" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_e615bd1_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' style="border-left: 2px solid #000000" valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' style="border-right: 2px solid #000000" valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" colspan="4" sdnum="1033;" sdval="0" style="border-left: 2px solid #000000" valign="bottom"><font color="#000000">0</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-formula="=8*1" sdnum="1033;" sdval="8" valign="bottom"><font color="#000000">8</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" sdnum="1033;" sdval="113" style="border-right: 2px solid #000000" valign="bottom"><font color="#000000">113</font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" colspan="16" data-sheets-value='{ "1": 2, "2": "在這個階段，每一個藍點，表示擁有了約 8點 G細胞數值。\n等級1 的G細胞數值為 0~ 113，超過113時，會進入下個等級。"}' rowspan="2" style="border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><font color="#000000" face="Noto Sans CJK SC">在這個階段，每一個藍點，表示擁有了約 8點 G細胞數值。<br/>等級1 的G細胞數值為 0~ 113，超過113時，會進入下個等級。</font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" colspan="16" data-sheets-value='{ "1": 2, "2": "查閱進化條件時，只需要計算，累積有多少藍點、黃點與紅點。\n\n都沒有藍點時，表示 藍色點數為0。\n4藍，代表 藍色點數 為4。\n...以此類推"}' rowspan="5" style="border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><b><font color="#FF0000" face="Noto Sans CJK SC">查閱進化條件時，只需要計算，累積有多少藍點、黃點與紅點。<br/><br/>都沒有藍點時，表示 藍色點數為0。<br/>4藍，代表 藍色點數 為4。<br/>...以此類推</font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" bgcolor="#FBBC04" colspan="22" data-sheets-value='{ "1": 2, "2": "等級 2 黃色 G細胞 背景：海洋"}' style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC">等級 2 黃色 G細胞 背景：海洋</font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" style="border-left: 2px solid #000000" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_59009cea_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_7c71f414_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_e3ce2acd_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" style="border-right: 2px solid #000000" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_f6b41160_4x.png" vspace="0" width="24"/>
+</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' style="border-left: 2px solid #000000" valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' style="border-right: 2px solid #000000" valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="4" sdnum="1033;" sdval="114" style="border-left: 2px solid #000000" valign="bottom"><font color="#000000">114</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-formula="=28*4+12*1" sdnum="1033;" sdval="124" valign="bottom"><font color="#000000">124</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-formula="=28*4+12*9" sdnum="1033;" sdval="220" valign="bottom"><font color="#000000">220</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-formula="=28*4+12*10" sdnum="1033;" sdval="232" style="border-right: 2px solid #000000" valign="bottom"><font color="#000000">232</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="22" data-sheets-value='{ "1": 2, "2": "G細胞數值為 114時，使用 14個藍點 來顯示。\nG細胞數值於 124 時，開始改成 4個藍點＋1~10個黃點 來顯示。\n此時，每一個藍點，表示擁有了約 28點 G細胞數值\n此時，每一個黃點，表示擁有了約 12點 G細胞數值。\n等級2 的G細胞數值為 114~ 232，超過232時，會進入下個等級。"}' rowspan="5" style="border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><font color="#000000" face="Noto Sans CJK SC">G細胞數值為 114時，使用 14個藍點 來顯示。<br/>G細胞數值於 124 時，開始改成 4個藍點＋1~10個黃點 來顯示。<br/>此時，每一個藍點，表示擁有了約 28點 G細胞數值<br/>此時，每一個黃點，表示擁有了約 12點 G細胞數值。<br/>等級2 的G細胞數值為 114~ 232，超過232時，會進入下個等級。</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="22" data-sheets-value='{ "1": 2, "2": "查閱進化條件時，只需要計算，累積有多少藍點、黃點與紅點。\n\n14藍，等同於點數 14藍+ 0黃。\n4藍+1黃，等同於點數 14藍+1黃。\n...以此類推"}' rowspan="5" style="border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><b><font color="#FF0000" face="Noto Sans CJK SC">查閱進化條件時，只需要計算，累積有多少藍點、黃點與紅點。<br/><br/>14藍，等同於點數 14藍+ 0黃。<br/>4藍+1黃，等同於點數 14藍+1黃。<br/>...以此類推</font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" bgcolor="#FF0000" colspan="22" data-sheets-value='{ "1": 2, "2": "等級 3 紅色 G細胞 背景：海岸"}' style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC">等級 3 紅色 G細胞 背景：海岸</font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" style="border-left: 2px solid #000000" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_ee78fbf9_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_a47f5a8_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_c07be390_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" style="border-right: 2px solid #000000" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_c5e1e6cf_4x.png" vspace="0" width="24"/>
+</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' style="border-left: 2px solid #000000" valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' style="border-right: 2px solid #000000" valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="4" sdnum="1033;" sdval="233" style="border-left: 2px solid #000000" valign="bottom"><font color="#000000">233</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-formula="=58*4+12*1" sdnum="1033;" sdval="244" valign="bottom"><font color="#000000">244</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-formula="=58*4+12*9" sdnum="1033;" sdval="340" valign="bottom"><font color="#000000">340</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-formula="=58*4+12*10" sdnum="1033;" sdval="352" style="border-right: 2px solid #000000" valign="bottom"><font color="#000000">352</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="22" data-sheets-value='{ "1": 2, "2": "G細胞數值為 233時，使用 4個藍點＋10個黃點 來顯示。\nG細胞數值於 244 時，開始改成 4個黃點＋1~10個紅點 來顯示。\n每一個黃點，表示擁有了約 58點 G細胞數值，\n每一個紅點，表示擁有了約 12點 G細胞數值。\n等級3 的G細胞數值為 233~ 352，超過352時，會進入下個等級。"}' rowspan="5" style="border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><font color="#000000" face="Noto Sans CJK SC">G細胞數值為 233時，使用 4個藍點＋10個黃點 來顯示。<br/>G細胞數值於 244 時，開始改成 4個黃點＋1~10個紅點 來顯示。<br/>每一個黃點，表示擁有了約 58點 G細胞數值，<br/>每一個紅點，表示擁有了約 12點 G細胞數值。<br/>等級3 的G細胞數值為 233~ 352，超過352時，會進入下個等級。</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="22" data-sheets-value='{ "1": 2, "2": "查閱進化條件時，只需要計算，累積有多少藍點、黃點與紅點。\n\n4黃+1紅，等同於點數 14藍+10黃+1紅。\n4黃+6紅，等同於點數 14藍+10黃+6紅。\n...以此類推"}' rowspan="5" style="border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><b><font color="#FF0000" face="Noto Sans CJK SC">查閱進化條件時，只需要計算，累積有多少藍點、黃點與紅點。<br/><br/>4黃+1紅，等同於點數 14藍+10黃+1紅。<br/>4黃+6紅，等同於點數 14藍+10黃+6紅。<br/>...以此類推</font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" colspan="16" data-sheets-value='{ "1": 2, "2": "P.S. 352 可能是 4黃9紅 或 4黃10紅"}' valign="middle"><b><font color="#FF0000" face="Noto Sans CJK SC">P.S. 352 可能是 4黃9紅 或 4黃10紅</font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#FFFFFF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" bgcolor="#FF0000" colspan="22" data-sheets-value='{ "1": 2, "2": "等級 4 紅色 G細胞 背景：都市"}' style="border-top: 2px solid #000000; border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC">等級 4 紅色 G細胞 背景：都市</font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" style="border-left: 2px solid #000000" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_4339afb6_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_77370f60_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_2387a8c9_4x.png" vspace="0" width="24"/>
+</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": ""}' rowspan="4" style="border-right: 2px solid #000000" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/><img height="24" hspace="11" src="assets/怪獸對打機COLOR 哥吉拉 70th Edition中文攻略 紫硯的副本_html_af99a04b_4x.png" vspace="0" width="24"/>
+</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' style="border-left: 2px solid #000000" valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-value='{ "1": 2, "2": "G細胞數值"}' style="border-right: 2px solid #000000" valign="bottom"><font color="#000000" face="Noto Sans CJK SC">G細胞數值</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="4" sdnum="1033;" sdval="353" style="border-left: 2px solid #000000" valign="bottom"><font color="#000000">353</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-formula="=58*4+12*10+12*1" sdnum="1033;" sdval="364" valign="bottom"><font color="#000000">364</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="bottom"><font color="#000000"><br/></font></td>
+<td align="center" colspan="4" data-sheets-formula="=58*4+12*10+12*9" sdnum="1033;" sdval="460" valign="bottom"><font color="#000000">460</font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="4" data-sheets-formula="=58*4+12*10+12*10" sdnum="1033;" sdval="472" style="border-right: 2px solid #000000" valign="bottom"><font color="#000000">472</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="22" data-sheets-value='{ "1": 2, "2": "G細胞數值於 353 時，使用 4個黃點＋10個紅點 來顯示。\nG細胞數值於 364 時，開始改成 4個紅點＋1~10個紅點 來顯示。\n此時，前5個紅點，表示共有 364點 G細胞數值。\n從第5個紅點後，增加的每一個紅點，表示擁有了約 12點 G細胞數值。\n等級4 的G細胞數值為 353~ 472，當14個紅點時，即達到最高值 472 點。"}' rowspan="5" style="border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><font color="#000000" face="Noto Sans CJK SC">G細胞數值於 353 時，使用 4個黃點＋10個紅點 來顯示。<br/>G細胞數值於 364 時，開始改成 4個紅點＋1~10個紅點 來顯示。<br/>此時，前5個紅點，表示共有 364點 G細胞數值。<br/>從第5個紅點後，增加的每一個紅點，表示擁有了約 12點 G細胞數值。<br/>等級4 的G細胞數值為 353~ 472，當14個紅點時，即達到最高值 472 點。</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="22" data-sheets-value='{ "1": 2, "2": "查閱進化條件時，只需要計算，累積有多少藍點、黃點與紅點。\n\n該等級開始時，\n4黃+10紅，等同於點數 14藍+10黃+10紅。\n\n第五個紅點，開始時，\n5紅，等同於點數 14藍+10黃+11紅。\n14紅，等同於點數 14藍+10黃+20紅。\n...以此類推"}' rowspan="7" style="border-bottom: 2px solid #000000; border-left: 2px solid #000000; border-right: 2px solid #000000" valign="middle"><b><font color="#FF0000" face="Noto Sans CJK SC">查閱進化條件時，只需要計算，累積有多少藍點、黃點與紅點。<br/><br/>該等級開始時，<br/>4黃+10紅，等同於點數 14藍+10黃+10紅。<br/><br/>第五個紅點，開始時，<br/>5紅，等同於點數 14藍+10黃+11紅。<br/>14紅，等同於點數 14藍+10黃+20紅。<br/>...以此類推</font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": ""}' height="48" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" bgcolor="#000000" colspan="22" data-sheets-value='{ "1": 2, "2": "進化的判定"}' valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="4">進化的判定</font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "在進化的判定上，有一點非常重要："}' valign="middle"><font color="#000000" face="Noto Sans CJK SC">在進化的判定上，有一點非常重要：</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "即使你在螢幕上看不到前一階段顏色的G細胞，但其實上你仍然擁有它們。"}' valign="middle"><font color="#000000" face="Noto Sans CJK SC">即使你在螢幕上看不到前一階段顏色的G細胞，但其實上你仍然擁有它們。</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "例如："}' valign="middle"><b><font color="#0000FF" face="Noto Sans CJK SC">例如：</font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "如果某個進化條件要求「9個以上的藍色G細胞」，"}' valign="middle"><font color="#000000" face="Noto Sans CJK SC">如果某個進化條件要求「9個以上的藍色G細胞」，</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "但因為你已經到達等級4，螢幕上只會顯示紅色G細胞，"}' valign="middle"><font color="#000000" face="Noto Sans CJK SC">但因為你已經到達等級4，螢幕上只會顯示紅色G細胞，</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "那麼你依然算是擁有超過9個藍色G細胞！"}' valign="middle"><font color="#000000" face="Noto Sans CJK SC">那麼你依然算是擁有超過9個藍色G細胞！</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "再舉個例子："}' valign="middle"><b><font color="#0000FF" face="Noto Sans CJK SC">再舉個例子：</font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "假設你已經達到等級3，"}' valign="middle"><font color="#000000" face="Noto Sans CJK SC">假設你已經達到等級3，</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "畫面上只看到 4個黃色G細胞 和 2個紅色G細胞，"}' valign="middle"><font color="#000000" face="Noto Sans CJK SC">畫面上只看到 4個黃色G細胞 和 2個紅色G細胞，</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "但如果進化需求是「10個以上的黃色G細胞」，你其實已經符合條件。"}' valign="middle"><font color="#000000" face="Noto Sans CJK SC">但如果進化需求是「10個以上的黃色G細胞」，你其實已經符合條件。</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "因為要達到該階段，你必須累積至少10個黃色G細胞，"}' valign="middle"><font color="#000000" face="Noto Sans CJK SC">因為要達到該階段，你必須累積至少10個黃色G細胞，</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" colspan="22" data-sheets-value='{ "1": 2, "2": "即便現在只看到4個，它們依舊被計算在內。"}' valign="middle"><font color="#000000" face="Noto Sans CJK SC">即便現在只看到4個，它們依舊被計算在內。</font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" bgcolor="#000000" data-sheets-value='{ "1": 2, "2": ""}' height="48" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" bgcolor="#000000" colspan="22" data-sheets-value='{ "1": 2, "2": "G細胞數值 增減表"}' valign="middle"><b><font color="#FFFFFF" face="Noto Sans CJK SC" size="4">G細胞數值 增減表</font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><b><font color="#0000FF" face="Microsoft JhengHei"><br/></font></b></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "動作"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" valign="middle"><b><font color="#0000FF" face="Noto Sans CJK SC">動作</font></b></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "G細胞數值 變化"}' style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#0000FF" face="Noto Sans CJK SC">G細胞數值 變化</font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "隨機遭遇戰 勝利"}' style="border-left: 1px solid #000000" valign="middle"><font color="#34A853" face="Noto Sans CJK SC">隨機遭遇戰 勝利</font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "加 12 點"}' style="border-right: 1px solid #000000" valign="middle"><b><font color="#34A853" face="Noto Sans CJK SC">加 12 點</font></b></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "對戰 勝利"}' style="border-left: 1px solid #000000" valign="middle"><font color="#34A853" face="Noto Sans CJK SC">對戰 勝利</font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "加 6 點"}' style="border-right: 1px solid #000000" valign="middle"><b><font color="#34A853" face="Noto Sans CJK SC">加 6 點</font></b></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "訓練成功"}' style="border-left: 1px solid #000000" valign="middle"><font color="#34A853" face="Noto Sans CJK SC">訓練成功</font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "加 4 點"}' style="border-right: 1px solid #000000" valign="middle"><b><font color="#34A853" face="Noto Sans CJK SC">加 4 點</font></b></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "訓練第二階段失敗"}' style="border-left: 1px solid #000000" valign="middle"><font color="#34A853" face="Noto Sans CJK SC">訓練第二階段失敗</font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "加 2 點"}' style="border-right: 1px solid #000000" valign="middle"><b><font color="#34A853" face="Noto Sans CJK SC">加 2 點</font></b></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "照顧失誤"}' style="border-left: 1px solid #000000" valign="middle"><font color="#EA4335" face="Noto Sans CJK SC">照顧失誤</font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "減 8 點"}' style="border-right: 1px solid #000000" valign="middle"><b><font color="#EA4335" face="Noto Sans CJK SC">減 8 點</font></b></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "隨機遭遇戰 失敗"}' style="border-left: 1px solid #000000" valign="middle"><font color="#EA4335" face="Noto Sans CJK SC">隨機遭遇戰 失敗</font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "減 6 點"}' style="border-right: 1px solid #000000" valign="middle"><b><font color="#EA4335" face="Noto Sans CJK SC">減 6 點</font></b></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "對戰 失敗"}' style="border-left: 1px solid #000000" valign="middle"><font color="#EA4335" face="Noto Sans CJK SC">對戰 失敗</font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "減 4 點"}' style="border-right: 1px solid #000000" valign="middle"><b><font color="#EA4335" face="Noto Sans CJK SC">減 4 點</font></b></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "餵食蛋白質"}' style="border-left: 1px solid #000000" valign="middle"><font color="#EA4335" face="Noto Sans CJK SC">餵食蛋白質</font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "減 4 點"}' style="border-right: 1px solid #000000" valign="middle"><b><font color="#EA4335" face="Noto Sans CJK SC">減 4 點</font></b></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+<tr>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' height="24" valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "訓練第一階段失敗"}' style="border-bottom: 1px solid #000000; border-left: 1px solid #000000" valign="middle"><font color="#EA4335" face="Noto Sans CJK SC">訓練第一階段失敗</font></td>
+<td align="center" colspan="5" data-sheets-value='{ "1": 2, "2": "減 2 點"}' style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" valign="middle"><b><font color="#EA4335" face="Noto Sans CJK SC">減 2 點</font></b></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+<td align="left" data-sheets-value='{ "1": 2, "2": ""}' valign="middle"><font color="#000000" face="Microsoft JhengHei"><br/></font></td>
+</tr>
+</table></div></main><script>(()=>{let z=1.25;const c=document.querySelector('.sheet-canvas'),o=document.getElementById('gZoom');function set(){c.style.zoom=z;o.textContent=Math.round(z*100)+'%'}document.querySelectorAll('[data-z]').forEach(b=>b.onclick=()=>{z=Math.max(.8,Math.min(2.2,z+Number(b.dataset.z)));set()});document.getElementById('gReset').onclick=()=>{z=1.25;set()};set()})();</script></body></html>

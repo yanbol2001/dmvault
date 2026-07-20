@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#ffffff">
+<meta name="description" content="DMVault Pendulum COLOR 進化條件與圖鑑">
+<title>DMVault｜Pendulum COLOR</title>
+<link rel="stylesheet" href="styles.css?v=0.81">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><strong>DMVault</strong><span>Pendulum COLOR</span></div>
+  <button class="home-nav-button" data-home-overview type="button">🏠 總覽首頁</button>
+  <nav class="versions" aria-label="Pendulum COLOR 版本切換">
+    <button class="version" data-version="v0">V0 病毒剋星</button>
+    <button class="version" data-version="v1">V1 自然靈魂</button><button class="version" data-version="v2">V2 深海救星</button>
+    <button class="version" data-version="v3">V3 噩夢軍團</button><button class="version" data-version="v4">V4 風之守衛</button><button class="version" data-version="v5">V5 鋼之帝國</button>
+  </nav>
+</header>
+<main>
+  <section class="toolbar compact-toolbar" aria-label="內容工具列">
+    <div class="tabs" role="tablist">
+      <button data-view="guide" class="tab" role="tab">基本操作</button>
+      <button data-view="overview" class="tab active" role="tab">總覽</button>
+      <button data-view="evolution" class="tab" role="tab">進化條件</button>
+      <button data-view="dex" class="tab" role="tab">圖鑑</button>
+      <button data-view="stages" class="tab" role="tab">關卡</button>
+    </div>
+    <div class="filterbar" aria-label="篩選條件">
+      <label><span>階段</span><select id="stageFilter"><option value="">全部階段</option></select></label>
+      <label><span>屬性</span><select id="attributeFilter"><option value="">全部屬性</option></select></label>
+      <button id="resetFilters" type="button">重設</button>
+      <button id="expandAll" type="button">全部展開</button>
+      <button id="collapseAll" type="button">全部收合</button>
+    </div>
+    <span id="summary" class="summary compact-summary" aria-live="polite"></span>
+    <label class="search"><span class="search-label">搜尋</span><span class="search-box"><input id="searchInput" type="search" autocomplete="off" placeholder="名稱、編號、階段、屬性"><button id="clearSearch" type="button" aria-label="清除搜尋">×</button><div id="searchSuggestions" class="search-suggestions hidden" role="listbox"></div></span></label>
+  </section>
+  <nav id="stageNav" class="stage-nav hidden" aria-label="階段快速跳轉"></nav>
+  <section id="guideView" class="view hidden"></section>
+  <section id="homeView" class="view"></section>
+  <section id="overviewView" class="view hidden"></section>
+  <section id="evolutionView" class="view hidden"></section>
+  <section id="dexView" class="view hidden"></section>
+  <section id="stagesView" class="view hidden"></section>
+</main>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<button id="backToTop" class="back-top" type="button" aria-label="返回頂端">↑</button>
+<footer>DMVault Pendulum COLOR · v0.81</footer>
+<script src="app.js?v=0.81"></script>
+</body>
+</html>

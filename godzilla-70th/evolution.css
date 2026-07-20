@@ -1,0 +1,465 @@
+
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#eef0f2;color:#111;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif}.site-header{position:sticky;top:0;z-index:50;background:#171a1d;color:#fff;border-bottom:1px solid #333}.brand-row{height:64px;display:flex;align-items:center;gap:14px;padding:0 18px;white-space:nowrap}.brand-row strong{font-size:28px}.brand-row b{font-size:24px;color:#cbd0d4}.brand-row em{font-style:normal;font-size:14px;padding:7px 12px;border:1px solid #76554d;border-radius:18px;color:#ffd9cf;background:#3a2926}.main-nav{display:flex;gap:12px;padding:8px 18px 12px;overflow-x:auto;white-space:nowrap}.main-nav a{color:#fff;text-decoration:none;border:1px solid #4b545b;background:#22282d;border-radius:12px;padding:10px 24px;font-size:18px;font-weight:700}.main-nav a.active{background:#5b4039;border-color:#8c6258}.evo-main{width:100%;padding:14px}.intro{background:#fff;border:1px solid #bbb;padding:12px 16px}.intro h1{margin:0 0 4px;font-size:24px}.intro p{margin:0;color:#555}.stage-nav{position:sticky;top:126px;z-index:40;display:flex;gap:7px;overflow:auto;background:#eef0f2;padding:9px 0}.stage-nav a{flex:0 0 auto;text-decoration:none;color:#111;border:1px solid #aaa;background:#fff;border-radius:7px;padding:7px 12px;font-weight:700}.stage-section{margin-top:14px;scroll-margin-top:180px}.stage-heading{display:flex;justify-content:space-between;align-items:center;margin:0;background:#090909;color:#fff;padding:9px 13px;font-size:19px}.stage-heading small{font-size:12px;font-weight:400}.evolution-sheet{background:#fff;border:2px solid #111;border-top:0;margin-bottom:18px;scroll-margin-top:180px}.sheet-row{display:flex;width:100%;align-items:stretch}.source-panel{width:350px;flex:0 0 350px;border-right:3px solid #111}.source-title-zh{text-align:center;font-weight:800;font-size:20px;padding:5px;border-bottom:1px solid #111}.source-title-jp{text-align:center;background:#050505;color:#fff;font-size:17px;font-weight:700;padding:5px}.source-body{display:grid;grid-template-columns:112px 1fr}.source-side{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:minmax(38px,auto);align-items:center;text-align:center;border-right:1px solid #bbb}.sprite{display:flex;align-items:center;justify-content:center}.sprite img{image-rendering:pixelated;object-fit:contain}.source-sprite{grid-column:1/3;height:78px}.source-sprite img{width:68px;height:68px}.stage-tag,.attribute-tag{font-size:14px}.attribute-tag{color:#1548d4}.strength-label{text-align:right;padding-right:7px}.strength-value{text-align:left;padding-left:7px}.source-stats{display:grid;grid-template-columns:1fr 110px}.stat-label,.stat-value{min-height:38px;border-bottom:1px solid #bbb;display:flex;align-items:center;justify-content:center;padding:4px}.stat-value{border-left:1px solid #bbb}.route-area{display:grid;grid-template-columns:repeat(var(--route-columns),minmax(145px,1fr));flex:1;min-width:0;align-items:stretch;overflow-x:auto}.route-column{min-width:145px;border-right:1px solid #bbb;background:#fff}.route-head{height:128px;border-bottom:1px solid #bbb;padding:5px;display:flex;flex-direction:column;align-items:center;justify-content:flex-end}.route-sprite{height:78px}.route-sprite img{width:68px;height:68px}.route-head strong{width:100%;height:42px;background:#050505;color:#fff;padding:4px;text-align:center;display:flex;align-items:center;justify-content:center;line-height:1.2}.route-fields{display:grid;grid-template-columns:58px 1fr}.route-label,.route-value{min-height:39px;border-bottom:1px solid #bbb;display:flex;align-items:center;padding:4px 5px}.route-value{border-left:1px solid #bbb;justify-content:center;overflow-wrap:anywhere}.route-value.muted{color:#aaa}.no-route{padding:40px;display:flex;align-items:center;justify-content:center;color:#777}.back-top{position:fixed;right:18px;bottom:18px;width:44px;height:44px;border-radius:50%;border:1px solid #111;background:#fff;display:none;font-size:20px}.back-top.show{display:block}@media(max-width:780px){.brand-row{height:auto;min-height:58px;flex-wrap:wrap;padding:10px 12px}.brand-row strong{font-size:22px}.brand-row b{font-size:19px}.brand-row em{font-size:12px}.main-nav{padding:7px 12px 10px}.main-nav a{padding:8px 16px;font-size:16px}.evo-main{padding:8px}.stage-nav{top:116px}.sheet-row{display:block}.source-panel{width:100%;border-right:0;border-bottom:3px solid #111}.route-area{grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}.route-column{min-width:0}.stage-section{scroll-margin-top:170px}}@media(max-width:440px){.route-area{grid-template-columns:1fr}.source-body{grid-template-columns:100px 1fr}.source-stats{grid-template-columns:1fr 96px}}
+
+/* V1.2.1：進化目標卡片統一尺寸，超出寬度時留在右側自動換行 */
+@media (min-width:781px){
+  .sheet-row{align-items:stretch}
+  .route-area{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,160px) !important;
+    grid-auto-rows:max-content;
+    align-content:start;
+    justify-content:start;
+    gap:0;
+    overflow:visible;
+    min-width:0;
+    padding:0;
+    background:#d7d7d7;
+  }
+  .route-column{
+    width:160px;
+    min-width:160px;
+    max-width:160px;
+    height:100%;
+    border-right:1px solid #aaa;
+    border-bottom:1px solid #aaa;
+  }
+  .route-head{height:128px}
+  .route-fields{grid-template-columns:58px 102px}
+  .no-route{grid-column:1/-1;min-height:180px;background:#fff}
+}
+
+@media (max-width:780px){
+  .route-area{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    overflow:visible;
+    background:#d7d7d7;
+  }
+  .route-column{width:auto;min-width:0;max-width:none}
+}
+
+@media (max-width:440px){
+  .route-area{grid-template-columns:1fr !important}
+}
+
+
+/* V1.3：所有進化卡片完整等高，空白特殊路線也顯示完整條件欄 */
+.route-area{
+  grid-auto-flow:row;
+  grid-auto-rows:auto;
+  align-items:start;
+  background:#fff;
+}
+.route-column{
+  display:flex;
+  flex-direction:column;
+  align-self:start;
+  height:auto !important;
+  min-height:401px;
+  background:#fff;
+}
+.route-head{flex:0 0 128px}
+.route-fields{flex:1}
+.route-fields .route-label,.route-fields .route-value{min-height:39px}
+@media (min-width:781px){
+  .route-area{
+    grid-template-columns:repeat(auto-fit,minmax(160px,160px)) !important;
+    justify-content:start;
+    align-content:start;
+  }
+  .route-column{min-height:401px}
+}
+@media (max-width:780px){
+  .route-column{min-height:401px}
+}
+
+/* V1.3.1：第二列進化目標併入右側卡片流；無一般條件的 G侵蝕／特殊模式只顯示卡頭 */
+.route-area{grid-auto-flow:row;align-items:start;align-content:start}
+.route-column.special-route{min-height:128px !important;height:128px !important;align-self:start;background:#fff}
+.route-column.special-route .route-head{height:128px;flex-basis:128px;border-bottom:1px solid #bbb}
+@media (min-width:781px){
+  .route-area{grid-template-columns:repeat(auto-fill,160px) !important}
+}
+
+/* V1.3.3：進化卡統一從右側起點流式排列；第二列不再落到來源卡下方 */
+.evolution-sheet{overflow:visible}
+.sheet-row{align-items:flex-start;overflow:visible}
+.source-panel{align-self:stretch}
+.route-area{
+  align-self:flex-start;
+  grid-auto-flow:row !important;
+  grid-auto-rows:max-content;
+  align-items:start !important;
+  align-content:start !important;
+  justify-content:start !important;
+  overflow:visible !important;
+}
+.route-column{
+  align-self:start !important;
+  margin:0 !important;
+}
+.route-fields{
+  display:grid;
+  grid-template-columns:58px 102px;
+  grid-auto-rows:39px;
+}
+.route-label,.route-value{
+  min-height:39px !important;
+  height:39px;
+}
+.route-column:not(.special-route){
+  height:401px !important;
+  min-height:401px !important;
+}
+.route-column.special-route{
+  height:128px !important;
+  min-height:128px !important;
+}
+@media (min-width:781px){
+  .route-area{
+    grid-template-columns:repeat(auto-fill,160px) !important;
+  }
+}
+@media (max-width:780px){
+  .route-fields{grid-template-columns:58px minmax(0,1fr)}
+  .route-column:not(.special-route){height:401px !important}
+}
+
+/* V1.5 黑紫白卡片化：僅改外觀，完整保留 V1.3.3 數值與版面資料 */
+:root{--gz-bg:#09070d;--gz-panel:#17111f;--gz-purple:#8b5cf6;--gz-purple2:#c4b5fd;--gz-line:#4a385f;--gz-white:#fff;--gz-muted:#b9afc8}
+body{background:radial-gradient(circle at 82% 0,#281442 0,transparent 34%),linear-gradient(180deg,#09070d,#100b17)!important;color:#f8f7fb}
+.site-header{background:rgba(10,7,14,.97)!important;border-bottom:1px solid var(--gz-line)!important;box-shadow:0 8px 28px #0009!important}
+.brand-row em{background:#21152f!important;border-color:#654b84!important;color:#eadcff!important}.main-nav a{background:#191220!important;border-color:#4a385f!important}.main-nav a.active{background:linear-gradient(135deg,#6d28d9,#8b5cf6)!important;border-color:#c4b5fd!important}
+.intro{background:linear-gradient(145deg,#1c1427,#120e19)!important;color:#fff!important;border:1px solid var(--gz-line)!important;border-left:4px solid var(--gz-purple)!important;border-radius:16px!important;box-shadow:0 12px 30px #0006!important}.intro p{color:var(--gz-muted)!important}
+.stage-nav{background:#110c18ee!important;border:1px solid var(--gz-line)!important;border-radius:14px!important;padding:10px!important}.stage-nav a{background:#1a1323!important;color:#fff!important;border-color:#4a385f!important;border-radius:10px!important}
+.stage-heading{background:linear-gradient(90deg,#1a1026,#421c70)!important;border:1px solid #694393!important;border-radius:15px 15px 0 0!important}
+.evolution-sheet{background:#130e1a!important;border:1px solid #503a68!important;border-radius:0 0 16px 16px!important;box-shadow:0 15px 36px #0007!important;overflow:hidden!important}
+.source-panel{background:#fff!important;color:#111!important;border-right:3px solid var(--gz-purple)!important}.source-title-zh{background:linear-gradient(90deg,#f3ebff,#fff)!important}.source-title-jp,.route-head strong{background:linear-gradient(135deg,#100b16,#32184d)!important;color:#fff!important}
+.route-area{background:#130e1a!important;padding:9px!important;gap:9px!important}.route-column{border:1px solid #5a4371!important;border-radius:12px!important;overflow:hidden!important;background:#fff!important;box-shadow:0 8px 20px #0006!important;transition:.18s ease}.route-column:hover{transform:translateY(-2px);border-color:#a78bfa!important;box-shadow:0 12px 26px #0008,0 0 17px #7c3aed44!important}
+.route-label{background:#f7f2fc!important}.route-value{background:#fff!important;color:#111!important}.route-value.muted{color:#999!important}.no-route{background:#1b1325!important;color:#c5b8d5!important;border-radius:12px!important}
+.back-top{background:#6d28d9!important;color:#fff!important;border-color:#c4b5fd!important}
+
+/* V1.5.1：修正進化條件白底白字，所有資料不需反白即可閱讀 */
+.route-label{color:#21152f!important;font-weight:700!important;background:#f4eef9!important;text-shadow:none!important}
+.route-value{color:#111!important;background:#fff!important;font-weight:500!important;text-shadow:none!important}
+.route-value.muted{color:#8b8392!important}
+.route-column *::selection{background:#8b5cf6;color:#fff}
+.source-panel,.source-panel *{color:#111}
+.source-title-jp,.source-title-jp *,.route-head strong,.route-head strong *{color:#fff!important}
+.attribute-tag{color:#2451d1!important}
+
+/* V2.2.1：G侵蝕／特殊模式只要有條件資料，就顯示完整卡片 */
+.route-column.special-route:has(.route-fields){
+  height:401px !important;
+  min-height:401px !important;
+}
+.route-column.special-route:has(.route-fields) .route-fields{display:grid !important}
+
+
+/* V3.0 RC：進化頁收尾 + 培養計時 */
+.evo-tools{display:flex;align-items:center;gap:8px;margin-top:12px;flex-wrap:wrap}.evo-tools label{font-weight:800}.evo-tools input{min-width:260px;flex:1;max-width:520px;border:1px solid #6b5680;border-radius:9px;padding:9px 12px;font:inherit;background:#fff;color:#17111f}.evo-tools button{border:1px solid #7957a0;border-radius:9px;padding:9px 14px;background:#2b183d;color:#fff;font-weight:800;cursor:pointer}
+.care-tools{border-top:3px solid #8b5cf6;background:#160e20;color:#fff;padding:9px}.care-actions{display:flex;gap:8px;align-items:center}.care-start,.freeze-btn,.reset-btn{border:1px solid #a78bfa;border-radius:9px;background:linear-gradient(135deg,#6d28d9,#8b5cf6);color:#fff;padding:8px 11px;font-weight:900;cursor:pointer}.owned-toggle{margin-left:auto;display:flex;align-items:center;gap:4px;white-space:nowrap;font-weight:800}.owned-toggle input{width:18px;height:18px;accent-color:#8b5cf6}.care-timer{margin-top:9px;border:1px solid #59416f;border-radius:10px;background:#0e0914;padding:9px}.timer-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}.timer-grid>div{background:#21142e;border:1px solid #4f3965;border-radius:8px;padding:7px;text-align:center}.timer-grid span{display:block;color:#cfc3dc;font-size:12px}.timer-grid strong{display:block;margin-top:3px;font-size:16px;color:#fff}.timer-meta{display:flex;justify-content:space-between;gap:8px;margin:8px 0;color:#d6cadf;font-size:12px}.timer-status{font-weight:900;color:#d8b4fe}.timer-buttons{display:flex;gap:7px}.reset-btn{background:#291e31;border-color:#6d5c76}.timer-complete .remaining,.timer-complete .timer-status{color:#86efac}.search-hidden{display:none!important}.jump-highlight{animation:gzJump 2.4s ease}@keyframes gzJump{0%,100%{box-shadow:0 15px 36px #0007}15%,70%{box-shadow:0 0 0 5px #c4b5fd,0 0 35px #8b5cf6}}
+/* 所有有條件的進化卡都完整顯示，卡片高度一致 */
+.route-column:has(.route-fields){height:401px!important;min-height:401px!important}.route-column:has(.route-fields) .route-fields{display:grid!important}.route-area{align-items:start!important}.evolution-sheet{scroll-margin-top:190px}
+@media(max-width:780px){.evo-tools input{min-width:0;width:100%}.care-actions{flex-wrap:wrap}.owned-toggle{margin-left:0}.timer-grid{grid-template-columns:1fr}.timer-meta{flex-direction:column}.care-start{flex:1}}
+
+/* 進化目標圖片／名稱：點擊跳到該怪獸資料 */
+.route-head.route-jump{cursor:pointer;transition:transform .16s ease,filter .16s ease,box-shadow .16s ease}
+.route-head.route-jump:hover,.route-head.route-jump:focus-visible{transform:translateY(-2px);filter:brightness(1.06);box-shadow:inset 0 0 0 3px #9b5cff;outline:none}
+.route-head.route-jump:active{transform:translateY(0)}
+.evolution-sheet.jump-highlight{animation:evoJumpHighlight 2.2s ease}
+@keyframes evoJumpHighlight{0%,35%{outline:6px solid #a855f7;outline-offset:4px;box-shadow:0 0 34px #8b5cf6cc}100%{outline-color:transparent;box-shadow:none}}
+
+/* RC2：已養過標記強化 */
+.owned-toggle{position:relative;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:7px 14px 7px 10px;border:2px solid #7c3aed;border-radius:12px;background:#fff;color:#3b185d;font-weight:900;cursor:pointer;user-select:none;box-shadow:0 3px 10px #0002;transition:.16s ease}
+.owned-toggle:hover{transform:translateY(-1px);box-shadow:0 6px 15px #0003}
+.owned-toggle input{position:absolute;opacity:0;pointer-events:none}
+.owned-toggle span{display:flex;align-items:center;gap:8px}
+.owned-toggle span:before{content:"";width:25px;height:25px;display:grid;place-items:center;border:2px solid #7c3aed;border-radius:7px;background:#f7f2ff;color:#fff;font-size:19px;line-height:1}
+.owned-toggle input:checked + span:before{content:"✓";background:#16a34a;border-color:#15803d;box-shadow:0 0 0 3px #dcfce7}
+.owned-toggle input:checked + span{color:#166534}
+.evolution-sheet.is-owned{outline:4px solid #22c55e;outline-offset:3px;box-shadow:0 0 0 7px #dcfce7,0 14px 30px #0003}
+.evolution-sheet.is-owned .source-title-zh:after{content:"  ✓ 已養過";display:inline-block;margin-left:10px;padding:3px 8px;border-radius:999px;background:#16a34a;color:#fff;font-size:12px;vertical-align:middle;box-shadow:0 2px 6px #0003}
+@media(max-width:520px){.owned-toggle{width:100%;justify-content:center}.evolution-sheet.is-owned .source-title-zh:after{display:block;width:max-content;margin:5px auto 0}}
+
+/* V3.0 RC4：補回原始攻略的特寫與攻擊招式 */
+.monster-extra-media{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8px;
+  padding:9px;
+  border-top:1px solid #ddd2e7;
+  background:#faf7fc;
+}
+.extra-media-card{
+  min-width:0;
+  overflow:hidden;
+  border:1px solid #d7c9e2;
+  border-radius:10px;
+  background:#fff;
+}
+.extra-media-title{
+  padding:6px 8px;
+  background:#f0e8f7;
+  color:#2b183d;
+  font-size:12px;
+  font-weight:900;
+  text-align:center;
+  border-bottom:1px solid #d7c9e2;
+}
+.extra-media-frame{
+  min-height:72px;
+  display:grid;
+  place-items:center;
+  padding:6px;
+}
+.extra-media-frame img{
+  display:block;
+  max-width:100%;
+  max-height:84px;
+  width:auto;
+  height:auto;
+  image-rendering:pixelated;
+  object-fit:contain;
+}
+.extra-media-card.closeup .extra-media-frame img{max-height:96px}
+.extra-media-card.attack .extra-media-frame img{max-height:64px}
+.extra-media-missing{color:#999;font-weight:800}
+@media(max-width:520px){
+  .monster-extra-media{grid-template-columns:1fr 1fr;gap:6px;padding:7px}
+  .extra-media-frame{min-height:62px}
+  .extra-media-card.closeup .extra-media-frame img{max-height:82px}
+}
+
+
+/* V3.0 RC6：計時與已養過放在每個進化目標下方 */
+.sheet-row{display:flex !important;width:100%;align-items:stretch !important}
+.source-panel{width:350px !important;flex:0 0 350px !important;border-right:3px solid #111 !important}
+.route-area{display:grid;grid-template-columns:repeat(var(--route-columns),minmax(180px,1fr));align-items:stretch}
+.route-column{display:flex;flex-direction:column;min-width:180px}
+.route-fields{flex:0 0 auto}
+.route-care{margin-top:auto;border-top:3px solid #8b5cf6;background:linear-gradient(180deg,#1b1225,#100b17);color:#fff}
+.route-care-title{display:flex;justify-content:space-between;align-items:center;gap:6px;padding:7px 8px;background:linear-gradient(135deg,#100b16,#32184d);border-bottom:1px solid #654b84}
+.route-care-title strong{font-size:13px}.route-care-title span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#d8cbea;font-size:11px;font-weight:800}
+.route-care .care-tools{border-top:0;background:transparent;padding:8px}
+.route-care .care-actions{display:grid;grid-template-columns:1fr;gap:7px}
+.route-care .care-start,.route-care .owned-toggle{width:100%;margin:0;justify-content:center;min-height:38px;padding:6px 8px;font-size:13px}
+.route-care .owned-toggle span:before{width:21px;height:21px;font-size:16px}
+.route-care .care-timer{margin-top:8px;padding:7px}
+.route-care .timer-grid{grid-template-columns:1fr;gap:5px}
+.route-care .timer-grid>div{padding:5px}.route-care .timer-grid strong{font-size:14px}
+.route-care .timer-meta{flex-direction:column;align-items:flex-start;margin:6px 0;font-size:10px}
+.route-care .timer-buttons{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.route-care .timer-buttons button{width:100%;padding:6px 5px;font-size:12px}
+.route-column.is-owned{box-shadow:inset 0 0 0 3px #22c55e;background:#f0fdf4}
+.route-column.is-owned .route-head strong:after{content:' ✓';color:#86efac}
+@media(max-width:780px){
+  .sheet-row{display:block !important}.source-panel{width:100% !important;flex:none !important;border-right:0 !important;border-bottom:3px solid #111 !important}
+  .route-area{grid-template-columns:repeat(2,minmax(0,1fr));overflow:visible}.route-column{min-width:0}
+}
+@media(max-width:440px){.route-area{grid-template-columns:1fr}}
+
+/* V3.0 RC6.1：修正路線卡固定高度裁掉培養計時與已養過按鈕 */
+.route-column,
+.route-column:not(.special-route),
+.route-column:has(.route-fields),
+.route-column.special-route:has(.route-fields){
+  height:auto !important;
+  min-height:0 !important;
+}
+.route-column{align-self:stretch !important;overflow:hidden !important}
+.route-fields{flex:0 0 auto !important}
+.route-care{display:block !important;visibility:visible !important;flex:0 0 auto !important;margin-top:0 !important}
+.route-care .care-tools,.route-care .care-actions,.route-care .owned-toggle,.route-care .care-start{display:flex !important}
+.route-care .care-actions{flex-direction:column !important;align-items:stretch !important}
+.route-care .owned-toggle,.route-care .care-start{width:100% !important}
+@media (min-width:781px){
+  .route-area{grid-auto-rows:auto !important;align-items:stretch !important}
+  .route-column{height:100% !important}
+}
+
+
+/* V3.0 RC7：精簡多機培養列 + 進化目標成長階段 */
+.route-head{display:grid !important;grid-template-columns:auto 1fr !important;grid-template-rows:auto auto !important;column-gap:8px !important;align-items:center !important}
+.route-head .route-sprite{grid-row:1 / span 2}
+.route-head strong{grid-column:2;align-self:end;line-height:1.15}
+.route-stage{grid-column:2;align-self:start;display:block;margin-top:3px;color:#6b5878;font-size:11px;font-weight:900;line-height:1.2}
+.route-care{border-top:2px solid #8b5cf6 !important}
+.route-care-title{display:none !important}
+.route-care .care-tools{padding:5px !important}
+.route-care .care-actions{display:grid !important;grid-template-columns:minmax(72px,1fr) auto minmax(70px,1fr) !important;gap:4px !important;align-items:center !important;flex-direction:initial !important}
+.route-care .care-start,.route-care .owned-toggle{width:auto !important;min-width:0 !important;min-height:30px !important;padding:4px 6px !important;border-radius:7px !important;font-size:11px !important;white-space:nowrap}
+.route-care .owned-toggle span{gap:4px}
+.route-care .owned-toggle span:before{width:17px !important;height:17px !important;font-size:13px !important;border-radius:5px !important}
+.compact-time{display:inline-flex;min-width:48px;min-height:30px;align-items:center;justify-content:center;padding:3px 5px;border:1px solid #5b466d;border-radius:7px;background:#0e0914;color:#fff;font:900 11px/1.1 ui-monospace,SFMono-Regular,Consolas,monospace}
+.route-care .care-timer{margin-top:5px !important;padding:6px !important;border-radius:8px !important}
+.route-care .care-timer[hidden]{display:none !important}
+.route-care .timer-grid{grid-template-columns:1fr 1fr !important;gap:4px !important}
+.route-care .timer-grid>div{padding:4px !important}
+.route-care .timer-grid span{font-size:9px !important}
+.route-care .timer-grid strong{font-size:12px !important}
+.route-care .timer-meta{display:none !important}
+.route-care .timer-buttons{grid-template-columns:1fr 1fr !important;gap:4px !important;margin-top:5px}
+.route-care .timer-buttons button{min-height:27px !important;padding:3px 4px !important;font-size:10px !important;border-radius:6px !important}
+@media(max-width:520px){.route-care .care-actions{grid-template-columns:1fr auto 1fr !important}.route-care .care-start,.route-care .owned-toggle{font-size:10px !important;padding:3px 4px !important}.compact-time{min-width:43px;font-size:10px}}
+
+/* V3.0 RC7.1：桌面版每列最多 8 隻，卡片加寬並自動換行 */
+.route-area{
+  grid-template-columns:repeat(8,minmax(180px,1fr)) !important;
+  grid-auto-flow:row !important;
+  grid-auto-rows:auto !important;
+  align-content:start !important;
+  overflow-x:visible !important;
+}
+.route-column{
+  width:auto !important;
+  min-width:180px !important;
+  max-width:none !important;
+}
+.route-care .care-actions{
+  grid-template-columns:minmax(78px,1fr) 52px minmax(76px,1fr) !important;
+}
+@media(max-width:1800px) and (min-width:1501px){
+  .route-area{grid-template-columns:repeat(7,minmax(180px,1fr)) !important}
+}
+@media(max-width:1500px) and (min-width:1201px){
+  .route-area{grid-template-columns:repeat(5,minmax(180px,1fr)) !important}
+}
+@media(max-width:1200px) and (min-width:781px){
+  .sheet-row{display:block !important}
+  .source-panel{width:100% !important;flex:none !important;border-right:0 !important;border-bottom:3px solid #111 !important}
+  .route-area{grid-template-columns:repeat(4,minmax(180px,1fr)) !important}
+}
+@media(max-width:780px){
+  .route-area{grid-template-columns:repeat(2,minmax(0,1fr)) !important}
+  .route-column{min-width:0 !important}
+}
+@media(max-width:440px){
+  .route-area{grid-template-columns:1fr !important}
+}
+
+/* RC9.7：進化目標固定單排，桌機與手機皆以橫向捲動瀏覽 */
+body .evolution-sheet .sheet-row{
+  min-width:0 !important;
+  overflow:hidden !important;
+}
+
+body .evolution-sheet .route-area{
+  display:flex !important;
+  flex-direction:row !important;
+  flex-wrap:nowrap !important;
+  flex:1 1 auto !important;
+  width:auto !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  align-items:flex-start !important;
+  align-content:flex-start !important;
+  justify-content:flex-start !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;
+  touch-action:pan-x pan-y;
+}
+
+body .evolution-sheet .route-area > .route-column{
+  flex:0 0 160px !important;
+  width:160px !important;
+  min-width:160px !important;
+  max-width:160px !important;
+  margin:0 !important;
+}
+
+body .evolution-sheet .route-area > .no-route{
+  flex:0 0 100% !important;
+  width:100% !important;
+}
+
+@media (max-width:780px){
+  body .evolution-sheet .sheet-row{
+    display:block !important;
+    width:100% !important;
+  }
+
+  body .evolution-sheet .source-panel{
+    width:100% !important;
+    max-width:none !important;
+    flex:none !important;
+    border-right:0 !important;
+    border-bottom:3px solid #8b5cf6 !important;
+  }
+
+  body .evolution-sheet .route-area{
+    display:flex !important;
+    flex-direction:row !important;
+    flex-wrap:nowrap !important;
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+  }
+
+  body .evolution-sheet .route-area > .route-column{
+    flex:0 0 160px !important;
+    width:160px !important;
+    min-width:160px !important;
+    max-width:160px !important;
+  }
+}
+
+/* RC9.8：桌機與手機的進化目標一律單列橫向滑動 */
+.evolution-sheet > .sheet-row{
+  min-width:0 !important;
+}
+
+.evolution-sheet > .sheet-row > .route-area{
+  display:flex !important;
+  flex-flow:row nowrap !important;
+  align-items:stretch !important;
+  justify-content:flex-start !important;
+  min-width:0 !important;
+  max-width:100% !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  -webkit-overflow-scrolling:touch;
+  overscroll-behavior-x:contain;
+  touch-action:pan-x pan-y;
+}
+
+.evolution-sheet > .sheet-row > .route-area > .route-column{
+  flex:0 0 160px !important;
+  width:160px !important;
+  min-width:160px !important;
+  max-width:160px !important;
+}
+
+@media (max-width:780px){
+  .evolution-sheet > .sheet-row{
+    display:block !important;
+    width:100% !important;
+  }
+
+  .evolution-sheet > .sheet-row > .source-panel{
+    width:100% !important;
+    max-width:none !important;
+    border-right:0 !important;
+  }
+
+  .evolution-sheet > .sheet-row > .route-area{
+    display:flex !important;
+    flex-flow:row nowrap !important;
+    width:100% !important;
+    max-width:100% !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+  }
+
+  .evolution-sheet > .sheet-row > .route-area > .route-column{
+    flex:0 0 160px !important;
+    width:160px !important;
+    min-width:160px !important;
+    max-width:160px !important;
+  }
+}
+

@@ -1,0 +1,46 @@
+/* DMVault Godzilla 70th V1.1.1 — shared, fixed two-row header */
+:root{
+  --dm-header-h:126px;
+  --dm-bg:#171a1d;
+  --dm-line:#3f4850;
+  --dm-text:#f4f6f8;
+  --dm-muted:#bdc6ce;
+  --dm-active:#4a3733;
+  --dm-active-line:#85645e;
+}
+.dm-header{
+  position:sticky!important;top:0!important;z-index:9999!important;
+  height:var(--dm-header-h)!important;min-height:var(--dm-header-h)!important;
+  display:grid!important;
+  grid-template-columns:max-content max-content 1fr!important;
+  grid-template-rows:58px 68px!important;
+  align-items:center!important;column-gap:18px!important;
+  padding:0 16px!important;margin:0!important;
+  background:var(--dm-bg)!important;color:var(--dm-text)!important;
+  border-bottom:1px solid var(--dm-line)!important;box-shadow:0 2px 8px #0005!important;
+  overflow:hidden!important;font-family:"Noto Sans TC","Microsoft JhengHei",sans-serif!important;
+}
+.dm-brand{grid-column:1;grid-row:1;font-size:22px!important;font-weight:900!important;white-space:nowrap!important;line-height:1!important}
+.dm-brand span{color:var(--dm-muted)!important;font-weight:650!important;margin-left:8px!important}
+.dm-badge{grid-column:2;grid-row:1;font-size:13px!important;white-space:nowrap!important;border:1px solid #68514d!important;background:#2a201f!important;padding:7px 12px!important;border-radius:999px!important;color:#f4c1b8!important}
+.dm-nav{
+  grid-column:1 / -1!important;grid-row:2!important;
+  justify-self:start!important;align-self:start!important;
+  margin:0!important;padding:5px 0 10px!important;
+  display:flex!important;align-items:center!important;justify-content:flex-start!important;
+  gap:10px!important;overflow-x:auto!important;overflow-y:hidden!important;
+  width:100%!important;white-space:nowrap!important;flex-wrap:nowrap!important;scrollbar-width:thin!important;
+}
+.dm-nav a{flex:0 0 auto!important;color:#fff!important;text-decoration:none!important;border:1px solid #4a535b!important;background:#242a2f!important;border-radius:12px!important;padding:10px 16px!important;font-size:16px!important;line-height:1.2!important}
+.dm-nav a.active{background:var(--dm-active)!important;border-color:var(--dm-active-line)!important}
+.dm-nav a:hover{background:#30373d!important}
+@media(max-width:700px){
+  :root{--dm-header-h:116px}
+  .dm-header{grid-template-columns:max-content 1fr!important;grid-template-rows:52px 64px!important;column-gap:10px!important;padding:0 10px!important}
+  .dm-brand{font-size:18px!important}.dm-brand span{margin-left:4px!important}
+  .dm-badge{display:none!important}.dm-nav{padding-top:4px!important}.dm-nav a{padding:9px 12px!important;font-size:14px!important}
+}
+
+/* V1.5 共用黑紫白主題 */
+:root{--dm-bg:#0a0710;--dm-line:#4a385f;--dm-text:#f8f7fb;--dm-muted:#c4b8d3;--dm-active:#6d28d9;--dm-active-line:#c4b5fd}
+.dm-header{background:rgba(10,7,14,.97)!important;border-color:var(--dm-line)!important;box-shadow:0 8px 28px #0009!important}.dm-badge{background:#21152f!important;border-color:#654b84!important;color:#eadcff!important}.dm-nav a{background:#191220!important;border-color:#4a385f!important}.dm-nav a.active{background:linear-gradient(135deg,#6d28d9,#8b5cf6)!important;border-color:#c4b5fd!important;box-shadow:0 0 18px #7c3aed55!important}
