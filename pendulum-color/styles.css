@@ -1569,3 +1569,58 @@ padding:8px 10px;
 .dex-map-canvas{min-width:100%!important;min-height:100%!important}
 .dex-map-board{min-width:0!important;overflow:visible!important}
 @media(max-width:760px){.dex-map-canvas{min-width:100%!important}.dex-map-board{min-width:0!important}}
+
+
+/* v0.83：手機版統一採哥吉拉式進化瀏覽；現有數碼獸固定，上方不隨目標卡橫移。 */
+@media(max-width:760px){
+  .evolution-sheet .sheet-scroll{
+    width:100% !important;
+    overflow:visible !important;
+  }
+  .evolution-sheet .sheet-row{
+    display:block !important;
+    width:100% !important;
+    min-width:0 !important;
+    overflow:hidden !important;
+  }
+  .evolution-sheet .source-panel{
+    position:relative !important;
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    flex:none !important;
+    margin:0 !important;
+    border-right:0 !important;
+    border-bottom:3px solid #111 !important;
+    z-index:2 !important;
+  }
+  .evolution-sheet .route-area{
+    display:flex !important;
+    flex-flow:row nowrap !important;
+    align-items:stretch !important;
+    gap:10px !important;
+    width:100% !important;
+    min-width:0 !important;
+    max-width:100% !important;
+    padding:10px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch;
+    overscroll-behavior-x:contain;
+    touch-action:pan-x pan-y;
+    scroll-snap-type:x proximity;
+  }
+  .evolution-sheet .route-column{
+    position:relative !important;
+    flex:0 0 286px !important;
+    width:286px !important;
+    min-width:286px !important;
+    max-width:286px !important;
+    margin:0 !important;
+    scroll-snap-align:start;
+  }
+  .evolution-sheet .route-area > .no-route{
+    flex:0 0 100% !important;
+    width:100% !important;
+  }
+}

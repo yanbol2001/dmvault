@@ -1005,19 +1005,6 @@
       "id": "evo-006"
     },
     {
-      "from": "年糕獸",
-      "to": "礦石獸",
-      "source_row": "19",
-      "target_column": "AQ",
-      "care_mistakes": "1+",
-      "effort": "3+",
-      "battles": "-",
-      "win_rate": "-",
-      "time": "12小時",
-      "notes": "",
-      "id": "evo-007"
-    },
-    {
       "from": "甲蟲獸",
       "to": "比多獸",
       "source_row": "31",
