@@ -245,6 +245,55 @@ main{
 </style>
 
 
+<style id="dmvault-mh-mobile-source-static-v1">
+/* MH20th 手機／PWA：現有怪獸固定，上方資料不參與橫向滑動；僅待進化卡左右滑動。 */
+@media(max-width:760px){
+  .route-scroll{
+    display:block !important;
+    width:100% !important;
+    max-width:100% !important;
+    padding:8px !important;
+    overflow:visible !important;
+  }
+  .route-scroll > .current{
+    display:block !important;
+    position:relative !important;
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    margin:0 0 10px !important;
+  }
+  .route-scroll > .target-grid{
+    box-sizing:border-box !important;
+    display:flex !important;
+    flex-flow:row nowrap !important;
+    align-items:stretch !important;
+    width:100% !important;
+    min-width:0 !important;
+    max-width:100% !important;
+    gap:10px !important;
+    padding:2px 0 8px !important;
+    overflow-x:auto !important;
+    overflow-y:hidden !important;
+    -webkit-overflow-scrolling:touch !important;
+    overscroll-behavior-x:contain !important;
+    touch-action:pan-x pan-y !important;
+    scroll-snap-type:x proximity !important;
+  }
+  .route-scroll > .target-grid > .target{
+    box-sizing:border-box !important;
+    position:relative !important;
+    flex:0 0 286px !important;
+    width:286px !important;
+    min-width:286px !important;
+    max-width:286px !important;
+    margin:0 !important;
+    scroll-snap-align:start !important;
+  }
+}
+</style>
+
+
 <link rel="manifest" href="../manifest.webmanifest">
 <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -297,7 +346,7 @@ function currCard(mo){return `<article id="monster-${mo.id}" class="current"><di
 function duration(t){let x=t["時間"]||"";if(x.includes("分鐘"))return parseFloat(x)*60000;if(x.includes("小時"))return parseFloat(x)*3600000;return 0}
 function cond(t){let period="";if(t["日夜"]){let isDay=t["日夜"].startsWith("06:00"),label=isDay?"日間型":"夜間型",cls=isDay?"day":"night";period=`<tr><td>時段</td><td><div class="time-type ${cls}">${label}<br>${t["日夜"]}</div></td></tr>`}return `<table class="info"><tr><td>失誤</td><td>${t["失誤"]||"-"}</td></tr><tr><td>訓練</td><td>${t["訓練"]||"-"}</td></tr><tr><td>戰鬥</td><td>${t["戰鬥"]||"-"}</td></tr><tr><td>勝率</td><td>${t["勝率"]||"-"}</td></tr><tr><td>時間</td><td>${t["時間"]||"-"}</td></tr>${period}${t["條件"]?`<tr><td>條件</td><td>${t["條件"]}</td></tr>`:""}${t["解鎖"]?`<tr><td>解鎖</td><td class="unlock-condition">${t["解鎖"]}</td></tr>`:""}</table>`}
 function target(t,src,i){let mo=m[t.to],key=`${src}_${mo.id}_${i}`,isOwned=owned(mo.id);return `<article class="target ${isOwned?'is-owned':''}" data-key="${key}" data-ms="${duration(t)}" data-monster="${mo.id}"><button type="button" class="ownedmark ${isOwned?'on':''}" onclick="toggleOwned('${mo.id}')" title="${isOwned?'取消已養過':'標記已養過'}" aria-label="${isOwned?'取消已養過':'標記已養過'}"><span class="owned-bigcheck">${isOwned?'✓':''}</span></button><div class="sprite" onclick="jump('${mo.id}')" title="跳到這隻怪獸的進化資料"><img src="${mo.img}"></div><div class="name"><h3 onclick="jump('${mo.id}')">${mo.zh}</h3><div class="sub">${mo.en||""}<br>${mo.ja||""}</div><span class="badge">${mo.stage}</span></div><div class="section">進化條件</div>${cond(t)}<div class="section">培育計時器</div><div class="timer-tools" data-key="${key}" data-ms="${duration(t)}"><div class="timer-slot"><button type="button" class="timer-start" onclick="start('${key}')">開始培養</button><div class="timer-running" hidden><strong class="timer-time">--:--:--</strong><span class="timer-controls"><button type="button" class="timer-freeze" onclick="freezeT('${key}')">冷凍</button><button type="button" class="timer-reset" onclick="clearT('${key}')">重設</button></span></div></div></div></article>`}
-function render(){timers.forEach(clearInterval);timers=[];let q=(searchInput?.value||'').trim().toLowerCase(),html='';routes.forEach(rr=>{let src=m[rr.source],all=(src.zh+' '+(src.en||'')+' '+(src.ja||'')).toLowerCase();if(q&&!all.includes(q)&&!rr.targets.some(t=>{let x=m[t.to];return (x.zh+' '+(x.en||'')+' '+(x.ja||'')).toLowerCase().includes(q)}))return;html+=`<section class="route-block stage-${src.stage}" id="route-${src.id}"><div class="route-title">${src.zh}｜${src.stage} → 可進化</div><div class="route-scroll">${currCard(src)}${rr.targets.map((t,i)=>target(t,src.id,i)).join('')}</div></section>`});routesRoot.innerHTML=html;tickers()}
+function render(){timers.forEach(clearInterval);timers=[];let q=(searchInput?.value||'').trim().toLowerCase(),html='';routes.forEach(rr=>{let src=m[rr.source],all=(src.zh+' '+(src.en||'')+' '+(src.ja||'')).toLowerCase();if(q&&!all.includes(q)&&!rr.targets.some(t=>{let x=m[t.to];return (x.zh+' '+(x.en||'')+' '+(x.ja||'')).toLowerCase().includes(q)}))return;html+=`<section class="route-block stage-${src.stage}" id="route-${src.id}"><div class="route-title">${src.zh}｜${src.stage} → 可進化</div><div class="route-scroll">${currCard(src)}<div class="target-grid">${rr.targets.map((t,i)=>target(t,src.id,i)).join('')}</div></div></section>`});routesRoot.innerHTML=html;tickers()}
 function timerState(k){
   let raw=G(k,"timer");
   if(raw){try{return JSON.parse(raw)}catch(err){}}

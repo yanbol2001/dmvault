@@ -1,14 +1,15 @@
 {
   "schema": 1,
-  "generatedAt": "2026-07-20T09:06:00Z",
+  "generatedAt": "2026-07-21T02:20:00Z",
   "projects": [
     {
       "id": "mh-20th",
       "name": "Monster Hunter 20th",
-      "version": "V7.4.0",
+      "version": "V7.4.1-mh-mobile-source-static-v1",
       "fileCount": 74,
-      "estimatedBytes": 960276,
-      "manifest": "./core/offline-manifests/mh-20th.json"
+      "estimatedBytes": 974367,
+      "manifest": "./core/offline-manifests/mh-20th.json",
+      "generatedAt": "2026-07-21T02:20:00Z"
     },
     {
       "id": "pendulum-color",
