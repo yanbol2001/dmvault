@@ -1,4 +1,4 @@
-const VERSION = "dmvault-platform-1.1.0-offline-final-v1";
+const VERSION = "dmvault-platform-1.1.1-penc-fix-v1";
 const CORE_CACHE = `${VERSION}-core`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const OFFLINE_CACHE_PREFIX = "dmvault-offline-package-";

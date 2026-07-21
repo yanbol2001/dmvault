@@ -13,10 +13,11 @@
     {
       "id": "pendulum-color",
       "name": "Pendulum COLOR",
-      "version": "pkg-90a9ee18bed4",
+      "version": "pkg-b0ee24a602be",
       "fileCount": 470,
-      "estimatedBytes": 697300,
-      "manifest": "./core/offline-manifests/pendulum-color.json"
+      "estimatedBytes": 698274,
+      "manifest": "./core/offline-manifests/pendulum-color.json",
+      "generatedAt": "2026-07-21T01:10:00Z"
     },
     {
       "id": "godzilla-70th",

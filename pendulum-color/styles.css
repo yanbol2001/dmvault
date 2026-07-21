@@ -1560,3 +1560,12 @@ padding:8px 10px;
   }
 }
 
+
+
+/* v0.82：圖鑑節點改採動態像素座標，避免圖鑑編號較後面的節點重疊。 */
+.dex-stage-labels{inset:0!important;width:100%!important}
+.dex-stage-label{left:var(--x)!important}
+.dex-map-node{left:var(--x)!important;top:var(--y)!important}
+.dex-map-canvas{min-width:100%!important;min-height:100%!important}
+.dex-map-board{min-width:0!important;overflow:visible!important}
+@media(max-width:760px){.dex-map-canvas{min-width:100%!important}.dex-map-board{min-width:0!important}}

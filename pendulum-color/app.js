@@ -399,7 +399,7 @@ function renderEvolution(){
   const unlockNotice=`<aside class="unlock-notice" role="note" aria-label="圖鑑${unlockDex}解鎖方式"><strong>圖鑑${unlockDex}解鎖方式：</strong><span>與其他不同版本的彩色超代(Pendulum COLOR)對戰一次。</span></aside>`;
   let html='',unlockNoticeInserted=false;
   for(const stage of stageOrder){
-    const list=DATA.digimon.filter(d=>d.stage===stage&&matches(d)); if(!list.length)continue;
+    const list=DATA.digimon.filter(d=>d.stage===stage&&matches(d)).sort((a,b)=>Number(a.dex_no)-Number(b.dex_no)); if(!list.length)continue;
     html+=`<section class="stage-section" id="stage-${stage}"><h2 class="stage-heading"><span>${stage}</span><small>${list.length} 隻</small></h2>`;
     for(const d of list){
       const routes=DATA.evolutions.filter(e=>e.from===d.name_zh);
@@ -453,14 +453,25 @@ function treeRelations(id){
   return {edges,ancestors,descendants,related:new Set([id,...ancestors,...descendants])};
 }
 function stageLayout(list){
-  const stageGap=100/Math.max(1,stageOrder.length-1);
+  // 使用固定像素間距而不是百分比，避免同一階段怪獸較多時節點互相重疊。
+  const columnGap=150;
+  const rowGap=96;
+  const left=76;
+  const top=92;
   const positions=new Map();
+  let maxRows=1;
   for(const [si,stage] of stageOrder.entries()){
-    const ds=list.filter(d=>d.stage===stage).sort((a,b)=>a.dex_no-b.dex_no);
-    const gap=ds.length>1?82/(ds.length-1):0;
-    ds.forEach((d,i)=>positions.set(d.id,{x:si*stageGap,y:ds.length===1?50:9+i*gap,stageIndex:si,index:i,count:ds.length}));
+    const ds=list.filter(d=>d.stage===stage).sort((a,b)=>Number(a.dex_no)-Number(b.dex_no));
+    maxRows=Math.max(maxRows,ds.length);
+    ds.forEach((d,i)=>positions.set(d.id,{x:left+si*columnGap,y:top+i*rowGap,stageIndex:si,index:i,count:ds.length}));
   }
-  return positions;
+  return {
+    positions,
+    width:left*2+(stageOrder.length-1)*columnGap,
+    height:top+Math.max(1,maxRows-1)*rowGap+92,
+    columnGap,
+    left
+  };
 }
 function conditionSummary(e){
   const rows=[];
@@ -672,14 +683,15 @@ function bindDexPanZoom(){
 function renderDex(){
   const list=filteredDigimon();
   if(!list.length){$('#dexView').innerHTML='<div class="empty">找不到符合項目</div>';return;}
-  const positions=stageLayout(list);
-  const nodes=list.map(d=>{const p=positions.get(d.id);const raised=isRaised(d.id);return `<button class="dex-map-node attr-${esc(d.attribute)} ${raised?'raised':''}" data-id="${d.id}" type="button" style="--x:${p.x};--y:${p.y}" title="#${padNo(d.dex_no)} ${esc(d.name_zh)}｜點一下前往進化條件">${sprite(d,'dex-map-sprite')}<span>${esc(d.name_zh)}</span>${raised?'<span class="raised-mark">✓</span>':''}</button>`;}).join('');
-  const stageLabels=stageOrder.map((stage,i)=>list.some(d=>d.stage===stage)?`<span class="dex-stage-label" style="--x:${i*(100/Math.max(1,stageOrder.length-1))}">${stage}</span>`:'').join('');
+  const layout=stageLayout(list);
+  const positions=layout.positions;
+  const nodes=list.map(d=>{const p=positions.get(d.id);const raised=isRaised(d.id);return `<button class="dex-map-node attr-${esc(d.attribute)} ${raised?'raised':''}" data-id="${d.id}" type="button" style="--x:${p.x}px;--y:${p.y}px" title="#${padNo(d.dex_no)} ${esc(d.name_zh)}｜點一下前往進化條件">${sprite(d,'dex-map-sprite')}<span>${esc(d.name_zh)}</span>${raised?'<span class="raised-mark">✓</span>':''}</button>`;}).join('');
+  const stageLabels=stageOrder.map((stage,i)=>list.some(d=>d.stage===stage)?`<span class="dex-stage-label" style="--x:${layout.left+i*layout.columnGap}px">${stage}</span>`:'').join('');
   $('#dexView').innerHTML=`<section class="dex-map-shell ${dexWireMode}">
     <div class="dex-tree-toolbar"><strong>進化技能樹</strong><div class="wire-switch" role="group" aria-label="圖鑑顯示模式"><button class="${dexWireMode==='wireless'?'active':''}" data-wire="wireless" type="button">無線</button><button class="${dexWireMode==='wired'?'active':''}" data-wire="wired" type="button">有線</button></div>
       <div class="tree-actions"><button id="dexZoomOut" type="button" aria-label="縮小">−</button><output id="dexZoomValue">${Math.round(dexScale*100)}%</output><button id="dexZoomIn" type="button" aria-label="放大">＋</button><button id="dexZoomReset" type="button">重設視圖</button><button id="treeClear" type="button" ${treeSelectedId?'':'disabled'}>清除高亮</button><button id="treeGoEvolution" type="button" ${treeSelectedId?'':'disabled'}>查看進化條件</button></div>
       <span id="treeSelection" class="dex-tree-hint">${treeSelectedId?(DATA.digimon.find(d=>d.id===treeSelectedId)?.name_zh+'：已高亮完整前後路線'):'滑過可預覽路線；點一下圖片前往進化條件'}</span></div>
-    <div class="dex-map-viewport"><div id="dexMapCanvas" class="dex-map-canvas"><div id="dexTreeBoard" class="dex-map-board"><div class="dex-stage-labels">${stageLabels}</div><svg id="dexTreeLines" class="dex-tree-lines" aria-hidden="true"></svg>${nodes}</div></div></div>
+    <div class="dex-map-viewport"><div id="dexMapCanvas" class="dex-map-canvas" style="width:${layout.width}px;height:${layout.height}px"><div id="dexTreeBoard" class="dex-map-board" style="width:${layout.width}px;height:${layout.height}px"><div class="dex-stage-labels">${stageLabels}</div><svg id="dexTreeLines" class="dex-tree-lines" aria-hidden="true"></svg>${nodes}</div></div></div>
   </section>`;
   $$('[data-wire]').forEach(b=>b.onclick=()=>{dexWireMode=b.dataset.wire;renderDex();});
   $$('.dex-map-node').forEach(n=>{
