@@ -40,9 +40,7 @@
     <div class="header-actions">
       <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="main-nav"><span aria-hidden="true">☰</span><span class="menu-label">選單</span></button>
       <nav class="main-nav" id="main-nav" aria-label="主要導覽">
-        <a href="#overview">總覽</a>
-        <a href="#projects">作品</a>
-        <a href="#updates">更新</a>
+        <a href="#projects">資料庫</a>
         <a href="#offline-data">離線</a>
         <a href="#about">關於</a>
       </nav>
@@ -62,17 +60,12 @@
       </div>
     </section>
 
-    <section class="section overview-section" id="overview">
+    <section class="section" id="projects">
       <div class="section-heading">
-        <div><p class="section-kicker">Overview</p><h2>平台總覽</h2></div>
-        <p>目前收錄狀態與平台資訊。</p>
+        <div><p class="section-kicker">Library</p><h2>資料庫</h2></div>
+        <p id="project-summary">作品資料載入中</p>
       </div>
-      <div class="overview-grid" aria-live="polite">
-        <article class="overview-card"><span class="overview-label">收錄作品</span><strong id="stat-total">—</strong><small>個作品</small></article>
-        <article class="overview-card"><span class="overview-label">目前可用</span><strong id="stat-available">—</strong><small>個作品</small></article>
-        <article class="overview-card"><span class="overview-label">最後更新</span><strong class="overview-date" id="stat-updated">—</strong><small>平台資料</small></article>
-        <article class="overview-card"><span class="overview-label">平台版本</span><strong class="overview-version" id="stat-version">—</strong><small>Development</small></article>
-      </div>
+      <div class="project-grid" id="project-grid" aria-live="polite"></div>
     </section>
 
 
@@ -116,22 +109,6 @@
       </div>
     </section>
 
-    <section class="section" id="projects">
-      <div class="section-heading">
-        <div><p class="section-kicker">Library</p><h2>作品資料庫</h2></div>
-        <p id="project-summary">作品資料載入中</p>
-      </div>
-      <div class="project-grid" id="project-grid" aria-live="polite"></div>
-    </section>
-
-    <section class="section" id="updates">
-      <div class="section-heading">
-        <div><p class="section-kicker">Changelog</p><h2>最新更新</h2></div>
-        <p id="update-summary">顯示最近更新。</p>
-      </div>
-      <div class="update-list" id="update-list" aria-live="polite"></div>
-      <div class="update-actions"><button class="secondary-button" id="toggle-updates" type="button" hidden>顯示全部更新</button></div>
-    </section>
 
     <section class="section" id="about">
       <div class="about-card">
