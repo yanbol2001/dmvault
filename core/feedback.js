@@ -233,6 +233,7 @@
   }
 
   function build() {
+    document.body.classList.add('dmv-feedback-enabled');
     migrateLegacyQueue();
 
     const btn = document.createElement('button');

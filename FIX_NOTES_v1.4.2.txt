@@ -1,0 +1,8 @@
+DMVault Feedback v1.4.2
+
+修正：
+- feedback.js 啟動時實際加入 dmv-feedback-enabled body class。
+- 平台首頁按鈕與回報按鈕使用不同垂直位置。
+- CSS 增加不依賴 body class 的平台首頁定位保險。
+- 回到頂端按鈕同步上移。
+- 更新離線快取版本。

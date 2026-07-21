@@ -125,3 +125,31 @@ body.dmv-feedback-enabled .back-to-top{
     bottom:max(116px,calc(env(safe-area-inset-bottom) + 112px)) !important;
   }
 }
+
+
+/* Feedback v1.4.2: structural collision fix.
+   v1.4.1 selectors depended on a body class that was not being applied. */
+.dmvault-platform-home{
+  right:max(12px,env(safe-area-inset-right)) !important;
+  bottom:max(76px,calc(env(safe-area-inset-bottom) + 72px)) !important;
+}
+body.dmv-feedback-enabled .dmv-feedback-button{
+  bottom:max(14px,calc(env(safe-area-inset-bottom) + 10px)) !important;
+}
+body.dmv-feedback-enabled .back-to-top{
+  bottom:max(136px,calc(env(safe-area-inset-bottom) + 132px)) !important;
+}
+@media(max-width:640px){
+  .dmvault-platform-home{
+    right:12px !important;
+    bottom:max(72px,calc(env(safe-area-inset-bottom) + 68px)) !important;
+  }
+  body.dmv-feedback-enabled .dmv-feedback-button{
+    right:12px !important;
+    bottom:max(12px,calc(env(safe-area-inset-bottom) + 8px)) !important;
+  }
+  body.dmv-feedback-enabled .back-to-top{
+    right:12px !important;
+    bottom:max(132px,calc(env(safe-area-inset-bottom) + 128px)) !important;
+  }
+}
