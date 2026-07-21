@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant" data-dmvault-root="../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DMVault MH20th V8.2</title>
+<!doctype html><html lang="zh-Hant" data-dmvault-root="../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DMVault MH20th Web v0.2</title>
 <style>
 :root{--bg:#f7f1e8;--panel:#fffdf8;--line:#dfd1bb;--text:#171717;--muted:#6f6255;--p:#7657f4;--ps:#efe9ff;--g:#22a25d;--gold:#f1b845}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:"Microsoft JhengHei",sans-serif;color:var(--text)}
@@ -308,56 +308,6 @@ main{
   <link rel="stylesheet" href="../../core/feedback.css">
   <script src="../../core/feedback-config.js"></script>
   <script defer src="../../core/feedback.js"></script>
-
-<style id="dmvault-mh-v8-2-independent-layout-refine">
-/* V8.2：以原 MH 獨立網頁版為基準，只收窄卡片與壓縮留白。 */
-@media (min-width:761px){
-  main{padding:12px 6px!important;}
-  .route-block{margin:22px 0!important;}
-  .route-title{padding:9px 12px!important;border-radius:10px 10px 0 0!important;font-size:16px!important;}
-  .route-scroll{
-    gap:8px!important;
-    padding:8px!important;
-    align-items:stretch!important;
-    border-radius:0 0 10px 10px!important;
-    scroll-padding-left:8px!important;
-  }
-  .route-scroll > .current{
-    flex:0 0 204px!important;
-    width:204px!important;
-    min-width:204px!important;
-    max-width:204px!important;
-    padding:10px!important;
-    border-radius:11px!important;
-  }
-  .route-scroll > .target-grid{display:contents!important;}
-  .route-scroll > .target-grid > .target,
-  .route-scroll > .target{
-    flex:0 0 212px!important;
-    width:212px!important;
-    min-width:212px!important;
-    max-width:212px!important;
-    padding:10px!important;
-    border-radius:11px!important;
-  }
-  .route-scroll .sprite{height:96px!important;border-radius:9px!important;}
-  .route-scroll .sprite img{max-width:88px!important;max-height:82px!important;}
-  .route-scroll .name h3{margin:7px 0 1px!important;font-size:16px!important;line-height:1.2!important;}
-  .route-scroll .sub{font-size:10px!important;line-height:1.25!important;}
-  .route-scroll .badge{margin-top:4px!important;padding:2px 7px!important;font-size:10px!important;}
-  .route-scroll .section{margin:9px 0 5px!important;padding-left:6px!important;border-left-width:3px!important;font-size:13px!important;}
-  .route-scroll .info{margin-top:6px!important;font-size:12px!important;}
-  .route-scroll .info td{padding:5px 6px!important;line-height:1.25!important;}
-  .route-scroll .current .info td:first-child{width:48%!important;}
-  .route-scroll .target .info td:first-child{width:43%!important;}
-  .route-scroll .attack{height:64px!important;border-radius:8px!important;}
-  .route-scroll .attack img{width:58px!important;height:58px!important;max-width:58px!important;max-height:58px!important;}
-  .route-scroll .timer-tools{padding-top:8px!important;}
-  .route-scroll .timer-start,.route-scroll .timer-running{height:31px!important;min-height:31px!important;max-height:31px!important;}
-  .route-scroll .timer-start{font-size:11px!important;}
-  .route-scroll .ownedmark{right:4px!important;top:4px!important;}
-}
-</style>
 </head><body><header class="dm-site-header"><div class="dm-site-top"><div class="dm-site-brand"><a href="../index.html">DMVault MH20th</a></div><nav class="dm-site-nav"><a href="../index.html" class="">彩色對打機總覽</a><a href="../guide.html" class="">基本操作</a><a href="../evolution/index.html" class="active">進化條件</a><a href="../evolution/dex/index.html" class="">圖鑑</a><a href="../stage.html" class="">關卡</a><a href="../background.html" class="">背景</a></nav><div class="dm-evolution-search"><input id="search" type="search" placeholder="搜尋怪獸"></div></div></header>
 
 <main style="padding-top:18px"><section class="hero"><div><h1>進化條件</h1><p>下方所有路線已打通，可直接用滾輪瀏覽；上方圖鑑只顯示圖片與名稱。</p></div><div>綠色記號＝已養過／已進圖鑑</div></section>
@@ -392,7 +342,7 @@ function G(id,f){try{return window.localStorage.getItem(K(id,f))}catch(err){retu
 function S(id,f,v){try{window.localStorage.setItem(K(id,f),v)}catch(err){}}
 const owned=id=>G(id,"owned")==="1";
 function stats(mo){let st=mo.stats||{},keys=["編號","體力","戰鬥","強度","飢餓倒數","力量倒數","大便倒數","入睡時間","起床時間"];return keys.map(k=>`<tr><td>${k}</td><td>${st[k]??"-"}</td></tr>`).join("")}
-function currCard(mo){return `<article id="monster-${mo.id}" class="current"><div class="sprite" onclick="location.href='dex/index.html#monster=${mo.id}'" title="在圖鑑中查看"><img src="${mo.img}"></div><div class="name"><h3 onclick="location.href='dex/index.html#monster=${mo.id}'">${mo.zh}</h3><div class="sub">${mo.en||""}<br>${mo.ja||""}</div><span class="badge">${mo.stage}</span></div><div class="section">基本資料</div><table class="info">${stats(mo)}</table><div class="section">攻擊圖案</div><div class="attack"><img src="${mo.atk}"></div></article>`}
+function currCard(mo){return `<article id="monster-${mo.id}" class="current"><div class="sprite" onclick="location.href='dex/index.html#monster=${mo.id}'" title="在圖鑑中查看"><img src="${mo.img}"></div><div class="name"><h3 onclick="location.href='dex/index.html#monster=${mo.id}'">${mo.zh}</h3><div class="sub">${mo.en||""}<br>${mo.ja||""}</div><span class="badge">${mo.stage}</span></div><div class="section">基本資料</div><table class="info">${stats(mo)}</table><div class="section">攻擊招式</div><div class="attack"><img src="${mo.atk}"></div></article>`}
 function duration(t){let x=t["時間"]||"";if(x.includes("分鐘"))return parseFloat(x)*60000;if(x.includes("小時"))return parseFloat(x)*3600000;return 0}
 function cond(t){let period="";if(t["日夜"]){let isDay=t["日夜"].startsWith("06:00"),label=isDay?"日間型":"夜間型",cls=isDay?"day":"night";period=`<tr><td>時段</td><td><div class="time-type ${cls}">${label}<br>${t["日夜"]}</div></td></tr>`}return `<table class="info"><tr><td>失誤</td><td>${t["失誤"]||"-"}</td></tr><tr><td>訓練</td><td>${t["訓練"]||"-"}</td></tr><tr><td>戰鬥</td><td>${t["戰鬥"]||"-"}</td></tr><tr><td>勝率</td><td>${t["勝率"]||"-"}</td></tr><tr><td>時間</td><td>${t["時間"]||"-"}</td></tr>${period}${t["條件"]?`<tr><td>條件</td><td>${t["條件"]}</td></tr>`:""}${t["解鎖"]?`<tr><td>解鎖</td><td class="unlock-condition">${t["解鎖"]}</td></tr>`:""}</table>`}
 function target(t,src,i){let mo=m[t.to],key=`${src}_${mo.id}_${i}`,isOwned=owned(mo.id);return `<article class="target ${isOwned?'is-owned':''}" data-key="${key}" data-ms="${duration(t)}" data-monster="${mo.id}"><button type="button" class="ownedmark ${isOwned?'on':''}" onclick="toggleOwned('${mo.id}')" title="${isOwned?'取消已養過':'標記已養過'}" aria-label="${isOwned?'取消已養過':'標記已養過'}"><span class="owned-bigcheck">${isOwned?'✓':''}</span></button><div class="sprite" onclick="jump('${mo.id}')" title="跳到這隻怪獸的進化資料"><img src="${mo.img}"></div><div class="name"><h3 onclick="jump('${mo.id}')">${mo.zh}</h3><div class="sub">${mo.en||""}<br>${mo.ja||""}</div><span class="badge">${mo.stage}</span></div><div class="section">進化條件</div>${cond(t)}<div class="section">培育計時器</div><div class="timer-tools" data-key="${key}" data-ms="${duration(t)}"><div class="timer-slot"><button type="button" class="timer-start" onclick="start('${key}')">開始培養</button><div class="timer-running" hidden><strong class="timer-time">--:--:--</strong><span class="timer-controls"><button type="button" class="timer-freeze" onclick="freezeT('${key}')">冷凍</button><button type="button" class="timer-reset" onclick="clearT('${key}')">重設</button></span></div></div></div></article>`}

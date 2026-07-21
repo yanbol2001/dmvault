@@ -1,32 +1,33 @@
 {
   "schema": 1,
-  "generatedAt": "2026-07-21T02:20:00Z",
+  "generatedAt": "2026-07-21T04:55:00Z",
   "projects": [
     {
       "id": "mh-20th",
       "name": "Monster Hunter 20th",
-      "version": "V7.4.1-mh-mobile-source-static-v1",
+      "version": "V7.4.1-feedback-layout-v142",
       "fileCount": 74,
       "estimatedBytes": 974367,
       "manifest": "./core/offline-manifests/mh-20th.json",
-      "generatedAt": "2026-07-21T02:20:00Z"
+      "generatedAt": "2026-07-21T03:40:00Z"
     },
     {
       "id": "pendulum-color",
       "name": "Pendulum COLOR",
-      "version": "pkg-b0ee24a602be",
+      "version": "pkg-feedback-layout-v142",
       "fileCount": 470,
       "estimatedBytes": 698274,
       "manifest": "./core/offline-manifests/pendulum-color.json",
-      "generatedAt": "2026-07-21T01:10:00Z"
+      "generatedAt": "2026-07-21T03:40:00Z"
     },
     {
       "id": "godzilla-70th",
       "name": "Godzilla 70th",
-      "version": "V3.0-offline1",
+      "version": "V3.0-gcell-mobile-v21",
       "fileCount": 219,
       "estimatedBytes": 4661019,
-      "manifest": "./core/offline-manifests/godzilla-70th.json"
+      "manifest": "./core/offline-manifests/godzilla-70th.json",
+      "generatedAt": "2026-07-21T04:55:00Z"
     }
   ]
 }
