@@ -1,0 +1,16 @@
+DMVault Feedback v1.3
+
+本版完成：
+- Google Apps Script LockService 並行寫入鎖
+- 唯一回報編號 FB-YYYYMMDD-XXXXXX
+- 後端回報 ID 防重複
+- 離線／失敗佇列 v2
+- 恢復網路自動重送與每分鐘補送
+- 待送筆數顯示及手動重送
+- 不限制單一裝置送出次數
+- 必填、最少字數、最大字數與後端格式驗證
+- 隱藏蜜罐欄位攔截簡單機器人
+- 試算表公式注入防護
+
+尚需管理員完成：
+部署 setup/DMVault_Feedback_AppsScript.gs，並將 /exec 網址填入 core/feedback-config.js。
