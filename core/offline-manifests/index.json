@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "generatedAt": "2026-07-21T03:40:00Z",
+  "generatedAt": "2026-07-21T04:55:00Z",
   "projects": [
     {
       "id": "mh-20th",
@@ -23,11 +23,11 @@
     {
       "id": "godzilla-70th",
       "name": "Godzilla 70th",
-      "version": "V3.0-feedback-layout-v142",
+      "version": "V3.0-gcell-mobile-v21",
       "fileCount": 219,
       "estimatedBytes": 4661019,
       "manifest": "./core/offline-manifests/godzilla-70th.json",
-      "generatedAt": "2026-07-21T03:40:00Z"
+      "generatedAt": "2026-07-21T04:55:00Z"
     }
   ]
 }
