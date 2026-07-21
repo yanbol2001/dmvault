@@ -1,20 +1,15 @@
-DMVault Feedback v1.3｜Google 端一次性設定
+DMVault Feedback v1｜Google 端一次性設定
 
-1. 建立一份新的 Google 試算表。
-2. 在試算表中開啟「擴充功能 → Apps Script」。
-3. 刪除預設程式碼，貼上 setup/DMVault_Feedback_AppsScript.gs 的全部內容。
-4. 儲存專案。
-5. 選擇「部署 → 新增部署作業」。
-6. 類型選「網頁應用程式」。
-7. 執行身分選「我」。
-8. 存取權選「任何人」。
-9. 部署後複製結尾為 /exec 的網址。
-10. 打開網站檔案 core/feedback-config.js，把 endpoint: '' 改成 endpoint: '你的 /exec 網址'。
-11. 上傳網站後，用手機與電腦各送一筆測試。
+1. 建立一份空白 Google 試算表，名稱可用「DMVault 回報紀錄」。
+2. 試算表上方選單：擴充功能 → Apps Script。
+3. 刪除原本內容，貼上 DMVault_Feedback_AppsScript.gs 的全部程式。
+4. 按「部署」→「新增部署作業」。
+5. 類型選「網頁應用程式」。
+6. 執行身分選「我」。
+7. 存取權選「所有人」。
+8. 完成授權與部署，複製結尾為 /exec 的網址。
+9. 打開網站檔案 core/feedback-config.js，把 endpoint: '' 改成：
+   endpoint: '你的 /exec 網址',
+10. Commit、Push，等待 GitHub Pages 更新。
 
-重要：
-- v1.3 的試算表欄位順序和 v1 不同。若舊表已有測試資料，最簡單是新建空白試算表再部署。
-- 不限制單一裝置回報次數。
-- 後端使用 LockService，避免多人同時寫入互撞。
-- 每筆有唯一回報 ID，重送不會重複寫入。
-- 離線或暫時失敗的回報會保留在裝置，恢復連線後自動重送。
+試算表欄位會在收到第一筆回報時自動建立，不必手動排版。
