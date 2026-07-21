@@ -27,32 +27,121 @@
     return 'DMVault Platform';
   };
 
+  const cleanText = value => String(value ?? '').replace(/\s+/g, ' ').trim();
+
+  const branchVersionFromPage = () => {
+    const path = location.pathname.toLowerCase();
+    if (path.includes('/pendulum-color/')) {
+      const code = (new URLSearchParams(location.search).get('version') || 'v0').toLowerCase();
+      const labels = {
+        v0: 'V0 病毒剋星', v1: 'V1 自然靈魂', v2: 'V2 深海救星',
+        v3: 'V3 噩夢軍團', v4: 'V4 風之守衛', v5: 'V5 鋼之帝國'
+      };
+      return labels[code] || code.toUpperCase();
+    }
+    return '';
+  };
+
   const versionFromPage = () => {
+    const path = location.pathname.toLowerCase();
     const candidates = [
+      window.DMVAULT_FEEDBACK_CONTEXT?.version,
+      document.documentElement.dataset.contentVersion,
       document.querySelector('[data-content-version]')?.dataset.contentVersion,
       document.querySelector('#footer-version')?.textContent,
       document.querySelector('#platform-version')?.textContent,
+      document.querySelector('.dm-badge')?.textContent,
       window.DMVAULT_CONFIG?.version
-    ];
-    return candidates.find(Boolean)?.trim() || 'unknown';
+    ].map(cleanText).filter(Boolean);
+    if (candidates.length) return candidates[0];
+    if (path.includes('/mh-20th/')) return 'DMVault MH20th V7.4.1';
+    if (path.includes('/godzilla-70th/')) return 'DMVault Godzilla 70th V3.0 RC9.8';
+    if (path.includes('/pendulum-color/')) return branchVersionFromPage();
+    const titleVersion = document.title.match(/(?:v|V)\d+(?:\.\d+)*(?:[-\w.]*)?/g)?.pop();
+    return titleVersion || 'unknown';
+  };
+
+  const valueByLabel = (root, labels) => {
+    if (!root) return '';
+    const wanted = labels.map(label => cleanText(label));
+    for (const label of root.querySelectorAll('.stat-label, .info td:first-child, dt, th')) {
+      if (!wanted.includes(cleanText(label.textContent))) continue;
+      const value = label.nextElementSibling;
+      if (value) return cleanText(value.textContent);
+    }
+    return '';
+  };
+
+  const closestVisible = selectors => {
+    const center = innerHeight / 2;
+    let best = null;
+    let bestScore = Infinity;
+    for (const element of document.querySelectorAll(selectors)) {
+      const rect = element.getBoundingClientRect();
+      if (rect.height <= 0 || rect.width <= 0 || rect.bottom < 0 || rect.top > innerHeight) continue;
+      const score = Math.abs((Math.max(0, rect.top) + Math.min(innerHeight, rect.bottom)) / 2 - center);
+      if (score < bestScore) { best = element; bestScore = score; }
+    }
+    return best;
+  };
+
+  const elementFromHash = () => {
+    const hash = decodeURIComponent(location.hash || '');
+    const match = hash.match(/(?:digimon|monster)=([^&]+)/i);
+    if (match) {
+      const id = CSS.escape(match[1]);
+      return document.querySelector(`#evo-${id}, #monster-${id}, [data-id="${id}"], [data-monster="${id}"]`);
+    }
+    if (/^#(?:evo-|monster-)/.test(hash)) return document.querySelector(hash);
+    return null;
+  };
+
+  const contextFromPage = () => {
+    const explicit = window.DMVAULT_FEEDBACK_CONTEXT || {};
+    let element = elementFromHash();
+    if (!element) element = document.querySelector('.dex-map-node.selected, .dex-map-node.hovered');
+    if (!element) element = closestVisible('.evolution-sheet, article.current, .monster-card, .dex-card, [id^="monster-"]');
+
+    const titleNode = element?.querySelector('.source-title-zh span:first-child, .source-title-zh, .name h3, h3, strong');
+    let item = cleanText(explicit.item || titleNode?.textContent || element?.getAttribute('title') || '');
+    item = item.replace(/^#\d+\s*/, '').replace(/｜.*$/, '').trim();
+
+    let dex = cleanText(explicit.dex || valueByLabel(element, ['圖鑑編號', '編號']));
+    if (!dex && element?.id) dex = (element.id.match(/(?:monster|evo)-(\d+)$/)?.[1] || '');
+    if (!dex && element?.getAttribute('title')) dex = element.getAttribute('title').match(/#(\d+)/)?.[1] || '';
+
+    const stage = cleanText(explicit.stage || element?.querySelector('.stage-pill, .stage-tag, .badge')?.textContent || '');
+    const branchVersion = cleanText(explicit.branchVersion || branchVersionFromPage());
+    const view = cleanText(explicit.view || document.querySelector('.dm-nav .active, nav .active, [aria-current="page"]')?.textContent || '');
+    const summary = [branchVersion, view, item && `項目：${item}`, dex && `編號：${dex}`, stage && `階段：${stage}`].filter(Boolean).join('｜');
+    return { branchVersion, item, dex, stage, view, summary };
   };
 
   const isPWA = () => matchMedia('(display-mode: standalone)').matches || navigator.standalone === true;
   const pageName = () => document.querySelector('h1')?.textContent?.trim() || document.title;
 
-  const diagnostics = () => ({
-    project: projectFromPath(),
-    page: pageName(),
-    version: versionFromPage(),
-    url: location.href,
-    online: navigator.onLine,
-    pwa: isPWA(),
-    viewport: `${innerWidth}×${innerHeight}`,
-    platform: navigator.userAgentData?.platform || navigator.platform || '',
-    userAgent: navigator.userAgent,
-    language: navigator.language,
-    time: new Date().toISOString()
-  });
+  const diagnostics = () => {
+    const context = contextFromPage();
+    return {
+      project: projectFromPath(),
+      page: pageName(),
+      version: versionFromPage(),
+      branchVersion: context.branchVersion,
+      item: context.item,
+      dex: context.dex,
+      stage: context.stage,
+      view: context.view,
+      contextSummary: context.summary,
+      url: location.href,
+      online: navigator.onLine,
+      pwa: isPWA(),
+      viewport: `${innerWidth}×${innerHeight}`,
+      platform: navigator.userAgentData?.platform || navigator.platform || '',
+      userAgent: navigator.userAgent,
+      language: navigator.language,
+      time: new Date().toISOString()
+    };
+  };
 
   const randomCode = () => {
     const bytes = new Uint8Array(4);
@@ -210,7 +299,7 @@
 
     const show = () => {
       const d = diagnostics();
-      meta.innerHTML = `作品：${esc(d.project)}<br>頁面：${esc(d.page)}<br>版本：${esc(d.version)}<br>模式：${d.pwa ? 'PWA' : '瀏覽器'}・${d.online ? '線上' : '離線'}`;
+      meta.innerHTML = `作品：${esc(d.project)}<br>頁面：${esc(d.page)}<br>版本：${esc(d.version)}${d.branchVersion && d.branchVersion !== d.version ? `<br>分支：${esc(d.branchVersion)}` : ''}${d.item ? `<br>目前項目：${esc(d.item)}${d.dex ? `（#${esc(d.dex)}）` : ''}${d.stage ? `・${esc(d.stage)}` : ''}` : ''}<br>模式：${d.pwa ? 'PWA' : '瀏覽器'}・${d.online ? '線上' : '離線'}`;
       status.textContent = cfg.endpoint ? '' : '管理員尚未完成回報功能連線設定。';
       status.className = `dmv-feedback-status${cfg.endpoint ? '' : ' is-error'}`;
       updateQueueUI();

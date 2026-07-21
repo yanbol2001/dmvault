@@ -1,11 +1,12 @@
 const SHEET_NAME = '回報紀錄';
-const SERVICE_VERSION = 'DMVault Feedback v1.3';
+const SERVICE_VERSION = 'DMVault Feedback v1.4';
 const MAX_MESSAGE_LENGTH = 2000;
 const MAX_CONTACT_LENGTH = 150;
 const HEADERS = [
   '收到時間','回報 ID','處理狀態','類型','內容','聯絡方式',
   '作品','頁面','版本','網址','PWA','網路狀態','視窗大小',
-  '平台','瀏覽器','語言','回報建立時間','備註'
+  '平台','瀏覽器','語言','回報建立時間','備註',
+  '版本分支','目前項目','圖鑑編號','階段','畫面脈絡'
 ];
 
 function doPost(e) {
@@ -39,7 +40,12 @@ function doPost(e) {
       safeText_(d.userAgent, 500),
       safeText_(d.language, 30),
       safeText_(data.createdAt, 60),
-      ''
+      '',
+      safeText_(d.branchVersion, 100),
+      safeText_(d.item, 150),
+      safeText_(d.dex, 40),
+      safeText_(d.stage, 80),
+      safeText_(d.contextSummary, 500)
     ]);
 
     CacheService.getScriptCache().put('feedback:' + data.id, '1', 21600);
@@ -99,6 +105,11 @@ function getSheet_() {
     if (currentHeaders[1] !== '回報 ID') {
       throw new Error('舊版欄位順序不同，請新增一個空白試算表或清空「回報紀錄」工作表後重新測試。');
     }
+    // v1.4 可直接沿用 v1.3 工作表：自動在右側補上新增欄位，不會刪除既有回報。
+    HEADERS.forEach(function(header, index) {
+      if (currentHeaders[index] !== header) sheet.getRange(1, index + 1).setValue(header);
+    });
+    sheet.getRange(1, 1, 1, HEADERS.length).setFontWeight('bold');
   }
   return sheet;
 }

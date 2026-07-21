@@ -1,0 +1,16 @@
+DMVault Feedback v1.4 自動脈絡擷取
+
+新增：
+- 自動辨識 MH / Pendulum COLOR / Godzilla 作品版本
+- Pendulum COLOR 自動辨識 V0～V5 分支
+- 在進化頁依網址雜湊或目前畫面位置抓取怪獸名稱
+- 自動抓取圖鑑編號、階段與目前分頁
+- 回報視窗送出前會顯示已抓到的項目
+- Apps Script 在既有試算表右側自動新增：版本分支、目前項目、圖鑑編號、階段、畫面脈絡
+- 保留 v1.3 的並行鎖、防重複與離線佇列
+
+部署注意：
+1. 網站整包覆蓋並 Push。
+2. Apps Script 將 Code.gs 替換為 setup/DMVault_Feedback_AppsScript.gs。
+3. 部署 > 管理部署作業 > 編輯 > 新版本 > 部署。
+4. 不必建立新試算表；第一筆 v1.4 回報送入時會自動補欄位。
