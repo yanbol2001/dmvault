@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "pendulum-color",
   "name": "Pendulum COLOR",
-  "version": "pkg-38567e961e10",
+  "version": "pkg-38567e961e10-feedback1",
   "generatedAt": "2026-07-21T01:40:00Z",
   "basePath": "./pendulum-color/",
   "fileCount": 470,
@@ -477,6 +477,9 @@
     "./pendulum-color/images/v5/031.gif",
     "./pendulum-color/images/v5/032.gif",
     "./pendulum-color/index.html",
-    "./pendulum-color/styles.css"
+    "./pendulum-color/styles.css",
+    "./core/feedback.css",
+    "./core/feedback-config.js",
+    "./core/feedback.js"
   ]
 }

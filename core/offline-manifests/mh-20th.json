@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "mh-20th",
   "name": "Monster Hunter 20th",
-  "version": "V7.4.0",
+  "version": "V7.4.0-feedback1",
   "generatedAt": "2026-07-20T08:56:38Z",
   "basePath": "./mh-20th/",
   "fileCount": 74,
@@ -81,6 +81,9 @@
     "./mh-20th/pwa/project-config.js",
     "./mh-20th/service-worker.js",
     "./mh-20th/stage.html",
-    "./mh-20th/style.css"
+    "./mh-20th/style.css",
+    "./core/feedback.css",
+    "./core/feedback-config.js",
+    "./core/feedback.js"
   ]
 }

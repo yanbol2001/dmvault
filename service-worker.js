@@ -1,4 +1,4 @@
-const VERSION = "dmvault-platform-1.1.2-penc-mobile-v1";
+const VERSION = "dmvault-platform-1.2.0-feedback-v1";
 const CORE_CACHE = `${VERSION}-core`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const OFFLINE_CACHE_PREFIX = "dmvault-offline-package-";
@@ -9,7 +9,7 @@ const CACHE_SCHEMA = 3;
 const RUNTIME_CACHE_LIMIT = 60;
 const CORE_FILES = [
   "./", "./index.html",
-  "./core/dmvault-nav.css", "./core/dmvault-nav.js", "./core/analytics.js", "./core/offline-manager.js", "./core/offline-ui.css", "./core/offline-ui.js",
+  "./core/dmvault-nav.css", "./core/dmvault-nav.js", "./core/analytics.js", "./core/feedback.css", "./core/feedback-config.js", "./core/feedback.js", "./core/offline-manager.js", "./core/offline-ui.css", "./core/offline-ui.js",
   "./core/offline-manifests/index.json", "./core/offline-manifests/mh-20th.json", "./core/offline-manifests/pendulum-color.json", "./core/offline-manifests/godzilla-70th.json",
   "./diagnostics.html", "./offline.html", "./manifest.webmanifest",
   "./core/css/dmvault-core.css", "./core/js/config.js", "./core/js/core.js", "./core/js/preferences.js", "./core/js/analytics.js", "./core/js/data.js", "./core/js/diagnostics.js", "./core/js/ui.js", "./core/js/pwa.js",

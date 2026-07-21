@@ -1,0 +1,15 @@
+DMVault Feedback v1
+
+已完成：
+- 全平台共用浮動「回報／建議」按鈕
+- 網站內建回報視窗，不跳離 DMVault
+- 分類：資料錯誤、畫面／功能異常、使用建議、留言鼓勵、其他
+- 自動附上作品、頁面、版本、網址、瀏覽器、PWA、裝置視窗與連線資訊
+- 離線暫存，恢復連線後自動重送
+- 15 秒防重複送出
+- 可複製診斷資料
+- Google Apps Script 後端與試算表欄位自動建立程式
+- Service Worker 與三個離線資料包已加入回報模組
+
+尚需一次性操作：
+部署 setup/DMVault_Feedback_AppsScript.gs，並把 /exec 網址填進 core/feedback-config.js。

@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "godzilla-70th",
   "name": "Godzilla 70th",
-  "version": "V3.0-offline1",
+  "version": "V3.0-offline1-feedback1",
   "generatedAt": "2026-07-20T08:56:38Z",
   "basePath": "./godzilla-70th/",
   "fileCount": 219,
@@ -226,6 +226,9 @@
     "./godzilla-70th/index.html",
     "./godzilla-70th/overview.css",
     "./godzilla-70th/shared.css",
-    "./godzilla-70th/stage.html"
+    "./godzilla-70th/stage.html",
+    "./core/feedback.css",
+    "./core/feedback-config.js",
+    "./core/feedback.js"
   ]
 }
