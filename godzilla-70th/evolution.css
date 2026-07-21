@@ -463,3 +463,89 @@ body .evolution-sheet .route-area > .no-route{
   }
 }
 
+
+/* V3.0 RC10：原始資料表式目前怪獸卡 + 待進化單列橫滑 */
+.sheet-row{
+  display:flex !important;
+  align-items:flex-start !important;
+  gap:0;
+  min-width:0;
+}
+.source-panel{
+  flex:0 0 360px !important;
+  width:360px !important;
+  overflow:hidden;
+  border-right:3px solid #17131d !important;
+  background:#fff;
+}
+.source-title-zh,.source-title-jp{padding-left:12px;padding-right:12px}
+.source-meta{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  border-top:1px solid #cfc7d6;
+  border-bottom:1px solid #cfc7d6;
+  background:#f5f0f8;
+}
+.source-meta .stage-tag,.source-meta .attribute-tag{
+  margin:0 !important;
+  padding:8px 6px !important;
+  border:0 !important;
+  border-radius:0 !important;
+  background:transparent !important;
+  text-align:center;
+  font-size:14px;
+  font-weight:900;
+}
+.source-meta .stage-tag{border-right:1px solid #cfc7d6 !important}
+.monster-data-table{width:100%;border-collapse:collapse;table-layout:fixed;background:#fff;color:#17131d}
+.monster-data-table th,.monster-data-table td{border:1px solid #cfc7d6;padding:7px 8px;vertical-align:middle}
+.monster-media-cell{width:42%;padding:5px !important;text-align:center;background:#fafafa}
+.monster-media-label{display:block;margin-bottom:5px;font-size:13px;font-weight:900;color:#31243b}
+.monster-media-frame{display:grid;place-items:center;min-height:62px}
+.monster-media-frame img{display:block;max-width:100%;max-height:82px;width:auto;height:auto;object-fit:contain;image-rendering:pixelated}
+tr:nth-child(4) .monster-media-frame img{max-height:96px}
+.monster-stat-label{width:34%;background:#f7f4f9;text-align:center;font-size:13px;font-weight:900;white-space:nowrap}
+.monster-stat-value{width:24%;text-align:center;font-size:14px;font-weight:800;white-space:nowrap}
+.route-area{
+  flex:1 1 auto !important;
+  display:flex !important;
+  grid-template-columns:none !important;
+  flex-wrap:nowrap !important;
+  align-items:stretch !important;
+  gap:0 !important;
+  min-width:0;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  scroll-snap-type:x proximity;
+  overscroll-behavior-x:contain;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-gutter:stable;
+}
+.route-column{
+  flex:0 0 190px !important;
+  width:190px !important;
+  min-width:190px !important;
+  max-width:190px !important;
+  scroll-snap-align:start;
+  height:auto !important;
+}
+.route-area>.no-route{min-width:100%;align-self:stretch}
+@media(max-width:780px){
+  .sheet-row{display:block !important}
+  .source-panel{width:100% !important;max-width:none !important;flex:none !important;border-right:0 !important;border-bottom:3px solid #17131d !important}
+  .route-area{display:flex !important;grid-template-columns:none !important;width:100%;overflow-x:auto !important;padding-bottom:6px}
+  .route-column{flex:0 0 184px !important;width:184px !important;min-width:184px !important;max-width:184px !important}
+  .monster-data-table th,.monster-data-table td{padding:7px 6px}
+  .monster-media-cell{width:39%}
+  .monster-stat-label{width:36%}
+  .monster-stat-value{width:25%}
+}
+@media(max-width:420px){
+  .source-title-zh{font-size:18px}
+  .source-title-jp{font-size:13px}
+  .monster-media-cell{width:38%}
+  .monster-media-label,.monster-stat-label{font-size:12px}
+  .monster-stat-value{font-size:13px}
+  .monster-media-frame img{max-height:72px}
+  tr:nth-child(4) .monster-media-frame img{max-height:84px}
+}

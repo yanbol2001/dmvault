@@ -1,0 +1,8 @@
+Godzilla 70th Evolution V2.2
+- Current monster panel rebuilt as a single vertical source-data table.
+- Normal sprite, close-up and attack sprite integrated into the same table.
+- Duplicate strength display removed; strength appears only once.
+- Stage and attribute remain directly beneath monster names.
+- Evolution targets stay in one horizontal row; overflow scrolls sideways.
+- Mobile keeps the current monster fully visible and scrolls only target cards.
+- CSS/service-worker version bumped for cache refresh.
