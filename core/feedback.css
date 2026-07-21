@@ -8,3 +8,35 @@
 .dmv-feedback-form{padding:8px 20px 20px}.dmv-feedback-field{display:grid;gap:7px;margin:13px 0}.dmv-feedback-field>span{font-weight:700;font-size:14px}.dmv-feedback-field input,.dmv-feedback-field select,.dmv-feedback-field textarea{width:100%;box-sizing:border-box;border:1px solid var(--fb-line);border-radius:11px;background:#0e1520;color:#fff;padding:11px 12px;font:inherit}.dmv-feedback-field textarea{min-height:130px;resize:vertical}.dmv-feedback-hint{font-size:12px;color:var(--fb-muted)}
 .dmv-feedback-meta{margin:14px 0;padding:11px 12px;border-radius:11px;background:rgba(255,255,255,.055);color:var(--fb-muted);font-size:12px;line-height:1.55;overflow-wrap:anywhere}.dmv-feedback-actions{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap;margin-top:15px}.dmv-feedback-actions button{border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.dmv-feedback-secondary{border:1px solid var(--fb-line);background:transparent;color:#fff}.dmv-feedback-submit{border:0;background:#eaf4ff;color:#102033}.dmv-feedback-submit:disabled{opacity:.55;cursor:wait}.dmv-feedback-status{min-height:20px;margin:10px 0 0;font-size:13px;color:var(--fb-muted)}.dmv-feedback-status.is-error{color:var(--fb-danger)}.dmv-feedback-status.is-ok{color:#9ee7b0}
 @media(max-width:640px){.dmv-feedback-button{right:12px;bottom:max(12px,calc(env(safe-area-inset-bottom) + 8px));padding:10px 13px}.dmv-feedback-backdrop{padding:8px;align-items:end}.dmv-feedback-dialog{border-radius:18px 18px 10px 10px;max-height:92dvh}.dmv-feedback-head{padding:17px 16px 9px}.dmv-feedback-form{padding:6px 16px 18px}}
+
+/* Feedback v1.1: keep fixed controls in one vertical stack. */
+body.dmv-feedback-enabled .dmv-feedback-button{
+  right:max(16px,env(safe-area-inset-right));
+  bottom:max(18px,calc(env(safe-area-inset-bottom) + 14px));
+}
+body.dmv-feedback-enabled .back-to-top{
+  right:max(18px,env(safe-area-inset-right)) !important;
+  bottom:max(78px,calc(env(safe-area-inset-bottom) + 74px)) !important;
+}
+body.dmv-feedback-enabled .toast,
+body.dmv-feedback-enabled .update-bar{
+  bottom:max(80px,calc(env(safe-area-inset-bottom) + 76px)) !important;
+}
+@media(max-width:640px){
+  body.dmv-feedback-enabled .dmv-feedback-button{
+    right:12px;
+    bottom:max(12px,calc(env(safe-area-inset-bottom) + 8px));
+  }
+  body.dmv-feedback-enabled .back-to-top{
+    right:12px !important;
+    bottom:max(72px,calc(env(safe-area-inset-bottom) + 68px)) !important;
+  }
+  body.dmv-feedback-enabled .toast,
+  body.dmv-feedback-enabled .update-bar{
+    left:12px !important;
+    right:82px !important;
+    bottom:max(12px,calc(env(safe-area-inset-bottom) + 8px)) !important;
+    transform:none !important;
+    max-width:none !important;
+  }
+}
