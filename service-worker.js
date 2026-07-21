@@ -1,4 +1,4 @@
-const VERSION = "dmvault-platform-1.2.2-mh-mobile-source-static-v1";
+const VERSION = "dmvault-platform-1.2.3-feedback-banner-v1";
 const CORE_CACHE = `${VERSION}-core`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const OFFLINE_CACHE_PREFIX = "dmvault-offline-package-";
