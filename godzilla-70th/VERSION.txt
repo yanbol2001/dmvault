@@ -1,2 +1,2 @@
-DMVault Godzilla 70th V3.0 RC10
-Evolution page V2.2 unified table layout
+DMVault Godzilla 70th V3.0 RC9.8
+GitHub Pages clean build + single-row horizontal scroll
