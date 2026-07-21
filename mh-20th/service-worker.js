@@ -1,5 +1,5 @@
-const BUILD = "7.4.1-pwa-20260721-mh-mobile-source-static-v1";
-const CACHE_PREFIX = "dmvault-mh20th-v751";
+const BUILD = "8.0.0-pwa-20260721-mh-source-profile-v1";
+const CACHE_PREFIX = "dmvault-mh20th";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${BUILD}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-${BUILD}`;
 const CORE = [

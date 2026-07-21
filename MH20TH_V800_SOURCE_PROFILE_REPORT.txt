@@ -1,0 +1,9 @@
+DMVault MH20th V8.0.0
+
+- Rebuilt from V7.4.1, not from the broken V7.5.x experiments.
+- Current monster is a full-width desktop profile.
+- MH keeps only monster sprite and attack icon; no Godzilla-only portrait section.
+- Label standardized to "攻擊圖案".
+- Evolution targets stay in one horizontal row and scroll only when needed.
+- Mobile stacks the current monster profile vertically; target cards still scroll horizontally.
+- Existing owned state, timers, freeze, search, dex jump, feedback, analytics and PWA remain intact.
