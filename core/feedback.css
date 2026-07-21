@@ -106,3 +106,22 @@ body.dmv-feedback-enabled .toast{
   clip: rect(0 0 0 0) !important;
   white-space: nowrap !important;
 }
+
+/* Feedback v1.4.1: keep the project-to-platform shortcut in the same vertical stack. */
+body.dmv-feedback-enabled .dmvault-platform-home{
+  right:max(12px,env(safe-area-inset-right)) !important;
+  bottom:max(72px,calc(env(safe-area-inset-bottom) + 68px)) !important;
+}
+body.dmv-feedback-enabled .back-to-top{
+  bottom:max(126px,calc(env(safe-area-inset-bottom) + 122px)) !important;
+}
+@media(max-width:640px){
+  body.dmv-feedback-enabled .dmvault-platform-home{
+    right:12px !important;
+    bottom:max(66px,calc(env(safe-area-inset-bottom) + 62px)) !important;
+  }
+  body.dmv-feedback-enabled .back-to-top{
+    right:12px !important;
+    bottom:max(116px,calc(env(safe-area-inset-bottom) + 112px)) !important;
+  }
+}

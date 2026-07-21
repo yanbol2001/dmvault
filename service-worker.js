@@ -1,4 +1,4 @@
-const VERSION = "dmvault-platform-1.2.4-feedback-context-v1";
+const VERSION = "dmvault-platform-1.2.5-feedback-float-stack-v1";
 const CORE_CACHE = `${VERSION}-core`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const OFFLINE_CACHE_PREFIX = "dmvault-offline-package-";
