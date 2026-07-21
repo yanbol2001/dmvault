@@ -1,4 +1,4 @@
-const BUILD = "8.0.0-pwa-20260721-mh-source-profile-v1";
+const BUILD = "8.1.0-pwa-20260721-desktop-horizontal-v1";
 const CACHE_PREFIX = "dmvault-mh20th";
 const CORE_CACHE = `${CACHE_PREFIX}-core-${BUILD}`;
 const RUNTIME_CACHE = `${CACHE_PREFIX}-runtime-${BUILD}`;
