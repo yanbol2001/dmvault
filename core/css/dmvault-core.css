@@ -246,9 +246,3 @@ main{width:min(1220px,calc(100% - 32px));margin:auto}
 /* Sprint 3 dev26: exportable diagnostics */
 .diagnostic-actions{display:flex;align-items:center;flex-wrap:wrap;gap:9px}.diagnostic-actions .secondary-button{min-width:0}.diagnostic-actions button:disabled{cursor:not-allowed;opacity:.5;transform:none}
 @media(max-width:560px){.diagnostic-actions{display:grid;grid-template-columns:1fr 1fr;width:100%}.diagnostic-actions #run-check{grid-column:1/-1}}
-
-
-/* Platform 1.2.3: update notice top banner */
-.update-bar{top:max(12px,calc(env(safe-area-inset-top) + 8px));bottom:auto;left:50%;right:auto;transform:translateX(-50%);width:min(720px,calc(100vw - 24px));display:flex;align-items:center;justify-content:space-between;gap:12px;z-index:9996}
-.update-bar[hidden]{display:none}
-@media(max-width:640px){.update-bar{top:max(8px,calc(env(safe-area-inset-top) + 6px));width:calc(100vw - 16px);padding:11px 12px}.update-bar button{margin-left:0;white-space:nowrap}}

@@ -9,7 +9,7 @@
 .dmv-feedback-meta{margin:14px 0;padding:11px 12px;border-radius:11px;background:rgba(255,255,255,.055);color:var(--fb-muted);font-size:12px;line-height:1.55;overflow-wrap:anywhere}.dmv-feedback-actions{display:flex;justify-content:flex-end;gap:9px;flex-wrap:wrap;margin-top:15px}.dmv-feedback-actions button{border-radius:10px;padding:10px 14px;font-weight:800;cursor:pointer}.dmv-feedback-secondary{border:1px solid var(--fb-line);background:transparent;color:#fff}.dmv-feedback-submit{border:0;background:#eaf4ff;color:#102033}.dmv-feedback-submit:disabled{opacity:.55;cursor:wait}.dmv-feedback-status{min-height:20px;margin:10px 0 0;font-size:13px;color:var(--fb-muted)}.dmv-feedback-status.is-error{color:var(--fb-danger)}.dmv-feedback-status.is-ok{color:#9ee7b0}
 @media(max-width:640px){.dmv-feedback-button{right:12px;bottom:max(12px,calc(env(safe-area-inset-bottom) + 8px));padding:10px 13px}.dmv-feedback-backdrop{padding:8px;align-items:end}.dmv-feedback-dialog{border-radius:18px 18px 10px 10px;max-height:92dvh}.dmv-feedback-head{padding:17px 16px 9px}.dmv-feedback-form{padding:6px 16px 18px}}
 
-/* Feedback v1.2: top update banner and collision-free floating controls. */
+/* Feedback v1.1: keep fixed controls in one vertical stack. */
 body.dmv-feedback-enabled .dmv-feedback-button{
   right:max(16px,env(safe-area-inset-right));
   bottom:max(18px,calc(env(safe-area-inset-bottom) + 14px));
@@ -18,33 +18,9 @@ body.dmv-feedback-enabled .back-to-top{
   right:max(18px,env(safe-area-inset-right)) !important;
   bottom:max(78px,calc(env(safe-area-inset-bottom) + 74px)) !important;
 }
-/* Update notice is a top banner, never part of the bottom floating stack. */
-.update-bar,
+body.dmv-feedback-enabled .toast,
 body.dmv-feedback-enabled .update-bar{
-  position:fixed !important;
-  top:max(12px,calc(env(safe-area-inset-top) + 8px)) !important;
-  bottom:auto !important;
-  left:50% !important;
-  right:auto !important;
-  transform:translateX(-50%) !important;
-  z-index:9996 !important;
-  width:min(720px,calc(100vw - 24px)) !important;
-  max-width:720px !important;
-  display:flex !important;
-  align-items:center;
-  justify-content:space-between;
-  gap:12px;
-  box-sizing:border-box;
-}
-.update-bar[hidden],
-body.dmv-feedback-enabled .update-bar[hidden]{display:none !important;}
-/* Ordinary temporary toasts stay clear of the feedback button. */
-body.dmv-feedback-enabled .toast{
-  left:max(16px,env(safe-area-inset-left)) !important;
-  right:auto !important;
-  bottom:max(18px,calc(env(safe-area-inset-bottom) + 14px)) !important;
-  transform:none !important;
-  max-width:min(560px,calc(100vw - 230px)) !important;
+  bottom:max(80px,calc(env(safe-area-inset-bottom) + 76px)) !important;
 }
 @media(max-width:640px){
   body.dmv-feedback-enabled .dmv-feedback-button{
@@ -55,101 +31,12 @@ body.dmv-feedback-enabled .toast{
     right:12px !important;
     bottom:max(72px,calc(env(safe-area-inset-bottom) + 68px)) !important;
   }
-  .update-bar,
+  body.dmv-feedback-enabled .toast,
   body.dmv-feedback-enabled .update-bar{
-    top:max(8px,calc(env(safe-area-inset-top) + 6px)) !important;
-    width:calc(100vw - 16px) !important;
-    padding:11px 12px !important;
-    border-radius:14px !important;
-    font-size:14px;
-  }
-  .update-bar button{flex:0 0 auto;margin-left:0 !important;white-space:nowrap;}
-  body.dmv-feedback-enabled .toast{
     left:12px !important;
-    right:86px !important;
+    right:82px !important;
     bottom:max(12px,calc(env(safe-area-inset-bottom) + 8px)) !important;
+    transform:none !important;
     max-width:none !important;
-  }
-}
-
-/* Feedback v1.3: queue badge and hidden bot trap */
-.dmv-feedback-button { position: fixed; }
-.dmv-feedback-queue-badge {
-  min-width: 1.25rem;
-  height: 1.25rem;
-  padding: 0 .3rem;
-  margin-left: .35rem;
-  border-radius: 999px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: .72rem;
-  font-weight: 800;
-  line-height: 1;
-  background: #fff;
-  color: #7a1d1d;
-  box-shadow: 0 0 0 2px rgba(0,0,0,.12);
-}
-.dmv-feedback-pending {
-  margin: .2rem 0 .75rem;
-  padding: .7rem .8rem;
-  border-radius: .75rem;
-  background: rgba(255, 193, 7, .14);
-  font-size: .88rem;
-  line-height: 1.45;
-}
-.dmv-feedback-honeypot {
-  position: absolute !important;
-  width: 1px !important;
-  height: 1px !important;
-  overflow: hidden !important;
-  clip: rect(0 0 0 0) !important;
-  white-space: nowrap !important;
-}
-
-/* Feedback v1.4.1: keep the project-to-platform shortcut in the same vertical stack. */
-body.dmv-feedback-enabled .dmvault-platform-home{
-  right:max(12px,env(safe-area-inset-right)) !important;
-  bottom:max(72px,calc(env(safe-area-inset-bottom) + 68px)) !important;
-}
-body.dmv-feedback-enabled .back-to-top{
-  bottom:max(126px,calc(env(safe-area-inset-bottom) + 122px)) !important;
-}
-@media(max-width:640px){
-  body.dmv-feedback-enabled .dmvault-platform-home{
-    right:12px !important;
-    bottom:max(66px,calc(env(safe-area-inset-bottom) + 62px)) !important;
-  }
-  body.dmv-feedback-enabled .back-to-top{
-    right:12px !important;
-    bottom:max(116px,calc(env(safe-area-inset-bottom) + 112px)) !important;
-  }
-}
-
-
-/* Feedback v1.4.2: structural collision fix.
-   v1.4.1 selectors depended on a body class that was not being applied. */
-.dmvault-platform-home{
-  right:max(12px,env(safe-area-inset-right)) !important;
-  bottom:max(76px,calc(env(safe-area-inset-bottom) + 72px)) !important;
-}
-body.dmv-feedback-enabled .dmv-feedback-button{
-  bottom:max(14px,calc(env(safe-area-inset-bottom) + 10px)) !important;
-}
-body.dmv-feedback-enabled .back-to-top{
-  bottom:max(136px,calc(env(safe-area-inset-bottom) + 132px)) !important;
-}
-@media(max-width:640px){
-  .dmvault-platform-home{
-    right:12px !important;
-    bottom:max(72px,calc(env(safe-area-inset-bottom) + 68px)) !important;
-  }
-  body.dmv-feedback-enabled .dmv-feedback-button{
-    right:12px !important;
-    bottom:max(12px,calc(env(safe-area-inset-bottom) + 8px)) !important;
-  }
-  body.dmv-feedback-enabled .back-to-top{
-    right:12px !important;
-    bottom:max(132px,calc(env(safe-area-inset-bottom) + 128px)) !important;
   }
 }
