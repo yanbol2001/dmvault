@@ -1,3 +1,4 @@
-DMVault MH20th V8.1.0 PWA
+DMVault MH20th V8.2.0 PWA
 Build: 2026-07-21
 GA4: G-LQEFPC3QCF
+Layout: MH independent horizontal route refine

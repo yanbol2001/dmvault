@@ -1,4 +1,4 @@
-<!doctype html><html lang="zh-Hant" data-dmvault-root="../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DMVault MH20th Web v0.2</title>
+<!doctype html><html lang="zh-Hant" data-dmvault-root="../"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>DMVault MH20th V8.2</title>
 <style>
 :root{--bg:#f7f1e8;--panel:#fffdf8;--line:#dfd1bb;--text:#171717;--muted:#6f6255;--p:#7657f4;--ps:#efe9ff;--g:#22a25d;--gold:#f1b845}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);font-family:"Microsoft JhengHei",sans-serif;color:var(--text)}
@@ -293,154 +293,6 @@ main{
 }
 </style>
 
-<style id="dmvault-mh-v8-source-profile">
-/* V8.1：桌機採橫向路線；來源怪獸固定在最左側，待進化卡同列排列。
-   手機維持來源資料完整顯示，下方待進化卡單排橫向滑動。 */
-.route-scroll{
-  box-sizing:border-box!important;
-  display:flex!important;
-  flex-flow:row nowrap!important;
-  align-items:stretch!important;
-  width:100%!important;
-  max-width:100%!important;
-  gap:12px!important;
-  padding:12px!important;
-  overflow-x:auto!important;
-  overflow-y:hidden!important;
-  -webkit-overflow-scrolling:touch!important;
-  overscroll-behavior-x:contain!important;
-  scroll-snap-type:x proximity!important;
-}
-.route-scroll>.current{
-  box-sizing:border-box!important;
-  flex:0 0 400px!important;
-  width:400px!important;
-  min-width:400px!important;
-  max-width:400px!important;
-  margin:0!important;
-  padding:0!important;
-  overflow:hidden!important;
-  scroll-snap-align:start!important;
-}
-.current-profile{display:block!important;text-align:left!important}
-.current-profile .current-head{
-  padding:12px 14px 10px!important;
-  text-align:center!important;
-  background:linear-gradient(180deg,#fff,#f2ece2)!important;
-  border-bottom:1px solid #d7cebf!important;
-}
-.current-profile .current-head h3{margin:0 0 3px!important;font-size:21px!important}
-.current-profile .current-head .sub{line-height:1.35!important}
-.current-profile .current-head .badge{margin-top:6px!important}
-.current-profile .current-grid{
-  display:grid!important;
-  grid-template-columns:164px minmax(0,1fr)!important;
-  min-height:100%!important;
-}
-.current-profile .current-images{
-  display:flex!important;
-  flex-direction:column!important;
-  border-right:1px solid #e1d8ca!important;
-  background:#fbf8f2!important;
-}
-.current-profile .current-images .sprite{
-  height:150px!important;
-  border:0!important;
-  border-radius:0!important;
-  border-bottom:1px solid #e1d8ca!important;
-  background:transparent!important;
-}
-.current-profile .current-images .sprite img{max-width:130px!important;max-height:125px!important}
-.current-profile .current-images .section{
-  margin:0!important;
-  padding:8px 6px!important;
-  border-left:0!important;
-  text-align:center!important;
-  background:#f3eee5!important;
-  border-bottom:1px solid #e1d8ca!important;
-}
-.current-profile .current-images .attack{
-  flex:1 1 auto!important;
-  min-height:120px!important;
-  border:0!important;
-  border-radius:0!important;
-  background:#fff!important;
-}
-.current-profile .current-images .attack img{
-  width:82px!important;height:82px!important;max-width:82px!important;max-height:82px!important
-}
-.current-profile .current-data{min-width:0!important;background:#fff!important}
-.current-profile .current-data .info{margin:0!important;height:100%!important;table-layout:fixed!important}
-.current-profile .current-data .info td{padding:8px 9px!important}
-.current-profile .current-data .info td:first-child{width:48%!important}
-.route-scroll>.target-grid{
-  box-sizing:border-box!important;
-  display:flex!important;
-  flex-flow:row nowrap!important;
-  align-items:stretch!important;
-  flex:0 0 auto!important;
-  width:auto!important;
-  min-width:0!important;
-  max-width:none!important;
-  gap:10px!important;
-  padding:0!important;
-  overflow:visible!important;
-}
-.route-scroll>.target-grid>.target{
-  box-sizing:border-box!important;
-  flex:0 0 250px!important;
-  width:250px!important;
-  min-width:250px!important;
-  max-width:250px!important;
-  margin:0!important;
-  scroll-snap-align:start!important;
-}
-.route-scroll>.target-grid>.target .sprite{height:115px!important}
-.route-scroll>.target-grid>.target .sprite img{max-width:105px!important;max-height:100px!important}
-.route-scroll>.target-grid>.target .name h3{font-size:18px!important}
-.route-scroll>.target-grid>.target .info td{padding:7px 8px!important}
-@media(max-width:760px){
-  .route-scroll{
-    display:block!important;
-    padding:8px!important;
-    overflow:visible!important;
-  }
-  .route-scroll>.current{
-    width:100%!important;
-    min-width:0!important;
-    max-width:none!important;
-    margin:0 0 10px!important;
-  }
-  .current-profile .current-grid{grid-template-columns:135px minmax(0,1fr)!important}
-  .current-profile .current-images .sprite{height:130px!important}
-  .current-profile .current-images .sprite img{max-width:112px!important;max-height:105px!important}
-  .current-profile .current-images .attack{min-height:105px!important}
-  .current-profile .current-images .attack img{width:72px!important;height:72px!important;max-width:72px!important;max-height:72px!important}
-  .route-scroll>.target-grid{
-    display:flex!important;
-    width:100%!important;
-    max-width:100%!important;
-    gap:10px!important;
-    padding:2px 0 8px!important;
-    overflow-x:auto!important;
-    overflow-y:hidden!important;
-    -webkit-overflow-scrolling:touch!important;
-    scroll-snap-type:x proximity!important;
-  }
-  .route-scroll>.target-grid>.target{
-    flex-basis:276px!important;
-    width:276px!important;
-    min-width:276px!important;
-    max-width:276px!important;
-  }
-}
-@media(max-width:430px){
-  .current-profile .current-grid{grid-template-columns:116px minmax(0,1fr)!important}
-  .current-profile .current-data .info td{padding:7px 6px!important;font-size:13px!important}
-  .current-profile .current-head h3{font-size:19px!important}
-}
-</style>
-
 
 <link rel="manifest" href="../manifest.webmanifest">
 <link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
@@ -456,6 +308,56 @@ main{
   <link rel="stylesheet" href="../../core/feedback.css">
   <script src="../../core/feedback-config.js"></script>
   <script defer src="../../core/feedback.js"></script>
+
+<style id="dmvault-mh-v8-2-independent-layout-refine">
+/* V8.2：以原 MH 獨立網頁版為基準，只收窄卡片與壓縮留白。 */
+@media (min-width:761px){
+  main{padding:12px 6px!important;}
+  .route-block{margin:22px 0!important;}
+  .route-title{padding:9px 12px!important;border-radius:10px 10px 0 0!important;font-size:16px!important;}
+  .route-scroll{
+    gap:8px!important;
+    padding:8px!important;
+    align-items:stretch!important;
+    border-radius:0 0 10px 10px!important;
+    scroll-padding-left:8px!important;
+  }
+  .route-scroll > .current{
+    flex:0 0 204px!important;
+    width:204px!important;
+    min-width:204px!important;
+    max-width:204px!important;
+    padding:10px!important;
+    border-radius:11px!important;
+  }
+  .route-scroll > .target-grid{display:contents!important;}
+  .route-scroll > .target-grid > .target,
+  .route-scroll > .target{
+    flex:0 0 212px!important;
+    width:212px!important;
+    min-width:212px!important;
+    max-width:212px!important;
+    padding:10px!important;
+    border-radius:11px!important;
+  }
+  .route-scroll .sprite{height:96px!important;border-radius:9px!important;}
+  .route-scroll .sprite img{max-width:88px!important;max-height:82px!important;}
+  .route-scroll .name h3{margin:7px 0 1px!important;font-size:16px!important;line-height:1.2!important;}
+  .route-scroll .sub{font-size:10px!important;line-height:1.25!important;}
+  .route-scroll .badge{margin-top:4px!important;padding:2px 7px!important;font-size:10px!important;}
+  .route-scroll .section{margin:9px 0 5px!important;padding-left:6px!important;border-left-width:3px!important;font-size:13px!important;}
+  .route-scroll .info{margin-top:6px!important;font-size:12px!important;}
+  .route-scroll .info td{padding:5px 6px!important;line-height:1.25!important;}
+  .route-scroll .current .info td:first-child{width:48%!important;}
+  .route-scroll .target .info td:first-child{width:43%!important;}
+  .route-scroll .attack{height:64px!important;border-radius:8px!important;}
+  .route-scroll .attack img{width:58px!important;height:58px!important;max-width:58px!important;max-height:58px!important;}
+  .route-scroll .timer-tools{padding-top:8px!important;}
+  .route-scroll .timer-start,.route-scroll .timer-running{height:31px!important;min-height:31px!important;max-height:31px!important;}
+  .route-scroll .timer-start{font-size:11px!important;}
+  .route-scroll .ownedmark{right:4px!important;top:4px!important;}
+}
+</style>
 </head><body><header class="dm-site-header"><div class="dm-site-top"><div class="dm-site-brand"><a href="../index.html">DMVault MH20th</a></div><nav class="dm-site-nav"><a href="../index.html" class="">彩色對打機總覽</a><a href="../guide.html" class="">基本操作</a><a href="../evolution/index.html" class="active">進化條件</a><a href="../evolution/dex/index.html" class="">圖鑑</a><a href="../stage.html" class="">關卡</a><a href="../background.html" class="">背景</a></nav><div class="dm-evolution-search"><input id="search" type="search" placeholder="搜尋怪獸"></div></div></header>
 
 <main style="padding-top:18px"><section class="hero"><div><h1>進化條件</h1><p>下方所有路線已打通，可直接用滾輪瀏覽；上方圖鑑只顯示圖片與名稱。</p></div><div>綠色記號＝已養過／已進圖鑑</div></section>
@@ -490,7 +392,7 @@ function G(id,f){try{return window.localStorage.getItem(K(id,f))}catch(err){retu
 function S(id,f,v){try{window.localStorage.setItem(K(id,f),v)}catch(err){}}
 const owned=id=>G(id,"owned")==="1";
 function stats(mo){let st=mo.stats||{},keys=["編號","體力","戰鬥","強度","飢餓倒數","力量倒數","大便倒數","入睡時間","起床時間"];return keys.map(k=>`<tr><td>${k}</td><td>${st[k]??"-"}</td></tr>`).join("")}
-function currCard(mo){return `<article id="monster-${mo.id}" class="current current-profile"><div class="current-head name"><h3 onclick="location.href='dex/index.html#monster=${mo.id}'">${mo.zh}</h3><div class="sub">${mo.en||""}<br>${mo.ja||""}</div><span class="badge">${mo.stage}</span></div><div class="current-grid"><section class="current-images"><div class="sprite current-sprite" onclick="location.href='dex/index.html#monster=${mo.id}'" title="在圖鑑中查看"><img src="${mo.img}"></div><div class="section">攻擊圖案</div><div class="attack"><img src="${mo.atk}"></div></section><section class="current-data"><table class="info">${stats(mo)}</table></section></div></article>`}
+function currCard(mo){return `<article id="monster-${mo.id}" class="current"><div class="sprite" onclick="location.href='dex/index.html#monster=${mo.id}'" title="在圖鑑中查看"><img src="${mo.img}"></div><div class="name"><h3 onclick="location.href='dex/index.html#monster=${mo.id}'">${mo.zh}</h3><div class="sub">${mo.en||""}<br>${mo.ja||""}</div><span class="badge">${mo.stage}</span></div><div class="section">基本資料</div><table class="info">${stats(mo)}</table><div class="section">攻擊圖案</div><div class="attack"><img src="${mo.atk}"></div></article>`}
 function duration(t){let x=t["時間"]||"";if(x.includes("分鐘"))return parseFloat(x)*60000;if(x.includes("小時"))return parseFloat(x)*3600000;return 0}
 function cond(t){let period="";if(t["日夜"]){let isDay=t["日夜"].startsWith("06:00"),label=isDay?"日間型":"夜間型",cls=isDay?"day":"night";period=`<tr><td>時段</td><td><div class="time-type ${cls}">${label}<br>${t["日夜"]}</div></td></tr>`}return `<table class="info"><tr><td>失誤</td><td>${t["失誤"]||"-"}</td></tr><tr><td>訓練</td><td>${t["訓練"]||"-"}</td></tr><tr><td>戰鬥</td><td>${t["戰鬥"]||"-"}</td></tr><tr><td>勝率</td><td>${t["勝率"]||"-"}</td></tr><tr><td>時間</td><td>${t["時間"]||"-"}</td></tr>${period}${t["條件"]?`<tr><td>條件</td><td>${t["條件"]}</td></tr>`:""}${t["解鎖"]?`<tr><td>解鎖</td><td class="unlock-condition">${t["解鎖"]}</td></tr>`:""}</table>`}
 function target(t,src,i){let mo=m[t.to],key=`${src}_${mo.id}_${i}`,isOwned=owned(mo.id);return `<article class="target ${isOwned?'is-owned':''}" data-key="${key}" data-ms="${duration(t)}" data-monster="${mo.id}"><button type="button" class="ownedmark ${isOwned?'on':''}" onclick="toggleOwned('${mo.id}')" title="${isOwned?'取消已養過':'標記已養過'}" aria-label="${isOwned?'取消已養過':'標記已養過'}"><span class="owned-bigcheck">${isOwned?'✓':''}</span></button><div class="sprite" onclick="jump('${mo.id}')" title="跳到這隻怪獸的進化資料"><img src="${mo.img}"></div><div class="name"><h3 onclick="jump('${mo.id}')">${mo.zh}</h3><div class="sub">${mo.en||""}<br>${mo.ja||""}</div><span class="badge">${mo.stage}</span></div><div class="section">進化條件</div>${cond(t)}<div class="section">培育計時器</div><div class="timer-tools" data-key="${key}" data-ms="${duration(t)}"><div class="timer-slot"><button type="button" class="timer-start" onclick="start('${key}')">開始培養</button><div class="timer-running" hidden><strong class="timer-time">--:--:--</strong><span class="timer-controls"><button type="button" class="timer-freeze" onclick="freezeT('${key}')">冷凍</button><button type="button" class="timer-reset" onclick="clearT('${key}')">重設</button></span></div></div></div></article>`}
