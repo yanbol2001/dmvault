@@ -308,6 +308,37 @@ main{
   <link rel="stylesheet" href="../../core/feedback.css">
   <script src="../../core/feedback-config.js"></script>
   <script defer src="../../core/feedback.js"></script>
+
+<style id="dmvault-mh-uniform-target-cards-v1">
+/* 待進化卡片統一高度：同一條進化路線以最高卡片為準，計時器固定貼齊底部。 */
+.route-scroll{
+  align-items:stretch !important;
+}
+.target-grid{
+  align-items:stretch !important;
+}
+.target{
+  display:flex !important;
+  flex-direction:column !important;
+  align-self:stretch !important;
+  height:auto !important;
+}
+.target .timer-tools{
+  margin-top:auto !important;
+}
+@media(max-width:760px){
+  .route-scroll > .target-grid{
+    align-items:stretch !important;
+  }
+  .route-scroll > .target-grid > .target{
+    display:flex !important;
+    flex-direction:column !important;
+    align-self:stretch !important;
+    height:auto !important;
+  }
+}
+</style>
+
 </head><body><header class="dm-site-header"><div class="dm-site-top"><div class="dm-site-brand"><a href="../index.html">DMVault MH20th</a></div><nav class="dm-site-nav"><a href="../index.html" class="">彩色對打機總覽</a><a href="../guide.html" class="">基本操作</a><a href="../evolution/index.html" class="active">進化條件</a><a href="../evolution/dex/index.html" class="">圖鑑</a><a href="../stage.html" class="">關卡</a><a href="../background.html" class="">背景</a></nav><div class="dm-evolution-search"><input id="search" type="search" placeholder="搜尋怪獸"></div></div></header>
 
 <main style="padding-top:18px"><section class="hero"><div><h1>進化條件</h1><p>下方所有路線已打通，可直接用滾輪瀏覽；上方圖鑑只顯示圖片與名稱。</p></div><div>綠色記號＝已養過／已進圖鑑</div></section>
