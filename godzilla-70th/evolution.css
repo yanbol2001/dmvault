@@ -500,3 +500,21 @@ body .evolution-sheet .route-area > .no-route{
     min-height:423px !important;
   }
 }
+
+
+/* V1.5.2：恢復培養計時器顯示
+   長名稱區加高後，卡片不得固定高度，否則底部培養工具會被 overflow:hidden 裁掉。 */
+.route-column:not(.special-route){
+  height:auto !important;
+  min-height:423px !important;
+}
+.route-column.special-route{
+  height:auto !important;
+  min-height:150px !important;
+}
+@media(max-width:780px){
+  .route-column:not(.special-route){
+    height:auto !important;
+    min-height:423px !important;
+  }
+}
