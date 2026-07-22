@@ -309,32 +309,81 @@ main{
   <script src="../../core/feedback-config.js"></script>
   <script defer src="../../core/feedback.js"></script>
 
-<style id="dmvault-mh-uniform-target-cards-v1">
-/* 待進化卡片統一高度：同一條進化路線以最高卡片為準，計時器固定貼齊底部。 */
+
+<style id="dmvault-mh-uniform-target-cards-v2">
+/* V2：桌機與手機都讓同一路線的待進化卡片等高。 */
 .route-scroll{
+  display:flex !important;
   align-items:stretch !important;
 }
-.target-grid{
+.route-scroll > .target-grid{
+  display:flex !important;
+  flex-flow:row nowrap !important;
   align-items:stretch !important;
+  gap:14px !important;
 }
-.target{
+.route-scroll > .target-grid > .target{
   display:flex !important;
   flex-direction:column !important;
   align-self:stretch !important;
+  flex:0 0 286px !important;
+  width:286px !important;
+  min-width:286px !important;
+  max-width:286px !important;
   height:auto !important;
 }
-.target .timer-tools{
+.route-scroll > .target-grid > .target .timer-tools{
   margin-top:auto !important;
 }
+
+/* 計時器：時間完整顯示，不再被冷凍／重設按鈕壓住。 */
+.timer-running{
+  display:grid !important;
+  grid-template-columns:minmax(78px,1fr) auto !important;
+  align-items:center !important;
+  gap:6px !important;
+  overflow:visible !important;
+  white-space:nowrap !important;
+  padding:4px 5px !important;
+}
+.timer-running[hidden]{
+  display:none !important;
+}
+.timer-time{
+  display:block !important;
+  min-width:78px !important;
+  width:auto !important;
+  overflow:visible !important;
+  white-space:nowrap !important;
+  text-align:center !important;
+  font-size:13px !important;
+  letter-spacing:0 !important;
+}
+.timer-controls{
+  display:flex !important;
+  flex:0 0 auto !important;
+  gap:3px !important;
+}
+.timer-controls button{
+  min-width:42px !important;
+  padding:1px 5px !important;
+}
+
 @media(max-width:760px){
+  .route-scroll{
+    display:block !important;
+  }
   .route-scroll > .target-grid{
+    display:flex !important;
+    flex-flow:row nowrap !important;
     align-items:stretch !important;
+    gap:10px !important;
   }
   .route-scroll > .target-grid > .target{
-    display:flex !important;
-    flex-direction:column !important;
-    align-self:stretch !important;
-    height:auto !important;
+    flex:0 0 286px !important;
+    width:286px !important;
+    min-width:286px !important;
+    max-width:286px !important;
   }
 }
 </style>

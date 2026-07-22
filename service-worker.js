@@ -1,4 +1,4 @@
-const VERSION = "dmvault-platform-1.2.7-mh-uniform-target-cards";
+const VERSION = "dmvault-platform-1.2.8-mh-card-timer-layout-fix";
 const CORE_CACHE = `${VERSION}-core`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const OFFLINE_CACHE_PREFIX = "dmvault-offline-package-";
