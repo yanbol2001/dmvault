@@ -1,4 +1,4 @@
-const VERSION = "dmvault-platform-1.2.4-godzilla-mobile-overview-unified";
+const VERSION = "dmvault-platform-1.2.5-godzilla-name-attack-fix";
 const CORE_CACHE = `${VERSION}-core`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const OFFLINE_CACHE_PREFIX = "dmvault-offline-package-";

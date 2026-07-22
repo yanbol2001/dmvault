@@ -463,3 +463,40 @@ body .evolution-sheet .route-area > .no-route{
   }
 }
 
+
+
+/* V1.5.1：長名稱完整顯示＋待進化卡片標題自動換行 */
+.route-head{
+  height:150px !important;
+  flex-basis:150px !important;
+  justify-content:flex-end;
+}
+.route-head strong{
+  height:64px !important;
+  min-height:64px !important;
+  padding:5px 4px !important;
+  font-size:15px !important;
+  line-height:1.15 !important;
+  white-space:normal !important;
+  overflow:visible !important;
+  overflow-wrap:anywhere !important;
+  word-break:break-word !important;
+}
+.route-column:not(.special-route){
+  height:423px !important;
+  min-height:423px !important;
+}
+.route-column.special-route{
+  height:150px !important;
+  min-height:150px !important;
+}
+.route-column.special-route .route-head{
+  height:150px !important;
+  flex-basis:150px !important;
+}
+@media(max-width:780px){
+  .route-column:not(.special-route){
+    height:423px !important;
+    min-height:423px !important;
+  }
+}
